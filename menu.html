@@ -147,69 +147,6 @@
     color: #ffcc00;
 }
 
-.carrossel {
-    width: 100%;
-    max-width: 1200px;
-    height: 250px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 20px;
-    position: relative;
-}
-
-/* container dos slides */
-
-/* estilos individuais */
-.s1 {
-    background: linear-gradient(90deg, #0f9c9c, #5ed3d3);
-}
-
-.s2 {
-    background: linear-gradient(90deg, #ff7a00, #ffb347);
-}
-
-.s3 {
-    background: linear-gradient(90deg, #333, #777);
-}
-
-/* textos */
-.slide h2 {
-    font-size: 28px;
-    margin: 0;
-}
-
-.slide span {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-/* animação automática */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    30% { transform: translateX(0); }
-
-    35% { transform: translateX(-100%); }
-    65% { transform: translateX(-100%); }
-
-    70% { transform: translateX(-200%); }
-    100% { transform: translateX(-200%); }
-}
-.slide {
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* importante */
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* faz a imagem preencher sem deformar */
-    border-radius: 20px;
-}
 
 
 </style>
