@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Menu </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <style>
     .logo {
@@ -102,7 +104,7 @@
 
 .search-box input {
     width: 100%;
-    padding: 12px 5px 12px 20px; /* espaço pra lupa */
+    padding: 12px 50px 12px 20px; /* espaço pra lupa */
     border-radius: 30px;
     border: none;
     outline: none;
@@ -112,7 +114,7 @@
 /* LUPA */
 .search-box i {
     position: absolute;
-    right: 0px; /* posição perfeita no canto */
+    right: 15px; /* posição perfeita no canto */
     top: 50%;
     transform: translateY(-50%);
     color: #333; /* laranja igual da imagem */
@@ -145,6 +147,12 @@
 .user:hover span,
 .user:hover i {
     color: #ffcc00;
+}
+  
+.carousel-item img {
+width: 100%;
+  height: 350px;
+  object-fit: contain;
 }
 
 
@@ -188,24 +196,9 @@
         <li>Blog</li>
         <li>Atendimento</li>
     </ul>
+</div>  
+
 </div>
-
-<div class="carrossel">
-    <div class="slides">
-        
-        <div class="slide">
-            <img src="1.png" alt="Banner 1">
-        </div>
-
-        <div class="slide">
-            <img src="2.png" alt="Banner 2">
-        </div>
-
-        <div class="slide">
-            <img src="3.png" alt="Banner 3">
-        </div>
-
-    </div>
 </div>
 
 </body>
