@@ -75,7 +75,7 @@
     .menu ul {
     max-width: 1200px;
     margin: 0;
-    padding-left: 400px; /* controla distância da esquerda */
+    padding-left: 550px; /* controla distância da esquerda */
     display: flex;
     justify-content: flex-start;
     gap: 50px;
@@ -148,12 +148,83 @@
 .user:hover i {
     color: #ffcc00;
 }
-  
-.carousel-item img {
-width: 100%;
-  height: 350px;
-  object-fit: contain;
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 350px; /* 🔥 altura reduzida */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
 }
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 preenche tudo */
+  object-position: center; /* mantém o foco no centro */
+}
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.indicators span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.indicators .active {
+  background: #00b4b6;
+  transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carousel {
+    height: 220px;
+  }
+}
+.carousel {
+  margin-top: 30px; /* ajuste como quiser */
+}
+
 
 
 
@@ -198,8 +269,63 @@ width: 100%;
     </ul>
 </div>  
 
+<div class="carousel">
+  <div class="carousel-track">
+    <div class="slide" style="--bg:url('1.png')">
+  <img src="1.png">
 </div>
+    <div class="slide" style="--bg:url('2.png')">
+  <img src="2.png">
 </div>
+    <div class="slide" style="--bg:url('3.png')">
+  <img src="3.png">
+</div>
+    <div class="slide" style="--bg:url('4.png')">
+  <img src="4.png">
+</div>
+  </div>
+
+  <div class="indicators"></div>
+</div>
+
+<script>
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.slide');
+const indicatorsContainer = document.querySelector('.indicators');
+
+let index = 0;
+
+/* Criar bolinhas */
+slides.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.addEventListener('click', () => goToSlide(i));
+  indicatorsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.indicators span');
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+}
+
+function goToSlide(i) {
+  index = i;
+  updateCarousel();
+}
+
+/* 🔥 Autoplay direto */
+setInterval(nextSlide, 4000);
+
+updateCarousel();
+</script>
 
 </body>
 </html>
