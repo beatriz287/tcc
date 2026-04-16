@@ -227,108 +227,93 @@
     background: #00b4b6;
     transform: scale(1.2);
 }
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-.carousel_produtos{
+.carousel_produtos {
   position: relative;
   display: flex;
   align-items: center;
 }
+
 .carousel-wrapper {
   overflow: hidden;
   width: 100%;
-  display: block; /* 🔥 evita bug de layout */
 }
 
-.carousel-track_produtos{
+.carousel-track_produtos {
   display: flex;
-  flex-direction: row; /* 🔥 garante horizontal */
   gap: 20px;
   transition: transform 0.4s ease;
 }
 
-.card {
-  width: calc((100% - 60px) / 4);
-  min-width: calc((100% - 60px) / 4); /* 🔥 MUITO IMPORTANTE */
+/* CARD */
+.card-prod {
+  flex: 0 0 calc((100% - 80px) / 5);
+  max-width: calc((100% - 80px) / 5);
   background: #fff;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  flex-shrink: 0;
+  border-radius: 16px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  position: relative;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.card img {
+.card-prod img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
-.card h3 {
+.brand {
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0;
+}
+
+.card-prod h3 {
   font-size: 14px;
-  margin-bottom: 10px;
+  height: 40px;
 }
 
 .price {
-  font-weight: bold;
   font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
+/* BOTÃO VERDE */
 .btn-cart {
-  margin-top: 10px;
-  display: inline-block;
-  background: #2ecc71;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.arrow {
-  background: #fff;
+  position: absolute;
+  right: 10px;
+  top: 120px;
+  background: #7bbf3f;
   border: none;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.arrow.left {
-  margin-right: 10px;
-}
-
-.arrow.right {
-  margin-left: 10px;
-}
+/* SETAS */
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
   z-index: 10;
 }
 
-.arrow.left {
-  left: -20px;
-}
+.arrow.left { left: -20px; }
+.arrow.right { right: -20px; }
 
-.arrow.right {
-  right: -20px;
+.titulo-destaque {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 
@@ -395,105 +380,98 @@ h2 {
   <div class="indicators"></div>
 </div>
 
-<div class="container">
-  <h2>Recomendados para você</h2>
+<div class="container mt-5">
+ <h2 class="titulo-destaque">Produtos em destaque</h2>
 
   <div class="carousel_produtos">
-  <button class="arrow left" onclick="scrollCarousel(-1)">‹</button>
+    <button class="arrow left" onclick="scrollCarousel(-1)">‹</button>
 
-  <div class="carousel-wrapper">
-    <div class="carousel-track_produtos" id="carousel">
-      <!-- cards -->
-    </div>
-  </div>
+    <div class="carousel-wrapper">
+      <div class="carousel-track_produtos" id="carousel">
 
-  <button class="arrow right" onclick="scrollCarousel(1)">›</button>
-</div>
+        <!-- PRODUTO -->
+        <div class="card-prod">
+          <img src="imagens/produto1.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Nome do produto aqui</h3>
+          <div class="price">R$ 99,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
 
-      <!-- PRODUTO -->
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Nome do produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
+        <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+         <div class="card-prod">
+          <img src="imagens/produto2.png" alt="">
+          <p class="brand">Marca</p>
+          <h3>Outro produto</h3>
+          <div class="price">R$ 59,90</div>
+          <button class="btn-cart"><i class="bi bi-cart"></i></button>
+        </div>
+
+        <!-- DUPLIQUE AQUI -->
+        
       </div>
-
-      <!-- DUPLIQUE ESSE BLOCO PARA MAIS PRODUTOS -->
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Produto 3</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-      <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
-       <div class="card">
-        <img src="SUA-IMAGEM-AQUI.jpg" alt="">
-        <h3>Outro produto</h3>
-        <div class="price">R$ 00,00</div>
-        <a href="#" class="btn-cart">Adicionar</a>
-      </div>
-
     </div>
 
     <button class="arrow right" onclick="scrollCarousel(1)">›</button>
   </div>
 </div>
+
+
 
 
 <script>
@@ -579,18 +557,14 @@ let position = 0;
 
 function scrollCarousel(direction) {
   const container = document.getElementById('carousel');
-  const cards = container.querySelectorAll('.card');
+  const cards = container.querySelectorAll('.card-prod');
 
-  const cardStyle = window.getComputedStyle(cards[0]);
-  const cardWidth = cards[0].offsetWidth + 20; // largura + gap
+  const cardWidth = cards[0].offsetWidth + 20;
+  const visible = 5;
 
-  const itemsPerView = 4;
-  const moveAmount = cardWidth * itemsPerView;
+  position += direction * cardWidth * visible;
 
-  position += direction * moveAmount;
-
-  const wrapper = container.parentElement;
-const maxScroll = container.scrollWidth - wrapper.clientWidth;
+  const maxScroll = container.scrollWidth - container.parentElement.clientWidth;
 
   if (position < 0) position = 0;
   if (position > maxScroll) position = maxScroll;
