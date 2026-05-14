@@ -72,34 +72,56 @@
 }
 
     /* MENU */
-    .menu {
-        background-color: #eee;
-        padding: 15px 30px;
-    }
-
-    .menu ul {
-    max-width: 1200px;
-    margin: 0;
-    padding-left: 560px; /* controla distância da esquerda */
-    display: flex;
-    justify-content: flex-start;
-    gap: 60px;
+.menu {
+    background-color: #eee;
+    padding: 15px 30px;
 }
 
-    .menu li {
-        cursor: pointer;
-        font-size: 20px;
-        color: #333;
-    }
+.menu ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 
-    .menu li:hover {
-        color: #333;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .menu .highlight {
-        color: #333;
-        font-weight: bold;
-    }
+    gap: 40px;
+
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: #333;
+}
+
+/* cria os pontinhos */
+.menu li::before {
+    content: "•";
+    margin-right: 12px;
+    color: #333;
+}
+
+/* REMOVE ponto do primeiro item */
+.menu li:first-child::before {
+    content: "";
+    margin: 0;
+}
+
+.menu li:hover {
+    color: #333;
+}
+
+.menu .highlight {
+    color: #333;
+    font-weight: bold;
+}
 
   .search-box {
     position: relative;
@@ -135,7 +157,7 @@
 }
 
 .todos i {
-    font-size: 16px; /* igual ao texto */
+    font-size: 30px; /* igual ao texto */
     color: #333;
 }
 .user {
