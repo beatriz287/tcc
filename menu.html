@@ -74,7 +74,7 @@
     /* MENU */
     .menu {
         background-color: #eee;
-        padding: 10px 30px;
+        padding: 15px 30px;
     }
 
     .menu ul {
@@ -83,12 +83,12 @@
     padding-left: 560px; /* controla distância da esquerda */
     display: flex;
     justify-content: flex-start;
-    gap: 50px;
+    gap: 60px;
 }
 
     .menu li {
         cursor: pointer;
-        font-size: 14px;
+        font-size: 20px;
         color: #333;
     }
 
@@ -320,6 +320,59 @@
   margin-bottom: 20px;
 }
 
+.sizes button.active {
+    background: #8bc53f;
+    color: white;
+}
+
+.img-area {
+    position: relative;
+}
+
+/* AREA DOS TAMANHOS */
+.sizes {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+
+    opacity: 0;
+    transition: 0.3s;
+
+    pointer-events: none;
+}
+
+/* MOSTRA AO PASSAR O MOUSE */
+.img-area:hover .sizes {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* BOTÕES DOS TAMANHOS */
+.sizes button {
+    border: 1px solid #8bc53f;
+    background: white;
+    color: #8bc53f;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.sizes button:hover {
+    background: #8bc53f;
+    color: white;
+}
+
 
 </style>
 </head>
@@ -394,6 +447,31 @@
       <div class="carousel-track_produtos" id="carousel">
 
         <!-- PRODUTO -->
+         <div class="card-prod">
+
+  <div class="img-area">
+    <img src="marca/areia_gato/katibom/3kg_tradicional.jpg" alt="">
+
+    <!-- TAMANHOS -->
+    <div class="sizes">
+      <button data-price="79.90">PP</button>
+      <button data-price="89.90">P</button>
+      <button data-price="99.90">M</button>
+      <button data-price="10.90">G</button>
+    </div>
+  </div>
+
+  <p class="brand">Pet Fashion</p>
+
+  <h3>Blusa pet rosa.</h3>
+
+  <div class="price">R$ 79,90</div>
+
+  <button class="btn-cart">
+    <i class="bi bi-cart"></i>
+  </button>
+
+</div>
 
         <div class="card-prod">
           <img src="marca/areia_gato/katibom/3kg_tradicional.jpg" alt="">
@@ -658,6 +736,33 @@ function scrollCarousel(direction) {
   container.style.transform = `translateX(-${position}px)`;
 }
 </script>
+
+
+  <script>
+document.querySelectorAll('.card-prod').forEach(card => {
+
+    const buttons = card.querySelectorAll('.sizes button');
+    const price = card.querySelector('.price');
+
+    buttons.forEach(button => {
+
+        button.addEventListener('click', () => {
+
+            const newPrice = button.getAttribute('data-price');
+
+            price.innerHTML = `R$ ${newPrice.replace('.', ',')}`;
+
+            // destaque do botão selecionado
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            button.classList.add('active');
+        });
+
+    });
+
+});
+</script>
+
 
 </body>
 </html>
