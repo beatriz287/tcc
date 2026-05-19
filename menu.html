@@ -20,7 +20,7 @@
     object-fit: contain;
      margin-top: 35px; 
      transform: scale(1.3);
-       margin-left: 25px;
+       margin-left: 60px;
       
 }
     body {
@@ -38,13 +38,6 @@
         padding: 10px 30px;
     }
 
-    .busca {
-        flex: 1;
-        margin: 0 30px;
-        display: flex;
-    justify-content: center;
-    }
-
     .busca input {
         width: 700px;
         padding: 10px;
@@ -53,11 +46,20 @@
         outline: none;
     }
 
-    .icons {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
+   .busca {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    right: 50px;
+}
 
     .icons i {
     font-size: 30px;
@@ -469,25 +471,26 @@
       <div class="carousel-track_produtos" id="carousel">
 
         <!-- PRODUTO -->
-         <div class="card-prod">
+ 
+
+<div class="card-prod">
 
   <div class="img-area">
+
     <img src="marca/areia_gato/katibom/3kg_tradicional.jpg" alt="">
 
-    <!-- TAMANHOS -->
     <div class="sizes">
-      <button data-price="79.90">PP</button>
-      <button data-price="89.90">P</button>
-      <button data-price="99.90">M</button>
-      <button data-price="10.90">G</button>
+      <button data-price="35,00">4Kg</button>
+      <button data-price="69,99">6Kg</button>
     </div>
+
   </div>
 
-  <p class="brand">Pet Fashion</p>
+  <p class="brand">KatiBom</p>
 
-  <h3>Blusa pet rosa.</h3>
+  <h3>Areia para gato tradicional.</h3>
 
-  <div class="price">R$ 79,90</div>
+  <div class="price">R$ 35,00</div>
 
   <button class="btn-cart">
     <i class="bi bi-cart"></i>
@@ -495,13 +498,31 @@
 
 </div>
 
-        <div class="card-prod">
-          <img src="marca/areia_gato/katibom/3kg_tradicional.jpg" alt="">
-          <p class="brand">KatiBom</p>
-          <h3>Areia para gato 3Kg tradicional.</h3>
-          <div class="price">R$ 35,00</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+<div class="card-prod">
+
+  <div class="img-area">
+
+    <img src="marca/areia_gato/pipicat/higienica_4kg.jpg" alt="">
+
+    <div class="sizes">
+      <button data-price="24,00">4Kg</button>
+      
+    </div>
+
+  </div>
+
+  <p class="brand">Pipicat</p>
+
+  <h3>Areia para gato higiênica.</h3>
+
+  <div class="price">R$ 24,00</div>
+
+  <button class="btn-cart">
+    <i class="bi bi-cart"></i>
+  </button>
+
+</div>
+       
 
          <div class="card-prod">
           <img src="marca/areia_gato/pipicat/higienica_4kg.jpg" alt="">
