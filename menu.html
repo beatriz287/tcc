@@ -381,8 +381,10 @@
     background: white;
     color: #8bc53f;
 
-    width: 38px;
+    min-width: 38px; /* largura mínima */
     height: 38px;
+
+    padding: 0 12px; /* espaço lateral automático */
 
     border-radius: 8px;
 
@@ -390,11 +392,98 @@
     cursor: pointer;
 
     transition: 0.3s;
+
+    white-space: nowrap; /* impede quebrar texto */
 }
 
 .sizes button:hover {
     background: #8bc53f;
     color: white;
+}
+
+/* SETAS INTERNAS DO CARD */
+.img-area {
+    position: relative;
+}
+
+/* AREA DOS TAMANHOS */
+.sizes {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    opacity: 0;
+    transition: 0.3s;
+
+    pointer-events: none;
+}
+
+.img-area:hover .sizes {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* BOTÕES */
+/* SOMENTE BOTÕES DE TAMANHO */
+.sizes button:not(.variant-arrow) {
+    border: 1px solid #8bc53f;
+    background: white;
+    color: #8bc53f;
+
+    min-width: 38px;
+    height: 38px;
+
+    padding: 0 12px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+}
+
+.sizes button:not(.variant-arrow):hover,
+.sizes button:not(.variant-arrow).active {
+    background: #8bc53f;
+    color: white;
+}
+
+/* SETINHAS */
+.variant-arrow {
+    background: transparent !important;
+    border: none !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    cursor: pointer;
+}
+
+.variant-arrow i {
+    font-size: 24px;
+    color: #8bc53f;;
+    transition: 0.2s;
+}
+
+.variant-arrow:hover i {
+    color: #8bc53f;
+    transform: scale(1.2);
+}
+.variant-arrow:hover {
+    color: #8bc53f;
+    background: transparent !important;
 }
 
 
@@ -477,124 +566,181 @@
 
   <div class="img-area">
 
-    <img src="marca/areia_gato/katibom/3kg_tradicional.jpg" alt="">
+    <img class="produto-img"
+         src="marca/areia_gato/katibom/3kg_tradicional.jpg"
+         alt="">
 
     <div class="sizes">
-      <button data-price="35,00">4Kg</button>
-      <button data-price="69,99">6Kg</button>
-    </div>
 
+      <button class="variant-arrow left">
+   <i class="bi bi-chevron-left"></i>
+</button>
+
+
+      <button
+        data-price="35,00"
+        data-img="marca/areia_gato/katibom/3kg_tradicional.jpg">
+        4Kg
+      </button>
+
+      <button
+        data-price="69,99"
+        data-img="marca/areia_gato/katibom/6kg_tradicional.jpg">
+        6Kg
+      </button>
+
+      <button class="variant-arrow right">
+      <i class="bi bi-chevron-right"></i>
+      </button>
+
+    </div>
   </div>
 
   <p class="brand">KatiBom</p>
-
   <h3>Areia para gato tradicional.</h3>
-
   <div class="price">R$ 35,00</div>
-
-  <button class="btn-cart">
-    <i class="bi bi-cart"></i>
-  </button>
 
 </div>
 
 <div class="card-prod">
-
-  <div class="img-area">
-
+<div class="img-area">
     <img src="marca/areia_gato/pipicat/higienica_4kg.jpg" alt="">
-
     <div class="sizes">
-      <button data-price="24,00">4Kg</button>
-      
+    <button data-price="24,00">4Kg</button>  
     </div>
-
   </div>
-
   <p class="brand">Pipicat</p>
-
   <h3>Areia para gato higiênica.</h3>
-
   <div class="price">R$ 24,00</div>
-
   <button class="btn-cart">
-    <i class="bi bi-cart"></i>
+  <i class="bi bi-cart"></i>
   </button>
+</div>
 
+<div class="card-prod">
+<div class="img-area">
+    <img src="marca/areia_gato/viva verde/4kg_graosfinos.jpg" alt="">
+    <div class="sizes">
+    <button data-price="70,00">4Kg</button>  
+    </div>
+  </div>
+  <p class="brand">Viva Verde</p>
+  <h3>Areia para gato grãos finos.</h3>
+  <div class="price">R$ 70,00</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
 </div>
        
+<div class="card-prod">
+  <div class="img-area">
+    <img src="marca/arranhador/sao benedito/estrela_azul.jpg" alt="">
+    <div class="sizes">   
+    <button data-price="39,99">Único</button>  
+    <button data-price="39,99">Único</button> 
+    <button data-price="39,99">Único</button> 
+    <button data-price="39,99">Único</button> 
+    <button data-price="39,99">Único</button> 
+    </div>
+  </div>
+  <p class="brand">São Benedito</p>
+  <h3>Arranhador para gato estrela azul.</h3>
+  <div class="price">R$ 39,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>
+        
 
-         <div class="card-prod">
-          <img src="marca/areia_gato/pipicat/higienica_4kg.jpg" alt="">
-          <p class="brand">Pipicat</p>
-          <h3>Areia para gato 4Kg higiênica. </h3>
-          <div class="price">R$ 24,00</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+<div class="card-prod">
+  <div class="img-area">
+    <img src="marca/arranhador/sao pet/bigben_marrom.jpg" alt="">
+    <div class="sizes">          
+    </div>
+  </div>
+  <p class="brand">São Pet</p>
+  <h3>Arranhador para gato bigben marrom.</h3>
+  <div class="price">R$ 679,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>
+        
+        
+<div class="card-prod">
+  <div class="img-area">
+    <img src="marca/bebedouro/plast pet/automatico_verde.jpg" alt="">
+    <div class="sizes">          
+    </div>
+  </div>
+  <p class="brand">Plast Pet</p>
+  <h3>Bebedouro para pet automatico verde.</h3>
+  <div class="price">R$ 29,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>      
 
-         <div class="card-prod">
-          <img src="marca/areia_gato/viva verde/4kg_graosfinos.jpg" alt="">
-          <p class="brand">Viva Verde</p>
-          <h3>Areia para gato 4Kg grãos finos.</h3>
-          <div class="price">R$ 70,00</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+        
+<div class="card-prod">
+<div class="img-area">
+    <img src="marca/bebedouro/trusqys pet/galaoautomatico_branco.jpg" alt="">
+    <div class="sizes">  
+    </div>
+  </div>
+  <p class="brand">Trusqys</p>
+  <h3>Bebedouro para pet galão automatico branco.</h3>
+  <div class="price">R$ 62,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>   
+        
 
-         <div class="card-prod">
-          <img src="marca/arranhador/sao benedito/estrela_azul.jpg" alt="">
-          <p class="brand">São Benedito</p>
-          <h3>Arranhador para gato estrela azul.</h3>
-          <div class="price">R$ 39,99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+  <div class="card-prod">
+  <div class="img-area">
+    <img src="marca/brinquedo cachorro e gato/kong/cachorro/tennis_colorida.jpg" alt="">
+    <div class="sizes">  
+    </div>
+  </div>
+  <p class="brand">Kong</p>
+  <h3>Brinqueto para cachorro estimulante tennis colorida.</h3>
+  <div class="price">R$ 98,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>      
 
-         <div class="card-prod">
-          <img src="marca/arranhador/sao pet/bigben_marrom.jpg" alt="">
-          <p class="brand">São Pet</p>
-          <h3>Arranhador para gato bigben marrom.</h3>
-          <div class="price">R$ 679.99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+  <div class="card-prod">
+  <div class="img-area">
+    <img src="marca/brinquedo cachorro e gato/nylabone/cachorro/mordedor_rosquinharosa.jpg" alt="">
+    <div class="sizes">   
+    </div>
+  </div>
+  <p class="brand">Nylabone</p>
+  <h3>Brinqueto para cachorro mordedor rosquinha rosa.</h3>
+  <div class="price">R$ 49,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>            
 
-         <div class="card-prod">
-          <img src="marca/bebedouro/plast pet/automatico_verde.jpg" alt="">
-          <p class="brand">Plast Pet</p>
-          <h3>Bebedouro para pet automatico verde.</h3>
-          <div class="price">R$ 29,99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+        
+ <div class="card-prod">
+  <div class="img-area">
+    <img src="marca/brinquedo cachorro e gato/petstages/gato/girabola_rato.jpg" alt="">
+    <div class="sizes">  
+  </div>
+  </div>
+  <p class="brand">Petstages</p>
+  <h3>Brinqueto para gato estimulante girabola rato.</h3>
+  <div class="price">R$ 139,99</div>
+  <button class="btn-cart">
+  <i class="bi bi-cart"></i>
+  </button>
+</div>            
 
-         <div class="card-prod">
-          <img src="marca/bebedouro/trusqys pet/galaoautomatico_branco.jpg" alt="">
-          <p class="brand">Trusqys</p>
-          <h3>Bebedouro para pet galão automatico branco.</h3>
-          <div class="price">R$ 62,99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
-
-         <div class="card-prod">
-          <img src="marca/brinquedo cachorro e gato/kong/cachorro/tennis_colorida.jpg" alt="">
-          <p class="brand">Kong</p>
-          <h3>Brinqueto para cachorro estimulante tennis colorida.</h3>
-          <div class="price">R$ 98,99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
-
-         <div class="card-prod">
-          <img src="marca/brinquedo cachorro e gato/nylabone/cachorro/mordedor_rosquinharosa.jpg" alt="">
-          <p class="brand">Nylabone</p>
-          <h3>Brinqueto para cachorro mordedor rosquinha rosa.</h3>
-          <div class="price">R$ 49,99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
-
-        <div class="card-prod">
-          <img src="marca/brinquedo cachorro e gato/petstages/gato/girabola_rato.jpg" alt="">
-          <p class="brand">Petstages</p>
-          <h3>Brinqueto para gato estimulante girabola rato.</h3>
-          <div class="price">R$ 139,99</div>
-          <button class="btn-cart"><i class="bi bi-cart"></i></button>
-        </div>
+      
 
          <div class="card-prod">
           <img src="marca/brinquedo cachorro e gato/kong/gato/gyroinfused_colorido.jpg" alt="">
@@ -784,7 +930,7 @@ function scrollCarousel(direction) {
   <script>
 document.querySelectorAll('.card-prod').forEach(card => {
 
-    const buttons = card.querySelectorAll('.sizes button');
+    const buttons = card.querySelectorAll('.sizes button:not(.variant-arrow)');
     const price = card.querySelector('.price');
 
     buttons.forEach(button => {
@@ -806,6 +952,91 @@ document.querySelectorAll('.card-prod').forEach(card => {
 });
 </script>
 
+<script>
+
+const buttons = document.querySelectorAll('.sizes button:not(.variant-arrow)');
+
+buttons.forEach(button => {
+
+  button.addEventListener('click', () => {
+
+    // pega o card correto
+    const card = button.closest('.card-prod');
+
+    // elementos do card clicado
+    const price = card.querySelector('.price');
+    const image = card.querySelector('.produto-img');
+
+    // dados do botão
+    const newPrice = button.dataset.price;
+    const newImage = button.dataset.img;
+
+    // altera preço e imagem
+    price.textContent = `R$ ${newPrice}`;
+    image.src = newImage;
+
+  });
+
+});
+
+</script>
+<script>
+
+document.querySelectorAll('.card-prod').forEach(card => {
+
+    const buttons = card.querySelectorAll('.sizes button:not(.variant-arrow)');
+    const image = card.querySelector('.produto-img');
+    const price = card.querySelector('.price');
+
+    const leftArrow = card.querySelector('.variant-arrow.left');
+    const rightArrow = card.querySelector('.variant-arrow.right');
+
+    let current = 0;
+
+    if(buttons.length > 0){
+
+        function updateVariant(index){
+
+            const btn = buttons[index];
+
+            buttons.forEach(b => b.classList.remove('active'));
+
+            btn.classList.add('active');
+
+            image.src = btn.dataset.img;
+
+            price.textContent = `R$ ${btn.dataset.price}`;
+        }
+
+        updateVariant(current);
+
+        rightArrow?.addEventListener('click', () => {
+
+            current++;
+
+            if(current >= buttons.length){
+                current = 0;
+            }
+
+            updateVariant(current);
+        });
+
+        leftArrow?.addEventListener('click', () => {
+
+            current--;
+
+            if(current < 0){
+                current = buttons.length - 1;
+            }
+
+            updateVariant(current);
+        });
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
