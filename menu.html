@@ -511,7 +511,455 @@
     margin-left: 6px;
 }
 
+/* ================================= */
+/* CARROSSEL EXCLUSIVOS */
+/* ================================= */
 
+.custom-carousel,
+.brands-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.custom-wrapper,
+.brands-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.custom-track,
+.brands-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+/* CARD GRANDE */
+
+.custom-card {
+    flex: 0 0 calc((100% - 60px) / 4);
+    max-width: calc((100% - 60px) / 4);
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.custom-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CARD MARCAS */
+
+.brand-card {
+    flex: 0 0 110px;
+    height: 85px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-card img {
+    width: 120%;
+    height: 120%;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    transform: scale(1.2);
+}
+
+.brand-card img {
+    width: 90px;
+    object-fit: contain;
+}
+
+/* SETAS */
+
+/* SETAS IGUAIS AO CARROSSEL PRODUTOS */
+
+.custom-arrow {
+  position: absolute;
+
+  top: 52%; /* ↓ desce a seta */
+
+  transform: translateY(-50%);
+
+  background: white;
+
+  border: 1px solid #ccc;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777; /* seta cinza */
+}
+
+.custom-arrow.left {
+  left: -20px;
+}
+
+.custom-arrow.right {
+  right: -20px;
+}
+
+/* LINK */
+
+.ver-todos {
+    color: #7d5a2d;
+    text-decoration: underline;
+}
+
+/* ================================= */
+/* PLANOS */
+/* ================================= */
+
+.plano-section {
+
+    background: #79cb92;
+    padding: 90px 20px;
+    margin-top: 80px;
+
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.plano-section::before,
+.plano-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+
+    width: 110%;
+    height: 120px;
+
+    background: #f5f5f5;
+
+    border-radius: 50%;
+}
+
+.plano-section::before {
+    top: -70px;
+}
+
+.plano-section::after {
+    bottom: -70px;
+}
+
+.titulo-planos {
+
+    color: #4d2394;
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    margin-bottom: 50px;
+}
+
+/* CARROSSEL */
+
+.planos-carousel {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.planos-wrapper {
+
+    width: 1080px;
+
+    overflow: hidden;
+}
+
+.planos-track {
+
+    display: flex;
+
+    gap: 25px;
+
+    transition: transform 0.5s ease;
+}
+
+/* CARD */
+
+.plano-card {
+
+    flex: 0 0 calc((100% - 50px) / 3);
+
+    max-width: calc((100% - 50px) / 3);
+
+    background: #edf3ea;
+
+    border-radius: 28px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    min-height: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.plano-card.destaque {
+
+    background: #f6f0ea;
+
+    transform: scale(1.03);
+}
+
+.mini {
+
+    font-size: 14px;
+
+    color: #4d2394;
+
+    font-weight: bold;
+}
+
+.plano-card h3 {
+
+    font-size: 56px;
+
+    color: #4d2394;
+
+    font-weight: 800;
+
+    margin: 15px 0 20px;
+}
+
+.tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    background: white;
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+
+    color: #555;
+
+    margin: 0 auto 25px;
+}
+
+.valor {
+
+    font-size: 30px;
+
+    color: #4d2394;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.plano-card p {
+
+    font-size: 15px;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+/* BOTÃO */
+
+.btn-cobertura {
+
+    width: 100%;
+
+    border: none;
+
+    background: #4d2394;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 18px;
+
+    transition: 0.3s;
+}
+
+.btn-cobertura:hover {
+
+    background: #37196c;
+}
+
+.plano-card a {
+
+    text-decoration: none;
+
+    color: #4d2394;
+
+    font-weight: 700;
+
+    font-size: 20px;
+}
+
+/* SETAS */
+
+.plano-arrow {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    color: #666;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: 0.3s;
+}
+
+.plano-arrow:hover {
+
+    transform: scale(1.1);
+}
+
+/* BOLINHAS */
+
+.planos-dots {
+
+    margin-top: 35px;
+}
+
+.planos-dots span {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.6);
+
+    display: inline-block;
+
+    margin: 5px;
+}
+
+.planos-dots .active {
+
+    background: #4d2394;
+}
+
+/* BOTÕES */
+
+.btn-regiao,
+.btn-area {
+
+    display: block;
+
+    width: 320px;
+
+    margin: 15px auto;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+}
+
+.btn-regiao {
+
+    background: white;
+
+    color: #4d2394;
+}
+
+.btn-area {
+
+    background: #eadbff;
+
+    color: #4d2394;
+}
+
+.rede-link {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #4d2394;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
 </style>
 </head>
 <body>
@@ -1034,6 +1482,304 @@
   </div>
 </div>
 
+<!-- ================================= -->
+<!-- VOCÊ SÓ ENCONTRA AQUI -->
+<!-- ================================= -->
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="titulo-destaque">Você só encontra aqui</h2>
+        <a href="#" class="ver-todos">Ver todos</a>
+    </div>
+
+    <div class="custom-carousel">
+
+        <button class="custom-arrow left"
+                onclick="moveCustomCarousel('carouselExclusivos', -1)">
+            ‹
+        </button>
+
+        <div class="custom-wrapper">
+            <div class="custom-track" id="carouselExclusivos">
+
+                <div class="custom-card">
+                    <img src="imagens/banner_azul.jpg">
+                </div>
+
+                <div class="custom-card">
+                    <img src="imagens/exclusivo2.jpg">
+                </div>
+
+                <div class="custom-card">
+                    <img src="imagens/exclusivo3.jpg">
+                </div>
+
+                <div class="custom-card">
+                    <img src="imagens/exclusivo4.jpg">
+                </div>
+
+                <div class="custom-card">
+                    <img src="imagens/exclusivo5.jpg">
+                </div>
+
+            </div>
+        </div>
+
+        <button class="custom-arrow right"
+                onclick="moveCustomCarousel('carouselExclusivos', 1)">
+            ›
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- MARCAS -->
+<!-- ================================= -->
+
+<div class="container mt-5 mb-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="titulo-destaque">Marcas que trabalhamos</h2>
+        <a href="#" class="ver-todos">Ver todas</a>
+    </div>
+
+    <div class="brands-carousel">
+
+        <button class="custom-arrow left"
+                onclick="moveCustomCarousel('carouselMarcas', -1)">
+            ‹
+        </button>
+
+        <div class="brands-wrapper">
+            <div class="brands-track" id="carouselMarcas">
+
+                <div class="brand-card">
+                    <img src="imagens/katbom.jpg">
+                </div>
+
+                <div class="brand-card">
+                    <img src="marcas/blue.png">
+                </div>
+
+                <div class="brand-card">
+                    <img src="marcas/nexgard.png">
+                </div>
+
+                <div class="brand-card">
+                    <img src="marcas/royalcanin.png">
+                </div>
+
+                <div class="brand-card">
+                    <img src="marcas/premier.png">
+                </div>
+
+                <div class="brand-card">
+                    <img src="marcas/proplan.png">
+                </div>
+
+                <div class="brand-card">
+                    <img src="marcas/golden.png">
+                </div>
+
+            </div>
+        </div>
+
+        <button class="custom-arrow right"
+                onclick="moveCustomCarousel('carouselMarcas', 1)">
+            ›
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================================= -->
+<!-- PLANOS DE SAÚDE -->
+<!-- ================================= -->
+
+<div class="plano-section">
+
+    <h2 class="titulo-planos">
+        Plano de saúde para<br>
+        cuidar do seu pet
+    </h2>
+
+    <div class="planos-carousel">
+
+        <!-- SETA ESQUERDA -->
+        <button class="plano-arrow left"
+                onclick="movePlanos(-1)">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <!-- WRAPPER -->
+        <div class="planos-wrapper container">
+
+            <!-- TRACK -->
+            <div class="planos-track" id="carouselPlanos">
+
+                <!-- CARD -->
+                <div class="plano-card">
+
+                    <span class="mini">
+                        Petlove
+                    </span>
+
+                    <h3>Leve</h3>
+
+                    <div class="tag">
+                        <i class="bi bi-heart"></i>
+                        Cuidado básico
+                    </div>
+
+                    <div class="valor">
+                        R$ 14,90/mês
+                    </div>
+
+                    <p>em São Paulo e região</p>
+
+                    <button class="btn-cobertura">
+                        Conferir cobertura
+                    </button>
+
+                    <a href="#">
+                        Contratar
+                    </a>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="plano-card destaque">
+
+                    <span class="mini">
+                        Petlove
+                    </span>
+
+                    <h3>Tranquilo</h3>
+
+                    <div class="tag">
+                        <i class="bi bi-heart"></i>
+                        Ambulatorial de rotina
+                    </div>
+
+                    <div class="valor">
+                        R$ 34,90/mês
+                    </div>
+
+                    <p>em São Paulo e região</p>
+
+                    <button class="btn-cobertura">
+                        Conferir cobertura
+                    </button>
+
+                    <a href="#">
+                        Contratar
+                    </a>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="plano-card">
+
+                    <span class="mini">
+                        Petlove
+                    </span>
+
+                    <h3>Ideal</h3>
+
+                    <div class="tag">
+                        <i class="bi bi-heart"></i>
+                        Hospitalar com internação
+                    </div>
+
+                    <div class="valor">
+                        R$ 94,90/mês
+                    </div>
+
+                    <p>em São Paulo e região</p>
+
+                    <button class="btn-cobertura">
+                        Conferir cobertura
+                    </button>
+
+                    <a href="#">
+                        Contratar
+                    </a>
+
+                </div>
+
+                <!-- CARD EXTRA -->
+                <div class="plano-card">
+
+                    <span class="mini">
+                        Petlove
+                    </span>
+
+                    <h3>Premium</h3>
+
+                    <div class="tag">
+                        <i class="bi bi-heart"></i>
+                        Cobertura completa
+                    </div>
+
+                    <div class="valor">
+                        R$ 149,90/mês
+                    </div>
+
+                    <p>em São Paulo e região</p>
+
+                    <button class="btn-cobertura">
+                        Conferir cobertura
+                    </button>
+
+                    <a href="#">
+                        Contratar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SETA DIREITA -->
+        <button class="plano-arrow right"
+                onclick="movePlanos(1)">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <!-- BOLINHAS -->
+    <div class="planos-dots">
+
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- BOTÕES -->
+    <button class="btn-regiao">
+        Consultar outra região
+    </button>
+
+    <button class="btn-area">
+        Ir para Área do cliente
+    </button>
+
+    <a href="#" class="rede-link">
+        Consultar rede credenciada
+    </a>
+
+</div>
+
 
 
 
@@ -1268,6 +2014,92 @@ document.querySelectorAll('.card-prod').forEach(card => {
     });
 
 });
+
+</script>
+
+<script>
+
+const carouselPositions = {};
+
+function moveCustomCarousel(id, direction){
+
+    const track = document.getElementById(id);
+
+    const card = track.children[0];
+
+    const gap = 20;
+
+    const move =
+        card.offsetWidth + gap;
+
+    if(!carouselPositions[id]){
+        carouselPositions[id] = 0;
+    }
+
+    carouselPositions[id] += direction * move;
+
+    const maxScroll =
+        track.scrollWidth -
+        track.parentElement.clientWidth;
+
+    if(carouselPositions[id] < 0){
+        carouselPositions[id] = 0;
+    }
+
+    if(carouselPositions[id] > maxScroll){
+        carouselPositions[id] = maxScroll;
+    }
+
+    track.style.transform =
+        `translateX(-${carouselPositions[id]}px)`;
+}
+
+</script>
+
+<script>
+
+let planosIndex = 0;
+
+function movePlanos(direction){
+
+    const track =
+        document.getElementById('carouselPlanos');
+
+    const cards =
+        track.querySelectorAll('.plano-card');
+
+    const card =
+        cards[0];
+
+    const gap = 25;
+
+    const cardWidth =
+        card.offsetWidth + gap;
+
+    const visibleCards = 3;
+
+    const totalPages =
+        Math.ceil(cards.length / visibleCards);
+
+    planosIndex += direction;
+
+    if(planosIndex < 0){
+        planosIndex = 0;
+    }
+
+    if(planosIndex >= totalPages){
+        planosIndex = totalPages - 1;
+    }
+
+    const move =
+        planosIndex *
+        cardWidth *
+        visibleCards;
+
+    track.style.transform =
+        `translateX(-${move}px)`;
+
+}
 
 </script>
 
