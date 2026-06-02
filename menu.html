@@ -376,6 +376,7 @@
 /* SETAS INTERNAS DO CARD */
 .img-area {
     position: relative;
+    padding-bottom: 45px; /* cria espaço pro botão não encostar na borda */
 }
 
 
@@ -417,64 +418,63 @@
 }
 .sizes {
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
 
     display: flex;
     align-items: center;
-    justify-content: center;
 
-    gap: 6px;
+    width: 100%;
+    padding: 0 10px;
 
-    width: auto;
+    box-sizing: border-box;
 
     opacity: 0;
-    transition: 0.3s;
-
+    visibility: hidden;
     pointer-events: none;
+
+    transition: .3s;
 }
 
 .img-area:hover .sizes {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
 }
 
 /* ÁREA VISÍVEL */
 .sizes-wrapper {
     overflow: hidden;
-    width: auto;
+    flex: 1;
+    max-width: 180px;
+    display: flex;
+    justify-content: center;
+    overflow: visible; /* importante */
 }
+
+
 
 /* TRILHO DOS BOTÕES */
 .sizes-track {
     display: flex;
     gap: 8px;
     transition: transform 0.3s ease;
+    justify-content: center;
 }
 
 /* BOTÕES */
-.sizes-track button {
-    border: 1px solid #8bc53f;
-    background: white;
-    color: #8bc53f;
-
-    height: 38px;
-
-    padding: 0 14px;
-
-    border-radius: 8px;
-
-    font-size: 14px;
-
-    white-space: nowrap;
-
-    flex-shrink: 0;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
+.sizes-track button { border: 1px solid #8bc53f;
+     background: white; 
+     color: #8bc53f; 
+     height: 38px; 
+     padding: 0 14px; 
+     border-radius: 8px; 
+     font-size: 14px; 
+     white-space: nowrap; 
+     flex-shrink: 0; 
+     cursor: pointer; 
+    transition: 0.3s; }
 
 .sizes-track button:hover,
 .sizes-track button.active {
@@ -487,9 +487,10 @@
     background: transparent !important;
     border: none !important;
 
-    width: 35px;
-    height: 30px;
+     flex-shrink: 0;
 
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1068,6 +1069,7 @@
       </button>
 
 
+
     </div>
 
   </div>
@@ -1472,6 +1474,204 @@
 
 </div>
 
+<div class="card-prod">
+
+  <div class="img-area">
+
+    <img class="produto-img"
+         src="marca/caixa de areia/furacao pet/kit_azul.jpg"
+         alt="">
+          <button class="btn-cart">
+      <i class="bi bi-cart"></i>
+    </button>
+
+   <div class="sizes">
+   
+
+  <button class="variant-arrow left">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <div class="sizes-wrapper">
+
+    <div class="sizes-track">
+
+      <button data-price="39,00"
+               data-img="marca/caixa de areia/furacao pet/kit_azul.jpg">
+       Único
+      </button>
+    </div>
+
+  </div>
+
+  <button class="variant-arrow right">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+</div>
+  </div>
+
+  <p class="brand">Furacão Pet</p>
+  <h3>Caixa de areia para gato.</h3>
+  <div class="price">R$ 39,00</div>
+
+</div>
+
+<div class="card-prod">
+
+  <div class="img-area">
+
+    <img class="produto-img"
+         src="marca/caixa de areia/alvorada/roxo.jpg"
+         alt="">
+          <button class="btn-cart">
+      <i class="bi bi-cart"></i>
+    </button>
+
+   <div class="sizes">
+   
+
+  <button class="variant-arrow left">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <div class="sizes-wrapper">
+
+    <div class="sizes-track">
+
+      <button data-price="55,00"
+               data-img="marca/caixa de areia/alvorada/roxo.jpg">
+       Único
+      </button>
+    </div>
+
+  </div>
+
+  <button class="variant-arrow right">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+</div>
+  </div>
+
+  <p class="brand">Alvorada</p>
+  <h3>Caixa de areia para gato.</h3>
+  <div class="price">R$ 55,00</div>
+
+</div>
+
+<div class="card-prod">
+
+  <div class="img-area">
+
+    <img class="produto-img"
+         src="marca/caixa de transporte/ferplast/trendy_marrom.jpg"
+         alt="">
+          <button class="btn-cart">
+      <i class="bi bi-cart"></i>
+    </button>
+
+   <div class="sizes">
+   
+
+  <button class="variant-arrow left">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <div class="sizes-wrapper">
+
+    <div class="sizes-track">
+
+      <button data-price="199,99"
+               data-img="marca/caixa de transporte/ferplast/trendy_marrom.jpg">
+       1°
+      </button>
+    
+
+      <button data-price="250,00"
+               data-img="marca/caixa de transporte/ferplast/trendy_marrom.jpg">
+       2°
+      </button>
+   
+
+      <button data-price="330,00"
+               data-img="marca/caixa de transporte/ferplast/trendy_marrom.jpg">
+       3°
+      </button>
+    
+
+  </div>
+  </div>
+
+  <button class="variant-arrow right">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+</div>
+  </div>
+
+  <p class="brand">Ferplast</p>
+  <h3>Caixa de transporte para pet.</h3>
+  <div class="price">R$ 199,99</div>
+
+</div>
+
+<div class="card-prod">
+
+  <div class="img-area">
+
+    <img class="produto-img"
+         src="marca/caixa de transporte/dura pet/elegance_verdetamanho1.jpg"
+         alt="">
+          <button class="btn-cart">
+      <i class="bi bi-cart"></i>
+    </button>
+
+   <div class="sizes">
+   
+
+  <button class="variant-arrow left">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <div class="sizes-wrapper">
+
+    <div class="sizes-track">
+
+      <button data-price="99,90"
+               data-img="marca/caixa de transporte/dura pet/elegance_verdetamanho1.jpg">
+       1°
+      </button>
+    
+
+      <button data-price="129,90"
+               data-img="marca/caixa de transporte/dura pet/elegance_verdetamanho2.jpg">
+       2°
+      </button>
+   
+
+      <button data-price="159,90"
+               data-img="marca/caixa de transporte/dura pet/elegance_verdetamanho3.jpg">
+       3°
+      </button>
+    
+
+  </div>
+  </div>
+
+  <button class="variant-arrow right">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+</div>
+  </div>
+
+  <p class="brand">Dura Pet</p>
+  <h3>Caixa de transporte para pet.</h3>
+  <div class="price">R$ 99,90</div>
+
+</div>
+
 
         <!-- DUPLIQUE AQUI -->
         
@@ -1743,7 +1943,36 @@
 
                 </div>
 
-                <div class="plano-card">
+                <div class="plano-card destaque">
+
+    <span class="mini">
+         Garras e patas
+    </span>
+
+    <h3>Completo</h3>
+
+    <div class="tag">
+        <i class="bi bi-crown"></i>
+        Rede premium disponível
+    </div>
+
+    <div class="valor">
+        R$ 414,90/mês
+    </div>
+
+    <p>em São Paulo e região</p>
+
+    <button class="btn-cobertura">
+        Conferir cobertura
+    </button>
+
+    <a href="#">
+        Contratar
+    </a>
+
+</div>
+
+     <div class="plano-card">
 
     <span class="mini">
          Garras e patas
@@ -1772,34 +2001,7 @@
 
 </div>
 
-<div class="plano-card destaque">
 
-    <span class="mini">
-         Garras e patas
-    </span>
-
-    <h3>Completo</h3>
-
-    <div class="tag">
-        <i class="bi bi-crown"></i>
-        Rede premium disponível
-    </div>
-
-    <div class="valor">
-        R$ 414,90/mês
-    </div>
-
-    <p>em São Paulo e região</p>
-
-    <button class="btn-cobertura">
-        Conferir cobertura
-    </button>
-
-    <a href="#">
-        Contratar
-    </a>
-
-</div>
 
             </div>
 
