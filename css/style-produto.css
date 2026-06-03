@@ -1,0 +1,189 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f7fb;
+      padding:40px;
+      color:#333;
+    }
+
+    .produto-container{
+      max-width:1100px;
+      margin:auto;
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      display:flex;
+      flex-wrap:wrap;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    /* IMAGEM */
+    .produto-imagem{
+      flex:1 1 450px;
+      background:#fff4e6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+    }
+
+    .produto-imagem img{
+      width:100%;
+      max-width:420px;
+      border-radius:15px;
+      object-fit:cover;
+    }
+
+    /* INFORMAÇÕES */
+    .produto-info{
+      flex:1 1 500px;
+      padding:40px;
+    }
+
+    .categoria{
+      display:inline-block;
+      background:#ffe0b2;
+      color:#ff7b00;
+      padding:8px 14px;
+      border-radius:20px;
+      font-size:13px;
+      font-weight:bold;
+      margin-bottom:18px;
+      text-transform:uppercase;
+    }
+
+    .produto-titulo{
+      font-size:38px;
+      margin-bottom:15px;
+      color:#222;
+    }
+
+    .avaliacao{
+      color:#ffb400;
+      font-size:18px;
+      margin-bottom:20px;
+    }
+
+    .descricao{
+      line-height:1.7;
+      color:#555;
+      margin-bottom:25px;
+    }
+
+    .preco{
+      font-size:40px;
+      color:#2e8b57;
+      font-weight:bold;
+      margin-bottom:25px;
+    }
+
+    .quantidade-area{
+      margin-bottom:25px;
+    }
+
+    .quantidade-area label{
+      display:block;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+
+    .quantidade{
+      width:90px;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      font-size:18px;
+    }
+
+    /* BOTÕES */
+    .botoes{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      border:none;
+      padding:15px 24px;
+      border-radius:12px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .carrinho{
+      background:#ff914d;
+      color:white;
+    }
+
+    .carrinho:hover{
+      background:#ff7a26;
+      transform:translateY(-2px);
+    }
+
+    .favorito{
+      background:white;
+      border:2px solid #ff4d6d;
+      color:#ff4d6d;
+    }
+
+    .favorito:hover{
+      background:#ff4d6d;
+      color:white;
+    }
+
+    /* BENEFÍCIOS */
+    .beneficios{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .beneficio{
+      background:#f8f9fc;
+      padding:15px;
+      border-radius:12px;
+      border:1px solid #eee;
+    }
+
+    .beneficio strong{
+      display:block;
+      margin-bottom:5px;
+      color:#444;
+    }
+
+    .beneficio p{
+      font-size:14px;
+      color:#666;
+    }
+
+    @media(max-width:768px){
+
+      body{
+        padding:20px;
+      }
+
+      .produto-container{
+        flex-direction:column;
+      }
+
+      .produto-titulo{
+        font-size:30px;
+      }
+
+      .preco{
+        font-size:34px;
+      }
+
+      .beneficios{
+        grid-template-columns:1fr;
+      }
+    }

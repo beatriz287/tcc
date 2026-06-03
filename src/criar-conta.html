@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Criar conta</title>
+    <link rel="stylesheet" href="../css/style-criar-conta.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <div class="box">
+    
+        <div class="form-box">
+            <a href="menu.html" class="voltar">X</a> 
+            <h2> Criar conta</h2>
+            <p> Ja tem uma conta? <a href="form.html"> Fazer login</a></p>
+            
+            <form action="welcome.php" method="POST">
+                <div class="input-group">
+                    <label for="email"> E-mail</label>
+                    <input type="text"  id="email" placeholder="Digite seu E-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha"> Senha</label>
+                    <input type="password"  id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha"> Confirmar senha</label>
+                    <input type="password"  id="confsenha" placeholder="Digite novamente sua senha" required>
+                </div>
+
+                <div  class="input-group">
+                    <button type="submit"> Criar conta </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
