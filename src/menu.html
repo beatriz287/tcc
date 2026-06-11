@@ -699,7 +699,7 @@
                data-img="../marca/caixa de transporte/dura pet/elegance_verdetamanho3.jpg">
        3°
       </button>
-    
+
 
   </div>
   </div>
@@ -714,6 +714,67 @@
   <p class="brand">Dura Pet</p>
   <h3>Caixa de transporte para pet.</h3>
   <div class="price">R$ 99,90</div>
+
+</div>
+
+<div class="card-prod">
+
+  <div class="img-area">
+
+    <img class="produto-img"
+         src="../marca/caixa de transporte/alvorada/laranja.jpg"
+         alt="">
+          <button class="btn-cart">
+      <i class="bi bi-cart"></i>
+    </button>
+
+   <div class="sizes">
+   
+
+  <button class="variant-arrow left">
+    <i class="bi bi-chevron-left"></i>
+  </button>
+
+  <div class="sizes-wrapper">
+
+    <div class="sizes-track">
+
+      <button data-price="53,90"
+               data-img="../marca/caixa de transporte/alvorada/laranja.jpg">
+       1°
+      </button>
+    
+
+      <button data-price="62,99"
+               data-img="../marca/caixa de transporte/alvorada/laranja.jpg">
+       2°
+      </button>
+   
+
+      <button data-price="89,99"
+               data-img="../marca/caixa de transporte/alvorada/laranja.jpg">
+       3°
+      </button>
+
+      <button data-price="120,00"
+               data-img="../marca/caixa de transporte/alvorada/laranja.jpg">
+       4°
+      </button>
+
+
+  </div>
+  </div>
+
+  <button class="variant-arrow right">
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+</div>
+  </div>
+
+  <p class="brand">alvorada</p>
+  <h3>Caixa de transporte para pet.</h3>
+  <div class="price">R$ 53,90</div>
 
 </div>
 
@@ -1178,21 +1239,60 @@ function scrollCarousel(direction) {
   <script>
 document.querySelectorAll('.card-prod').forEach(card => {
 
-    const buttons = card.querySelectorAll('.sizes button:not(.variant-arrow)');
+    const track = card.querySelector('.sizes-track');
+    const buttons = track.querySelectorAll('button');
+
+    const image = card.querySelector('.produto-img');
     const price = card.querySelector('.price');
 
-    buttons.forEach(button => {
+    const leftArrow = card.querySelector('.variant-arrow.left');
+    const rightArrow = card.querySelector('.variant-arrow.right');
 
-        button.addEventListener('click', () => {
+    let current = 0;
 
-            const newPrice = button.getAttribute('data-price');
+    function updateVariant(index){
 
-            price.innerHTML = `R$ ${newPrice.replace('.', ',')}`;
+        const btn = buttons[index];
 
-            // destaque do botão selecionado
-            buttons.forEach(btn => btn.classList.remove('active'));
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-            button.classList.add('active');
+        image.src = btn.dataset.img;
+        price.textContent = `R$ ${btn.dataset.price}`;
+
+        const btnWidth = btn.offsetWidth + 8;
+
+        track.style.transform =
+            `translateX(-${Math.max(0, index - 1) * btnWidth}px)`;
+    }
+
+    updateVariant(0);
+
+    rightArrow.addEventListener('click', () => {
+
+        if(current < buttons.length - 1){
+            current++;
+        }
+
+        updateVariant(current);
+    });
+
+    leftArrow.addEventListener('click', () => {
+
+        if(current > 0){
+            current--;
+        }
+
+        updateVariant(current);
+    });
+
+    buttons.forEach((btn,index)=>{
+
+        btn.addEventListener('click',()=>{
+
+            current = index;
+            updateVariant(current);
+
         });
 
     });
@@ -1246,28 +1346,20 @@ document.querySelectorAll('.card-prod').forEach(card => {
 
     let current = 0;
 
-    function updateVariant(index){
+   function updateVariant(index){
 
-        const btn = buttons[index];
+    const btn = buttons[index];
 
-        buttons.forEach(b => b.classList.remove('active'));
+    buttons.forEach(b => b.classList.remove('active'));
 
-        btn.classList.add('active');
+    btn.classList.add('active');
 
-        image.src = btn.dataset.img;
+    image.src = btn.dataset.img;
 
-        price.textContent = `R$ ${btn.dataset.price}`;
+    price.textContent = `R$ ${btn.dataset.price}`;
+}
 
-        scrollSizes();
-    }
-
-    function scrollSizes(){
-
-        const buttonWidth = buttons[0].offsetWidth + 8;
-
-        track.style.transform =
-            `translateX(-${current * buttonWidth}px)`;
-    }
+   
 
     updateVariant(current);
 

@@ -309,7 +309,7 @@
 .btn-cart {
     position: absolute;
      right: -2px; /* mais pra direita */
-    top:265px;   /* mais pra cima */
+    top:310px;   /* mais pra cima */
 
     background: #7bbf3f;
     border: none;
@@ -446,10 +446,8 @@
 .sizes-wrapper {
     overflow: hidden;
     flex: 1;
-    max-width: 180px;
-    display: flex;
-    justify-content: center;
-    overflow: visible; /* importante */
+    max-width: 150px; /* área entre as setas */
+    position: relative;
 }
 
 
@@ -458,7 +456,12 @@
 .sizes-track {
     display: flex;
     gap: 8px;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
+    width: max-content;
+}
+
+.sizes-track:has(button:only-child) {
+    width: 100%;
     justify-content: center;
 }
 
