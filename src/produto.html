@@ -5,17 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pet Shop - Produto</title>
     <link href="../css/style-produto.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
+
+  
+
+    <div class="topo">
+
+        <div class="logo">
+            <img src="../imagens/logo.png" alt="Garra & Patas">
+        </div>
+
+        <div class="espaco-topo"></div>
+
+        <div class="icons">
+
+            <div class="user">
+                <a href="form.html">
+                    <i class="bi bi-cart"></i>
+                    <span>Acessar meu carrinho</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    
 
   <div class="produto-container">
 
     <!-- FOTO -->
     <div class="produto-imagem">
       <img 
-        src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?q=80&w=1200&auto=format&fit=crop" 
-        alt="Ração Premium para Cachorro"
-      >
+    id="fotoProduto"
+    src="../marca/areia_gato/katibom/3kg_tradicional.jpg" 
+    alt="Ração Premium para Cachorro"
+>
     </div>
 
     <!-- INFORMAÇÕES -->
@@ -40,9 +67,25 @@
         seu pet.
       </p>
 
-      <div class="preco">
-        R$ 129,90
-      </div>
+      <div class="preco" id="precoProduto">
+  R$ 129,90
+</div>
+
+      <div class="tamanhos">
+  <label><strong>Tamanho:</strong></label>
+
+  <button class="btn-tamanho ativo"
+          onclick="trocarProduto('3kg')">
+    3kg
+  </button>
+
+  <button class="btn-tamanho"
+          onclick="trocarProduto('6kg')">
+    6kg
+  </button>
+
+ 
+</div>
 
       <!-- QUANTIDADE -->
       <div class="quantidade-area">
@@ -50,13 +93,15 @@
           Quantidade:
         </label>
 
-        <input 
-          type="number"
-          id="quantidade"
-          class="quantidade"
-          value="1"
-          min="1"
-        >
+     <input
+    type="number"
+    id="quantidade"
+    class="quantidade"
+    value="1"
+    min="1"
+    onchange="atualizarPreco()"
+    oninput="atualizarPreco()"
+>
       </div>
 
       <!-- BOTÕES -->
@@ -100,6 +145,44 @@
     </div>
 
   </div>
+<script>
 
+function trocarProduto(tamanho){
+
+    const foto = document.getElementById("fotoProduto");
+
+    document.querySelectorAll('.btn-tamanho')
+      .forEach(btn => btn.classList.remove('ativo'));
+
+    event.target.classList.add('ativo');
+
+    if(tamanho === "3kg"){
+        foto.src = "../marca/areia_gato/katibom/3kg_tradicional.jpg";
+        precoUnitario = 129.90;
+    }
+
+    if(tamanho === "6kg"){
+        foto.src = "../marca/areia_gato/katibom/6kg_tradicional.jpg";
+        precoUnitario = 179.90;
+    }
+
+    atualizarPreco();
+}
+
+</script>
+
+<script>
+
+let precoUnitario = 129.90;
+
+function atualizarPreco() {
+    const quantidade = document.getElementById("quantidade").value;
+    const total = precoUnitario * quantidade;
+
+    document.getElementById("precoProduto").innerHTML =
+        "R$ " + total.toFixed(2).replace(".", ",");
+}
+
+</script>
 </body>
 </html>
