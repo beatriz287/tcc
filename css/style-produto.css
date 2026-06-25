@@ -65,7 +65,7 @@
     max-width:1100px;
     margin:30px auto;
     background:#fff;
-    border-radius:20px;
+    border-radius:15px;
     overflow:hidden;
     display:flex;
     flex-wrap:wrap;
@@ -100,69 +100,69 @@
       background:#ffe0b2;
       color:#ff7b00;
       padding:5px 14px;
-      border-radius:15px;
-      font-size:13px;
+      border-radius:10px;
+      font-size:10px;
       font-weight:bold;
-      margin-bottom:15px;
+      margin-bottom:10px;
       text-transform:uppercase;
     }
 
     .produto-titulo{
-      font-size:30px;
-      margin-bottom:15px;
+      font-size:20px;
+      margin-bottom:10px;
       color:#222;
     }
 
     .avaliacao{
       color:#ffb400;
-      font-size:18px;
-      margin-bottom:20px;
+      font-size:15px;
+      margin-bottom:10px;
     }
 
     .descricao{
       line-height:1.7;
       color:#555;
-      margin-bottom:20px;
+      margin-bottom:18px;
     }
 
     .preco{
-      font-size:30px;
+      font-size:25px;
       color:#2e8b57;
       font-weight:bold;
-      margin-bottom:25px;
+      margin-bottom:20px;
     }
 
     .quantidade-area{
-      margin-bottom:20px;
+      margin-bottom:12px;
     }
 
     .quantidade-area label{
       display:block;
-      margin-bottom:10px;
+      margin-bottom:8px;
       font-weight:bold;
     }
 
     .quantidade{
-      width:80px;
-      padding:12px;
-      border-radius:10px;
+      width:60px;
+      padding:10px;
+      border-radius:8px;
       border:1px solid #ccc;
-      font-size:15px;
+      font-size:12px;
     }
 
     /* BOTÕES */
     .botoes{
       display:flex;
-      gap:15px;
+      gap:10px;
       flex-wrap:wrap;
-      margin-bottom:20px;
+      margin-bottom:15px;
     }
 
     .btn{
       border:none;
-      padding:15px 24px;
-      border-radius:12px;
-      font-size:16px;
+      padding:10px 20px;
+      border-radius:10px;
+      font-size:10px;
       cursor:pointer;
       transition:0.3s;
       font-weight:bold;
@@ -193,14 +193,14 @@
     .beneficios{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:15px;
-      margin-top:15px;
+      gap:8px;
+      margin-top:8px;
     }
 
     .beneficio{
       background:#f8f9fc;
-      padding:15px;
-      border-radius:12px;
+      padding:8px;
+      border-radius:8px;
       border:1px solid #eee;
     }
 
@@ -208,24 +208,25 @@
       display:block;
       margin-bottom:5px;
       color:#444;
+      font-size:14px;
     }
 
     .beneficio p{
-      font-size:12px;
+      font-size:11px;
       color:#666;
     }
 
     .tamanhos{
-    margin-bottom:25px;
+    margin-bottom:15px;
 }
 
 .btn-tamanho{
-    padding:10px 18px;
+    padding:7px 10px;
     margin-right:10px;
     border:2px solid #0f9c9c;
     background:white;
     color:#0f9c9c;
-    border-radius:8px;
+    border-radius:7px;
     cursor:pointer;
     font-weight:bold;
 }
@@ -276,3 +277,6 @@
         grid-template-columns:1fr;
       }
     }
+
+
+    

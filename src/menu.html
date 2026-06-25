@@ -85,10 +85,12 @@
 
   <div class="img-area">
 
+    <a href="produto.html">
     <img class="produto-img"
-     src="../marca/areia_gato/katibom/3kg_tradicional.jpg"
-     alt=""
-     onclick="abrirProduto()">
+         src="../marca/areia_gato/katibom/3kg_tradicional.jpg"
+         alt="">
+</a>
+          <button class="btn-cart">
       <i class="bi bi-cart"></i>
     </button>
 
@@ -127,7 +129,8 @@
   </div>
 
   <p class="brand">KatiBom</p>
-  <h3 onclick="abrirProduto()">Areia para gato tradicional.</h3>
+  <a href="produto.html">
+  <h3 >Areia para gato tradicional.</h3></a>
   <div class="price">R$ 32,99</div>
 
 </div>
@@ -1487,18 +1490,7 @@ function movePlanos(direction){
 
 </script>
 
-<script>
-  const id = new URLSearchParams(window.location.search).get('id');
 
-  const produtos = {
-  1: {
-    nome: "Areia para gato tradicional",
-    preco: "32,99",
-    imagem: "../marca/areia_gato/katibom/3kg_tradicional.jpg"
-  },
-  
-};
-</script>
 
 </body>
 </html>

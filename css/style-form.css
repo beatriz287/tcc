@@ -50,8 +50,8 @@ textarea{
 
 .box{
     width: 100%;
-    max-width: 1200px;
-    min-height: 700px;
+    max-width: 1100px;
+    min-height: 600px;
     background: white;
     border-radius: 20px;
     position: relative;
