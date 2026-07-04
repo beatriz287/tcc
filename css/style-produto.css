@@ -70,6 +70,7 @@
     display:flex;
     flex-wrap:wrap;
     box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    position: relative;
 }
 
     /* IMAGEM */
@@ -278,5 +279,35 @@
       }
     }
 
+.voltar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
-    
+    width: 42px;
+    height: 42px;
+
+    background: #ffffff; /* verde do seu topo */
+    color: #000000;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    transition: 0.3s ease;
+
+    z-index: 10;
+}
+
+.voltar:hover{
+    background: #F7A61B; /* laranja do seu site */
+    transform: rotate(90deg) scale(1.1);
+}
