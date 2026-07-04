@@ -626,7 +626,8 @@
 }
 
 .custom-arrow.left {
-  left: -20px;
+  left: -23px;
+  top: 50%;
 }
 
 .custom-arrow.right {
@@ -869,7 +870,7 @@
 
     border-radius: 50%;
 
-    border: none;
+    border: 1px solid #ccc;
 
     background: white;
 
@@ -879,7 +880,7 @@
 
     justify-content: center;
 
-    font-size: 28px;
+    font-size: 20px;
 
     color: #666;
 
@@ -1175,3 +1176,89 @@ display:flex;
 
 }
 
+
+/* SECTION igual ao resto do site */
+.custom-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* TÍTULO */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.custom-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* SEU CARROSSEL BASE */
+.custom-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* mantém o mesmo padrão do seu CSS */
+.custom-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* TRACK */
+.custom-track.cat-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+/* CARD CIRCULAR */
+.cat-card {
+    flex: 0 0 110px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.cat-circle {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.cat-circle img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.cat-card p {
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+/* hover */
+.cat-card:hover .cat-circle {
+    border: 2px solid #7bbf3f;
+    transform: scale(1.05);
+}
+
+.custom-arrow {
+
+  font-size: 13px;
+}
+
+.custom-carousel .custom-arrow {
+  top: 35% !important;
+}
