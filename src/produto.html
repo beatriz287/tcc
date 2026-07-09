@@ -41,7 +41,7 @@
     <div class="produto-imagem">
       <img 
     id="fotoProduto"
-    src="../marca/areia_gato/katibom/3kg_tradicional.jpg" 
+    src="../marcas/areia gato/gattino/4kg_perfumada.png" 
     alt="Ração Premium para Cachorro"
 >
     </div>
@@ -51,11 +51,11 @@
       
 
       <div class="categoria">
-        🐶 Ração Premium
+        🐶 🐱Areia perfumada
       </div>
 
       <h1 class="produto-titulo">
-        Ração Golden Premium para Cães Adultos
+        Areia para gato perfumada
       </h1>
 
       <div class="avaliacao">
@@ -63,28 +63,27 @@
       </div>
 
       <p class="descricao">
-        Alimentação completa e balanceada para cães adultos.
-        Rica em proteínas, vitaminas e minerais essenciais para
-        garantir mais energia, saúde e qualidade de vida para o
-        seu pet.
+        Areia higiênica perfumada para gatos.
+        Com alta absorção e eficiente controle de odores,
+        mantém a caixa de areia limpa e o ambiente mais agradável. 
+        Sua fragrância suave proporciona frescor por mais tempo, 
+        garantindo mais conforto e praticidade para você e o seu pet.
+
       </p>
 
       <div class="preco" id="precoProduto">
-  R$ 129,90
+  R$ 42,99
 </div>
 
       <div class="tamanhos">
   <label><strong>Tamanho:</strong></label>
 
   <button class="btn-tamanho ativo"
-          onclick="trocarProduto('3kg')">
-    3kg
+          onclick="trocarProduto('4kg')">
+    4kg
   </button>
 
-  <button class="btn-tamanho"
-          onclick="trocarProduto('6kg')">
-    6kg
-  </button>
+
 
  
 </div>
@@ -129,7 +128,7 @@
 
         <div class="beneficio">
           <strong>🐾 Produto Premium</strong>
-          <p>Alta qualidade nutricional</p>
+          <p>Alta qualidade</p>
         </div>
 
         <div class="beneficio">
@@ -148,7 +147,100 @@
 
   </div>
 <!-- PRODUTO -->
+<footer class="footer">
 
+    <div class="footer-top"></div>
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col empresa">
+
+            <h2>Garras <span>& Patas</span></h2>
+
+            <p>
+                Tudo para o seu pet em um só lugar. Encontre
+                rações, brinquedos, acessórios e muito mais
+                para cães e gatos.
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-col">
+
+            <h3>Institucional</h3>
+
+            <ul>
+
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-col">
+
+            <h3>Categorias</h3>
+
+            <ul>
+
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Rações</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Acessórios</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+
+            <h3>Atendimento</h3>
+
+            <p>📞 (11) 99999-9999</p>
+
+            <p>📧 contato@carrarasepatas.com</p>
+
+            <p>📍 Rua das Flores, 123</p>
+
+            <p>Segunda a Sexta</p>
+
+            <p>08:00 às 18:00</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        <p>
+            © 2025 Garras & Patas - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido por <strong>Seu Nome</strong> | TCC - Desenvolvimento Web
+        </p>
+
+    </div>
+
+</footer>
 
   
 <script>
@@ -162,15 +254,11 @@ function trocarProduto(tamanho){
 
     event.target.classList.add('ativo');
 
-    if(tamanho === "3kg"){
-        foto.src = "../marca/areia_gato/katibom/3kg_tradicional.jpg";
-        precoUnitario = 129.90;
+    if(tamanho === "4kg"){
+        foto.src = "../marcas/areia gato/gattino/4kg_perfumada.png";
+        precoUnitario = 42,99;
     }
 
-    if(tamanho === "6kg"){
-        foto.src = "../marca/areia_gato/katibom/6kg_tradicional.jpg";
-        precoUnitario = 179.90;
-    }
 
     atualizarPreco();
 }
@@ -179,7 +267,7 @@ function trocarProduto(tamanho){
 
 <script>
 
-let precoUnitario = 129.90;
+let precoUnitario = 42.99;
 
 function atualizarPreco() {
     const quantidade = document.getElementById("quantidade").value;
@@ -189,6 +277,43 @@ function atualizarPreco() {
         "R$ " + total.toFixed(2).replace(".", ",");
 }
 
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.querySelector(".cat-track");
+  const leftBtn = document.querySelector(".custom-arrow.left");
+  const rightBtn = document.querySelector(".custom-arrow.right");
+
+  if (!track || !leftBtn || !rightBtn) return;
+
+  let position = 0;
+  const itemWidth = 130;
+
+  rightBtn.addEventListener("click", () => {
+    const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
+
+    position -= itemWidth;
+
+    if (Math.abs(position) > maxScroll) {
+      position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  });
+
+  leftBtn.addEventListener("click", () => {
+    position += itemWidth;
+
+    if (position > 0) {
+      position = -(track.scrollWidth - track.parentElement.offsetWidth);
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  });
+
+});
 </script>
 </body>
 </html>

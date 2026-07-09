@@ -63,5 +63,138 @@
             </form>
         </div>
     </div>
+
+    <footer class="footer">
+
+    <div class="footer-top"></div>
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col empresa">
+
+            <h2>Garras <span>& Patas</span></h2>
+
+            <p>
+                Tudo para o seu pet em um só lugar. Encontre
+                rações, brinquedos, acessórios e muito mais
+                para cães e gatos.
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-col">
+
+            <h3>Institucional</h3>
+
+            <ul>
+
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-col">
+
+            <h3>Categorias</h3>
+
+            <ul>
+
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Rações</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Acessórios</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+
+            <h3>Atendimento</h3>
+
+            <p>📞 (11) 99999-9999</p>
+
+            <p>📧 contato@carrarasepatas.com</p>
+
+            <p>📍 Rua das Flores, 123</p>
+
+            <p>Segunda a Sexta</p>
+
+            <p>08:00 às 18:00</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        <p>
+            © 2025 Garras & Patas - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido por <strong>Seu Nome</strong> | TCC - Desenvolvimento Web
+        </p>
+
+    </div>
+
+</footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.querySelector(".cat-track");
+  const leftBtn = document.querySelector(".custom-arrow.left");
+  const rightBtn = document.querySelector(".custom-arrow.right");
+
+  if (!track || !leftBtn || !rightBtn) return;
+
+  let position = 0;
+  const itemWidth = 130;
+
+  rightBtn.addEventListener("click", () => {
+    const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
+
+    position -= itemWidth;
+
+    if (Math.abs(position) > maxScroll) {
+      position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  });
+
+  leftBtn.addEventListener("click", () => {
+    position += itemWidth;
+
+    if (position > 0) {
+      position = -(track.scrollWidth - track.parentElement.offsetWidth);
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  });
+
+});
+</script>
 </body>
 </html>
+
