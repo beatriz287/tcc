@@ -46,7 +46,92 @@
         <li>Blog</li>
         <li>Atendimento</li>
     </ul>
-</div>  
+</div> 
+<!-- MENU LATERAL -->
+<div id="menuLateral" class="menu-lateral">
+
+    <div class="topo-menu">
+         <h2>Boas-vindas à Garra & Patas</h2>
+         
+
+        
+        <span class="fechar" onclick="fecharMenu()">
+            <i class="bi bi-x-lg"></i>
+        </span>
+
+        
+    </div>
+
+    <ul>
+      <p>Aqui você encontra tudo para seu melhor amigo!🐶🐱</p>
+        <li>
+            <i class=""></i>
+            Cachorros
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-heart-fill"></i>
+            Gatos
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-heart-fill"></i>
+            Pássaros
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-heart-fill"></i>
+            Peixes
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-heart-fill"></i>
+            Outros Pets
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-house"></i>
+            Casa
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-flower1"></i>
+            Jardim
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="bi bi-droplet"></i>
+            Piscina
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+    </ul>
+
+    <div class="menu-rodape">
+
+    <div class="item-rodape">
+        Atendimento
+        <i class="bi bi-chevron-right"></i>
+    </div>
+
+    <div class="item-rodape">
+        Política de Privacidade
+        <i class="bi bi-chevron-right"></i>
+    </div>
+
+</div>
+
+</div>
+
+<!-- FUNDO ESCURO -->
+<div id="overlay" class="overlay" onclick="fecharMenu()"></div> 
 
 <div class="carousel">
   <div class="carousel-track">
@@ -1784,5 +1869,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
+<script>
+
+const menu = document.getElementById("menuLateral");
+const overlay = document.getElementById("overlay");
+
+function abrirMenu(){
+
+    menu.classList.add("ativo");
+    overlay.classList.add("ativo");
+
+}
+
+function fecharMenu(){
+
+    menu.classList.remove("ativo");
+    overlay.classList.remove("ativo");
+
+}
+
+document.querySelector(".todos").addEventListener("click", abrirMenu);
+
+</script>
+
 </body>
 </html>
