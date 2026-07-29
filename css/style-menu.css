@@ -242,14 +242,15 @@
 
 }
 
-.menu-lateral a{
+.menu-lateral li a{
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
 
-    color:#00a0a0;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
+.menu-lateral li:hover a{
+    color: #0f9c9c;
 }
 
 .menu-lateral ul{
@@ -279,9 +280,11 @@
 }
 
 .menu-lateral li:hover{
-
     color:#0f9c9c;
+}
 
+.menu-lateral li:hover i{
+    color:#0f9c9c;
 }
 
 .menu-lateral li i:first-child{
@@ -327,6 +330,7 @@
     flex-direction: column;
 }
 
+
 .menu-rodape{
     margin-top: auto; /* Empurra para o final */
 
@@ -339,29 +343,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 15px 0;
-
     cursor: pointer;
-
     color: #333;
-
     transition: .3s;
 }
 
+.item-rodape a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    transition: .3s;
+}
+
+/* Quando passar o mouse no item inteiro */
 .item-rodape:hover{
+    color: #0f9c9c;
+}
+
+/* Garante que o link também fique verde */
+.item-rodape:hover a{
+    color: #0f9c9c;
+}
+
+/* Faz a seta também ficar verde */
+.item-rodape:hover i{
     color: #0f9c9c;
 }
 
 .item-rodape i{
     font-size: 14px;
-}
-
-
-/* A barra do menu será a referência para o mega menu */
-.menu-area {
-    position: relative;
-    width: 100%;
+    transition: .3s;
 }
 
 /* ===================== MEGA MENU ===================== */
