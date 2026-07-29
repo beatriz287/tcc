@@ -8,6 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <link href="../css/style-menu.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -33,20 +34,160 @@
     </div>
 </div>
 
-<div class="menu">
-    <ul>
-        <li class="todos">
-        <i class="bi bi-list-ul"></i>
-        Todos
-        </li>
-        <li>Cachorros</li>
-        <li>Gatos</li>
-        <li>Promoções</li>
-        <li>Lojas</li>
-        <li>Blog</li>
-        <li>Atendimento</li>
-    </ul>
-</div> 
+<div class="menu-area">
+
+    <div class="menu">
+        <ul>
+            <li class="todos">
+                <i class="bi bi-list-ul"></i>
+                Todos
+            </li>
+
+            <li class="menu-item">
+                <a href="#" id="btnCachorros">Cachorros</a>
+            </li>
+
+            <li class="menu-item">
+    <a href="#" id="btnGatos">Gatos</a>
+</li>
+            <li>Promoções</li>
+            <li>Lojas</li>
+            <li>Blog</li>
+            <li>Atendimento</li>
+        </ul>
+    </div>
+
+    <!-- ================= MEGA MENU ================= -->
+
+    <div id="megaMenu" class="mega-menu">
+
+        <div class="mega-container">
+
+           <button class="fechar-mega" id="fecharMega">
+        ✕ Fechar
+    </button>
+            <div class="mega-imagem">
+                <img src="../imagens/cachorro_menu.png" alt="Cachorro">
+            </div>
+
+          <div class="mega-categorias">
+    <a href="#" class="categoria ativa" data-categoria="racao">Ração</a>
+    <a href="#" class="categoria" data-categoria="petiscos">Petiscos</a>
+    <a href="#" class="categoria" data-categoria="roupas">Roupas e Acessórios</a>
+    <a href="#" class="categoria" data-categoria="coleiras">Coleiras, Guias e Peitorais</a>
+    <a href="#" class="categoria" data-categoria="camas">Caminhas e Casinhas</a>
+    <a href="#" class="categoria" data-categoria="adestramento">Proteção e Adestramento</a>
+    <a href="#" class="categoria" data-categoria="alimentacao">Acessórios para Alimentação</a>
+    <a href="#" class="categoria" data-categoria="medicamentos">Medicamentos</a>
+    <a href="#" class="categoria" data-categoria="higiene">Higiene e Limpeza</a>
+    <a href="#" class="categoria" data-categoria="transporte">Transporte</a>
+    <a href="#" class="categoria" data-categoria="brinquedos">Brinquedos</a>
+</div>
+
+            <div class="mega-subcategorias" id="megaSubcategorias">
+                <h3>Ração🐾</h3>
+
+                <a href="racao-seca.html">Ração Seca</a>
+                <a href="racao-umida.html">Ração Úmida</a>
+                <a href="racao-natural.html">Ração Natural</a>
+                <a href="racao-medicamentosa.html">Ração Medicamentosa</a>
+                <a href="racao-premium.html">Ração Premium</a>
+                <a href="racao-super-premium.html">Ração Super Premium</a>
+                <a href="racao-filhotes.html">Filhotes</a>
+                <a href="racao-adultos.html">Adultos</a>
+                <a href="racao-idosos.html">Idosos</a>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- ================= MEGA MENU GATOS ================= -->
+
+<div id="megaMenuGatos" class="mega-menu">
+
+    <div class="mega-container">
+
+      <button class="fechar-mega" id="fecharMegaGatos">
+        ✕ Fechar
+    </button>
+        <div class="mega-imagemGatos">
+            <img src="../imagens/gato_menu.png" alt="Gato">
+        </div>
+
+        <div class="mega-categorias mega-categorias-gatos">
+
+            <a href="#" class="categoria ativa" data-categoria="racao-gatos">
+                Ração
+            </a>
+
+            <a href="#" class="categoria" data-categoria="petiscos-gatos">
+                Petiscos
+            </a>
+
+            <a href="#" class="categoria" data-categoria="areias">
+                Areias e Banheiros
+            </a>
+
+            <a href="#" class="categoria" data-categoria="arranhadores">
+                Arranhadores
+            </a>
+
+            <a href="#" class="categoria" data-categoria="camas-gatos">
+                Caminhas e Casinhas
+            </a>
+
+            <a href="#" class="categoria" data-categoria="coleiras-gatos">
+                Coleiras e Peitorais
+            </a>
+
+            <a href="#" class="categoria" data-categoria="alimentacao-gatos">
+                Acessórios para Alimentação
+            </a>
+
+            <a href="#" class="categoria" data-categoria="medicamentos-gatos">
+                Medicamentos
+            </a>
+
+            <a href="#" class="categoria" data-categoria="higiene-gatos">
+                Higiene e Limpeza
+            </a>
+
+            <a href="#" class="categoria" data-categoria="transporte-gatos">
+                Transporte
+            </a>
+
+            <a href="#" class="categoria" data-categoria="brinquedos-gatos">
+                Brinquedos
+            </a>
+
+        </div>
+
+        <div class="mega-subcategorias" id="megaSubcategoriasGatos">
+
+            <h3>Ração para Gatos 🐾</h3>
+
+            <a href="racao-seca-gatos.html">Ração Seca</a>
+            <a href="racao-umida-gatos.html">Ração Úmida</a>
+            <a href="racao-natural-gatos.html">Ração Natural</a>
+            <a href="racao-medicamentosa-gatos.html">Ração Medicamentosa</a>
+            <a href="racao-premium-gatos.html">Ração Premium</a>
+            <a href="racao-super-premium-gatos.html">Ração Super Premium</a>
+            <a href="racao-filhotes-gatos.html">Filhotes</a>
+            <a href="racao-adultos-gatos.html">Adultos</a>
+            <a href="racao-idosos-gatos.html">Idosos</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
 <!-- MENU LATERAL -->
 <div id="menuLateral" class="menu-lateral">
 
@@ -65,52 +206,47 @@
     <ul>
       <p>Aqui você encontra tudo para seu melhor amigo!🐶🐱</p>
         <li>
-            <i class=""></i>
+            <i class="fa-solid fa-dog"></i>
             Cachorros
             <i class="bi bi-chevron-right"></i>
         </li>
 
         <li>
-            <i class="bi bi-heart-fill"></i>
+            <i class="fa-solid fa-cat"></i>
             Gatos
             <i class="bi bi-chevron-right"></i>
         </li>
 
         <li>
-            <i class="bi bi-heart-fill"></i>
-            Pássaros
+            <i class="fa-solid fa-bowl-food"></i>
+            Rações
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-bone"></i>
+            Brinquedos
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-cookie"></i>
+            Petiscos
+            <i class="bi bi-chevron-right"></i>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-house"></i>
+            Sobre nós
             <i class="bi bi-chevron-right"></i>
         </li>
 
         <li>
             <i class="bi bi-heart-fill"></i>
-            Peixes
+            Blog
             <i class="bi bi-chevron-right"></i>
         </li>
 
-        <li>
-            <i class="bi bi-heart-fill"></i>
-            Outros Pets
-            <i class="bi bi-chevron-right"></i>
-        </li>
-
-        <li>
-            <i class="bi bi-house"></i>
-            Casa
-            <i class="bi bi-chevron-right"></i>
-        </li>
-
-        <li>
-            <i class="bi bi-flower1"></i>
-            Jardim
-            <i class="bi bi-chevron-right"></i>
-        </li>
-
-        <li>
-            <i class="bi bi-droplet"></i>
-            Piscina
-            <i class="bi bi-chevron-right"></i>
-        </li>
 
     </ul>
 
@@ -1891,6 +2027,394 @@ function fecharMenu(){
 
 document.querySelector(".todos").addEventListener("click", abrirMenu);
 
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnCachorros = document.getElementById("btnCachorros");
+    const btnGatos = document.getElementById("btnGatos");
+
+    const megaMenuCachorros = document.getElementById("megaMenu");
+    const megaMenuGatos = document.getElementById("megaMenuGatos");
+
+    btnCachorros.addEventListener("click", function (evento) {
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        megaMenuGatos.classList.remove("ativo");
+        megaMenuCachorros.classList.toggle("ativo");
+    });
+
+    btnGatos.addEventListener("click", function (evento) {
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        megaMenuCachorros.classList.remove("ativo");
+        megaMenuGatos.classList.toggle("ativo");
+    });
+
+    megaMenuCachorros.addEventListener("click", function (evento) {
+        evento.stopPropagation();
+    });
+
+    megaMenuGatos.addEventListener("click", function (evento) {
+        evento.stopPropagation();
+    });
+
+    document.addEventListener("click", function () {
+        megaMenuCachorros.classList.remove("ativo");
+        megaMenuGatos.classList.remove("ativo");
+    });
+
+});
+
+document.getElementById("fecharMega").addEventListener("click", function () {
+    megaMenu.classList.remove("ativo");
+});
+
+document.getElementById("fecharMegaGatos").addEventListener("click", function () {
+    megaMenuGatos.classList.remove("ativo");
+});
+</script>
+
+<script>
+const categoriasMenu = document.querySelectorAll(".mega-categorias .categoria");
+const areaSubcategorias = document.getElementById("megaSubcategorias");
+
+const subcategorias = {
+    racao: {
+        titulo: "Ração🐾",
+        itens: [
+            ["Ração Seca", "racao-seca.html"],
+            ["Ração Úmida", "racao-umida.html"],
+            ["Ração Natural", "racao-natural.html"],
+            ["Ração Medicamentosa", "racao-medicamentosa.html"],
+            ["Ração Premium", "racao-premium.html"],
+            ["Ração Super Premium", "racao-super-premium.html"],
+            ["Filhotes", "racao-filhotes.html"],
+            ["Adultos", "racao-adultos.html"],
+            ["Idosos", "racao-idosos.html"]
+        ]
+    },
+
+    petiscos: {
+        titulo: "Petiscos🐾",
+        itens: [
+            ["Bifinhos", "bifinhos.html"],
+            ["Ossinhos", "ossinhos.html"],
+            ["Biscoitos", "biscoitos.html"],
+            ["Petiscos Naturais", "petiscos-naturais.html"],
+            ["Petiscos para Filhotes", "petiscos-filhotes.html"]
+        ]
+    },
+
+    roupas: {
+        titulo: "Roupas e Acessórios🐾",
+        itens: [
+            ["Roupas", "roupas.html"],
+            ["Camisetas", "camisetas.html"],
+            ["Vestidos", "vestidos.html"],
+            ["Acessórios", "acessorios.html"],
+            ["Bandanas", "bandanas.html"]
+        ]
+    },
+
+    coleiras: {
+        titulo: "Coleiras, Guias e Peitorais🐾",
+        itens: [
+            ["Coleiras", "coleiras.html"],
+            ["Guias", "guias.html"],
+            ["Peitorais", "peitorais.html"],
+            ["Enforcadores", "enforcadores.html"],
+            ["Identificadores", "identificadores.html"]
+        ]
+    },
+
+    camas: {
+        titulo: "Caminhas e Casinhas🐾",
+        itens: [
+            ["Caminhas", "caminhas.html"],
+            ["Casinhas", "casinhas.html"],
+            ["Colchonetes", "colchonetes.html"],
+            ["Cobertores", "cobertores.html"],
+            ["Almofadas", "almofadas.html"]
+        ]
+    },
+
+    adestramento: {
+        titulo: "Proteção e Adestramento🐾",
+        itens: [
+            ["Tapetes Higiênicos", "tapetes-higienicos.html"],
+            ["Educadores", "educadores.html"],
+            ["Repelentes", "repelentes.html"],
+            ["Focinheiras", "focinheiras.html"],
+            ["Adestradores", "adestradores.html"]
+        ]
+    },
+
+    alimentacao: {
+        titulo: "Acessórios para Alimentação🐾",
+        itens: [
+            ["Comedouros", "comedouros.html"],
+            ["Bebedouros", "bebedouros.html"],
+            ["Potes", "potes.html"],
+            ["Fontes", "fontes.html"],
+            ["Tapetes para Comedouro", "tapetes-comedouro.html"]
+        ]
+    },
+
+    medicamentos: {
+        titulo: "Medicamentos🐾",
+        itens: [
+            ["Antipulgas", "antipulgas.html"],
+            ["Vermífugos", "vermifugos.html"],
+            ["Vitaminas", "vitaminas.html"],
+            ["Suplementos", "suplementos.html"],
+            ["Cuidados com a Saúde", "cuidados-saude.html"]
+        ]
+    },
+
+    higiene: {
+        titulo: "Higiene e Limpeza🐾",
+        itens: [
+            ["Shampoos", "shampoos.html"],
+            ["Condicionadores", "condicionadores.html"],
+            ["Escovas", "escovas.html"],
+            ["Perfumes", "perfumes.html"],
+            ["Limpeza de Ouvidos", "limpeza-ouvidos.html"]
+        ]
+    },
+
+    transporte: {
+        titulo: "Transporte🐾",
+        itens: [
+            ["Caixas de Transporte", "caixas-transporte.html"],
+            ["Bolsas de Transporte", "bolsas-transporte.html"],
+            ["Cintos de Segurança", "cintos-seguranca.html"],
+            ["Assentos", "assentos.html"],
+            ["Carrinhos", "carrinhos.html"]
+        ]
+    },
+
+    brinquedos: {
+        titulo: "Brinquedos🐾",
+        itens: [
+            ["Bolinhas", "bolinhas.html"],
+            ["Mordedores", "mordedores.html"],
+            ["Pelúcias", "pelucias.html"],
+            ["Cordas", "cordas.html"],
+            ["Brinquedos Interativos", "brinquedos-interativos.html"]
+        ]
+    }
+};
+
+categoriasMenu.forEach(function(categoria) {
+    categoria.addEventListener("click", function(evento) {
+        evento.preventDefault();
+
+        const nomeCategoria = categoria.dataset.categoria;
+        const dadosCategoria = subcategorias[nomeCategoria];
+
+        if (!dadosCategoria) {
+            return;
+        }
+
+        categoriasMenu.forEach(function(item) {
+            item.classList.remove("ativa");
+        });
+
+        categoria.classList.add("ativa");
+
+        areaSubcategorias.innerHTML = "";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = dadosCategoria.titulo;
+        areaSubcategorias.appendChild(titulo);
+
+        dadosCategoria.itens.forEach(function(item) {
+            const link = document.createElement("a");
+
+            link.textContent = item[0];
+            link.href = item[1];
+
+            areaSubcategorias.appendChild(link);
+        });
+    });
+});
+</script>
+
+<script>
+const categoriasGatos = document.querySelectorAll(
+    ".mega-categorias-gatos .categoria"
+);
+
+const areaSubcategoriasGatos = document.getElementById(
+    "megaSubcategoriasGatos"
+);
+
+const subcategoriasGatos = {
+    "racao-gatos": {
+        titulo: "Ração para Gatos 🐾",
+        itens: [
+            ["Ração Seca", "racao-seca-gatos.html"],
+            ["Ração Úmida", "racao-umida-gatos.html"],
+            ["Ração Natural", "racao-natural-gatos.html"],
+            ["Ração Medicamentosa", "racao-medicamentosa-gatos.html"],
+            ["Ração Premium", "racao-premium-gatos.html"],
+            ["Ração Super Premium", "racao-super-premium-gatos.html"],
+            ["Filhotes", "racao-filhotes-gatos.html"],
+            ["Adultos", "racao-adultos-gatos.html"],
+            ["Idosos", "racao-idosos-gatos.html"]
+        ]
+    },
+
+    "petiscos-gatos": {
+        titulo: "Petiscos para Gatos 🐾",
+        itens: [
+            ["Petiscos Crocantes", "petiscos-crocantes-gatos.html"],
+            ["Petiscos Naturais", "petiscos-naturais-gatos.html"],
+            ["Petiscos Cremosos", "petiscos-cremosos-gatos.html"],
+            ["Biscoitos", "biscoitos-gatos.html"],
+            ["Petiscos para Filhotes", "petiscos-filhotes-gatos.html"]
+        ]
+    },
+
+    areias: {
+        titulo: "Areias e Banheiros 🐾",
+        itens: [
+            ["Areia Higiênica", "areia-higienica.html"],
+            ["Sílica", "silica-gatos.html"],
+            ["Granulado de Madeira", "granulado-madeira.html"],
+            ["Caixas de Areia", "caixas-de-areia.html"],
+            ["Pás Higiênicas", "pas-higienicas.html"]
+        ]
+    },
+
+    arranhadores: {
+        titulo: "Arranhadores 🐾",
+        itens: [
+            ["Arranhadores de Chão", "arranhadores-chao.html"],
+            ["Arranhadores de Parede", "arranhadores-parede.html"],
+            ["Arranhadores com Torre", "arranhadores-torre.html"],
+            ["Arranhadores de Papelão", "arranhadores-papelao.html"],
+            ["Protetores de Móveis", "protetores-moveis.html"]
+        ]
+    },
+
+    "camas-gatos": {
+        titulo: "Caminhas e Casinhas 🐾",
+        itens: [
+            ["Caminhas", "caminhas-gatos.html"],
+            ["Casinhas", "casinhas-gatos.html"],
+            ["Tocas", "tocas-gatos.html"],
+            ["Almofadas", "almofadas-gatos.html"],
+            ["Redes", "redes-gatos.html"]
+        ]
+    },
+
+    "coleiras-gatos": {
+        titulo: "Coleiras e Peitorais 🐾",
+        itens: [
+            ["Coleiras", "coleiras-gatos.html"],
+            ["Peitorais", "peitorais-gatos.html"],
+            ["Guias", "guias-gatos.html"],
+            ["Plaquinhas de Identificação", "plaquinhas-gatos.html"],
+            ["Coleiras Antipulgas", "coleiras-antipulgas-gatos.html"]
+        ]
+    },
+
+    "alimentacao-gatos": {
+        titulo: "Acessórios para Alimentação 🐾",
+        itens: [
+            ["Comedouros", "comedouros-gatos.html"],
+            ["Bebedouros", "bebedouros-gatos.html"],
+            ["Fontes de Água", "fontes-gatos.html"],
+            ["Potes", "potes-gatos.html"],
+            ["Tapetes para Comedouro", "tapetes-comedouro-gatos.html"]
+        ]
+    },
+
+    "medicamentos-gatos": {
+        titulo: "Medicamentos 🐾",
+        itens: [
+            ["Antipulgas", "antipulgas-gatos.html"],
+            ["Vermífugos", "vermifugos-gatos.html"],
+            ["Vitaminas", "vitaminas-gatos.html"],
+            ["Suplementos", "suplementos-gatos.html"],
+            ["Cuidados com a Saúde", "cuidados-saude-gatos.html"]
+        ]
+    },
+
+    "higiene-gatos": {
+        titulo: "Higiene e Limpeza 🐾",
+        itens: [
+            ["Shampoos", "shampoos-gatos.html"],
+            ["Escovas", "escovas-gatos.html"],
+            ["Cortadores de Unha", "cortadores-unha-gatos.html"],
+            ["Limpeza de Ouvidos", "limpeza-ouvidos-gatos.html"],
+            ["Eliminadores de Odores", "eliminadores-odores.html"]
+        ]
+    },
+
+    "transporte-gatos": {
+        titulo: "Transporte 🐾",
+        itens: [
+            ["Caixas de Transporte", "caixas-transporte-gatos.html"],
+            ["Bolsas de Transporte", "bolsas-transporte-gatos.html"],
+            ["Mochilas", "mochilas-gatos.html"],
+            ["Cintos de Segurança", "cintos-seguranca-gatos.html"],
+            ["Carrinhos", "carrinhos-gatos.html"]
+        ]
+    },
+
+    "brinquedos-gatos": {
+        titulo: "Brinquedos 🐾",
+        itens: [
+            ["Bolinhas", "bolinhas-gatos.html"],
+            ["Varinhas", "varinhas-gatos.html"],
+            ["Pelúcias", "pelucias-gatos.html"],
+            ["Brinquedos com Catnip", "catnip.html"],
+            ["Brinquedos Interativos", "brinquedos-interativos-gatos.html"]
+        ]
+    }
+};
+
+categoriasGatos.forEach(function(categoria) {
+    categoria.addEventListener("click", function(evento) {
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        const nomeCategoria = categoria.dataset.categoria;
+        const dadosCategoria = subcategoriasGatos[nomeCategoria];
+
+        if (!dadosCategoria) {
+            return;
+        }
+
+        categoriasGatos.forEach(function(item) {
+            item.classList.remove("ativa");
+        });
+
+        categoria.classList.add("ativa");
+
+        areaSubcategoriasGatos.innerHTML = "";
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = dadosCategoria.titulo;
+
+        areaSubcategoriasGatos.appendChild(titulo);
+
+        dadosCategoria.itens.forEach(function(item) {
+            const link = document.createElement("a");
+
+            link.textContent = item[0];
+            link.href = item[1];
+
+            areaSubcategoriasGatos.appendChild(link);
+        });
+    });
+});
 </script>
 
 </body>

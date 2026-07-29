@@ -358,6 +358,245 @@
 }
 
 
+/* A barra do menu será a referência para o mega menu */
+.menu-area {
+    position: relative;
+    width: 100%;
+}
+
+/* ===================== MEGA MENU ===================== */
+.fechar-mega{
+    position:absolute;
+    top:20px;
+    left: 500px;
+
+    background:none;
+    border:none;
+
+    color:#9b9b9b;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+    z-index:1000;
+}
+
+.fechar-mega:hover{
+    color:#555;
+}
+.menu-item a{
+    color: #333;           /* Cor preta (ou a que você preferir) */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    background: white;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 0 0 18px 18px;
+
+    display: none;
+    z-index: 999;
+
+    /* Não deixa o conteúdo cortado */
+    overflow: hidden;
+}
+
+.mega-menu.ativo {
+    display: block;
+}
+
+.mega-container {
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+
+    /* Remova a altura fixa */
+    height: auto;
+    min-height: 430px;
+
+    display: grid;
+    grid-template-columns: 24% 28% 46%;
+    align-items: stretch;
+}
+
+
+
+/* ===================== IMAGEM ===================== */
+
+.mega-imagem {
+    background: white;
+    position: relative;
+    min-width: 0;
+    padding: 0;
+
+    /* Deixa a imagem sair da coluna para o lado esquerdo */
+    overflow: visible;
+    z-index: 1;
+}
+
+.mega-imagem img {
+    display: block;
+    position: absolute;
+
+    width: 210%;
+    max-width: none;
+    height: auto;
+
+    right: -100px;   /* aproxima da coluna azul */
+    bottom: -3px;
+
+    object-fit: contain;
+}
+
+/* Mantém a coluna azul na frente da imagem */
+.mega-categorias {
+    position: relative;
+    z-index: 2;
+}
+
+.mega-imagemGatos {
+    background: white;
+    position: relative;
+    min-width: 0;
+    padding: 0;
+
+    /* Deixa a imagem sair da coluna para o lado esquerdo */
+    overflow: visible;
+    z-index: 1;
+}
+
+.mega-imagemGatos img {
+    display: block;
+    position: absolute;
+
+    width: 210%;
+    max-width: none;
+    height: auto;
+
+    right: -50px;   /* aproxima da coluna azul */
+    bottom: -3px;
+
+    object-fit: contain;
+}
+
+/* ===================== CATEGORIAS ===================== */
+
+.mega-categorias {
+    background: #11999c;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Espaço em cima e embaixo para não cortar textos */
+    padding: 16px 0;
+}
+
+.mega-categorias a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    padding: 12px 24px;
+
+    transition: 0.2s;
+}
+
+.mega-categorias a:hover,
+.mega-categorias a.ativa {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===================== SUBCATEGORIAS ===================== */
+
+.mega-subcategorias {
+    background: white;
+    padding: 28px 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.mega-subcategorias h3 {
+    margin: 0 0 12px;
+
+    font-size: 26px;
+    line-height: 1.2;
+
+    color: #222;
+}
+
+.mega-subcategorias a {
+    display: block;
+
+    text-decoration: none;
+    color: #333;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    transition: 0.2s;
+}
+
+.mega-subcategorias a:hover {
+    color: #11999c;
+}
+
+.ver-todos {
+    margin-top: auto;
+    padding-top: 18px;
+
+    color: #11999c !important;
+    font-weight: bold;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width: 900px) {
+    .mega-menu {
+        position: static;
+        border-radius: 0;
+    }
+
+    .mega-container {
+        width: 100%;
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+
+        height: auto;
+        min-height: 0;
+    }
+
+    .mega-imagem {
+        display: none;
+    }
+
+    .mega-categorias,
+    .mega-subcategorias {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .ver-todos {
+        margin-top: 15px;
+    }
+}
 
 .carousel {
     position: relative;
