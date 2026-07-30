@@ -65,6 +65,24 @@
 }
 
     /* MENU */
+.categoria{
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.categoria:hover{
+    color: #0f9c9c;
+    padding-left: 28px; /* move um pouco para a direita */
+}
+
+/* Categoria ativa */
+.categoria.ativa{
+    color: #0f9c9c;
+}
 .menu {
     background-color: #eee;
     padding: 15px 30px;
@@ -94,12 +112,7 @@
     color: #333;
 }
 
-/* cria os pontinhos */
-.menu li::before {
-    content: "•";
-    margin-right: 12px;
-    color: #333;
-}
+
 
 /* REMOVE ponto do primeiro item */
 .menu li:first-child::before {
@@ -108,7 +121,7 @@
 }
 
 .menu li:hover {
-    color: #333;
+    color: #0f9c9c;
 }
 
 .menu .highlight {
@@ -145,8 +158,29 @@
 .todos {
     display: flex;
     align-items: center;
-    gap: 6px;
-    line-height: 1; /* evita desalinhamento */
+    gap: 4px;
+    line-height: 1;
+}
+
+.todos i {
+    font-size: 30px;
+    color: #333;
+    transition: color .3s ease;
+}
+
+.todos .categoria {
+    padding: 12px 0;
+    color: #333;
+    transition: color .3s ease, transform .3s ease;
+}
+
+.todos:hover .categoria,
+.todos:hover i {
+    color: #0f9c9c;
+}
+
+.todos:hover .categoria {
+    transform: translateX(4px);
 }
 
 .todos i {

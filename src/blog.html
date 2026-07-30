@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="../css/style-blog.css" rel="stylesheet">
+     <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+     <link
+        rel="stylesheet"
+        href="./css/style-menu.css"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+</head>
+<body>
+     <div class="topo">
+    
+    <div class="logo">
+    <a href="menu.html">
+        <img src="../imagens/logo.png" alt="Garra & Patas Pet Shop">
+    </a>
+</div>
+
+  <div class="espaco-topo"></div>
+
+    <div class="icons">
+
+        <div class="user">
+            <a href="form.html">
+                <i class="bi bi-lock"></i>
+                <span>Ambiente seguro</span>
+            </a>
+        </div>
+
+        
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+         CONTEÚDO DO BLOG
+    ====================================================== -->
+
+    <main class="blog-page">
+
+        <!-- HERO -->
+
+        <section class="blog-hero">
+
+            <div class="blog-hero-conteudo">
+
+                <span class="blog-selo">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    Garra & Patas News
+
+                </span>
+
+
+                <h1>
+                    Notícias, histórias e descobertas do mundo pet
+                </h1>
+
+
+                <p>
+                    Acompanhe acontecimentos reais sobre cães, gatos,
+                    proteção animal, saúde, comportamento e adoção.
+                </p>
+
+
+                <div class="blog-hero-botoes">
+
+                    <a
+                        href="#ultimas-noticias"
+                        class="btn-blog-principal"
+                    >
+                        Ver últimas notícias
+
+                        <i class="bi bi-arrow-down"></i>
+                    </a>
+
+
+                    <a
+                        href="#categorias"
+                        class="btn-blog-secundario"
+                    >
+                        Explorar categorias
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="blog-hero-decoracao">
+
+                <div class="circulo-pet circulo-gato">
+
+                    <i class="fa-solid fa-cat"></i>
+
+                </div>
+
+
+                <div class="circulo-pet circulo-cachorro">
+
+                    <i class="fa-solid fa-dog"></i>
+
+                </div>
+
+
+                <i class="fa-solid fa-paw pata-decorativa pata-1"></i>
+                <i class="fa-solid fa-paw pata-decorativa pata-2"></i>
+                <i class="fa-solid fa-paw pata-decorativa pata-3"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTÍCIA PRINCIPAL -->
+
+        <section
+            class="noticia-destaque-container"
+            id="noticiaDestaque"
+        >
+            <!-- O JavaScript colocará a notícia aqui -->
+        </section>
+
+
+        <!-- CATEGORIAS E PESQUISA -->
+
+        <section
+            class="controle-noticias"
+            id="categorias"
+        >
+
+            <div class="controle-titulo">
+
+                <span>
+                    Encontre uma matéria
+                </span>
+
+                <h2>
+                    Explore o mundo pet
+                </h2>
+
+            </div>
+
+
+            <div class="blog-pesquisa">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="search"
+                    id="pesquisaNoticias"
+                    placeholder="Pesquisar por uma notícia..."
+                    aria-label="Pesquisar notícias"
+                >
+
+                <button
+                    type="button"
+                    id="limparPesquisa"
+                    aria-label="Limpar pesquisa"
+                    title="Limpar pesquisa"
+                >
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+            </div>
+
+
+            <div
+                class="filtros-categorias"
+                role="group"
+                aria-label="Categorias de notícias"
+            >
+
+                <button
+                    class="filtro-btn ativo"
+                    data-category="todos"
+                    type="button"
+                >
+                    <i class="bi bi-grid"></i>
+                    Todas
+                </button>
+
+
+                <button
+                    class="filtro-btn"
+                    data-category="gatos"
+                    type="button"
+                >
+                    <i class="fa-solid fa-cat"></i>
+                    Gatos
+                </button>
+
+
+                <button
+                    class="filtro-btn"
+                    data-category="cachorros"
+                    type="button"
+                >
+                    <i class="fa-solid fa-dog"></i>
+                    Cachorros
+                </button>
+
+
+                <button
+                    class="filtro-btn"
+                    data-category="resgate"
+                    type="button"
+                >
+                    <i class="bi bi-heart-fill"></i>
+                    Resgate
+                </button>
+
+
+                <button
+                    class="filtro-btn"
+                    data-category="saude"
+                    type="button"
+                >
+                    <i class="bi bi-heart-pulse-fill"></i>
+                    Saúde
+                </button>
+
+
+                <button
+                    class="filtro-btn"
+                    data-category="ciencia"
+                    type="button"
+                >
+                    <i class="bi bi-lightbulb-fill"></i>
+                    Ciência
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ÚLTIMAS NOTÍCIAS -->
+
+        <section
+            class="ultimas-noticias"
+            id="ultimas-noticias"
+        >
+
+            <div class="titulo-secao-blog">
+
+                <div>
+
+                    <span>
+                        Garra & Patas informa
+                    </span>
+
+                    <h2>
+                        Últimas notícias
+                    </h2>
+
+                </div>
+
+
+                <p id="contadorNoticias">
+                    Carregando notícias...
+                </p>
+
+            </div>
+
+
+            <div
+                class="noticias-grid"
+                id="noticiasGrid"
+            >
+                <!-- Cards criados pelo JavaScript -->
+            </div>
+
+
+            <div
+                class="nenhum-resultado"
+                id="nenhumResultado"
+                hidden
+            >
+
+                <i class="fa-solid fa-paw"></i>
+
+                <h3>
+                    Nenhuma notícia encontrada
+                </h3>
+
+                <p>
+                    Tente pesquisar outro termo ou escolher outra categoria.
+                </p>
+
+                <button
+                    type="button"
+                    id="resetarFiltros"
+                >
+                    Mostrar todas as notícias
+                </button>
+
+            </div>
+
+
+            <div class="carregar-mais-container">
+
+                <button
+                    type="button"
+                    id="carregarMais"
+                    class="btn-carregar-mais"
+                >
+                    Carregar mais notícias
+
+                    <i class="bi bi-arrow-down-circle"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFÍCIOS DO BLOG -->
+
+        <section class="blog-beneficios">
+
+            <article>
+
+                <div class="beneficio-icone">
+
+                    <i class="bi bi-newspaper"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Notícias verificadas
+                    </h3>
+
+                    <p>
+                        Matérias baseadas em fontes jornalísticas
+                        e pesquisas publicadas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <div class="beneficio-icone">
+
+                    <i class="bi bi-heart-pulse"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Conteúdo responsável
+                    </h3>
+
+                    <p>
+                        Informações para promover saúde, proteção
+                        e bem-estar animal.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <div class="beneficio-icone">
+
+                    <i class="bi bi-globe-americas"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Acontecimentos mundiais
+                    </h3>
+
+                    <p>
+                        Histórias sobre cães e gatos em diferentes
+                        partes do mundo.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- NEWSLETTER -->
+
+        
+
+
+
+
+
+     <footer class="footer">
+
+    <div class="footer-top"></div>
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col empresa">
+
+            <h2>Garras <span>& Patas</span></h2>
+
+            <p>
+                Tudo para o seu pet em um só lugar. Encontre
+                rações, brinquedos, acessórios e muito mais
+                para cães e gatos.
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-col">
+
+            <h3>Institucional</h3>
+
+            <ul>
+
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-col">
+
+            <h3>Categorias</h3>
+
+            <ul>
+
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Rações</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Acessórios</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+
+            <h3>Atendimento</h3>
+
+            <p>📞 (11) 99999-9999</p>
+
+            <p>📧 contato@carrarasepatas.com</p>
+
+            <p>📍 Rua das Flores, 123</p>
+
+            <p>Segunda a Sexta</p>
+
+            <p>08:00 às 18:00</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        <p>
+            © 2025 Garras & Patas - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido por <strong>Seu Nome</strong> | TCC - Desenvolvimento Web
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="./blog.js"></script>
+
+</body>
+</html>
