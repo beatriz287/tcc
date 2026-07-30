@@ -253,7 +253,7 @@
     <div class="menu-rodape">
 
     <div class="item-rodape">
-        <a href="#" >Atendimento</a>
+        <a href="atendimento.html" >Atendimento</a>
         
         <i class="bi bi-chevron-right"></i>
     </div>
@@ -2039,6 +2039,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const megaMenuCachorros = document.getElementById("megaMenu");
     const megaMenuGatos = document.getElementById("megaMenuGatos");
 
+    const fecharMega = document.getElementById("fecharMega");
+    const fecharMegaGatos = document.getElementById("fecharMegaGatos");
+
     btnCachorros.addEventListener("click", function (evento) {
         evento.preventDefault();
         evento.stopPropagation();
@@ -2055,6 +2058,16 @@ document.addEventListener("DOMContentLoaded", function () {
         megaMenuGatos.classList.toggle("ativo");
     });
 
+    fecharMega.addEventListener("click", function (evento) {
+        evento.stopPropagation();
+        megaMenuCachorros.classList.remove("ativo");
+    });
+
+    fecharMegaGatos.addEventListener("click", function (evento) {
+        evento.stopPropagation();
+        megaMenuGatos.classList.remove("ativo");
+    });
+
     megaMenuCachorros.addEventListener("click", function (evento) {
         evento.stopPropagation();
     });
@@ -2068,14 +2081,6 @@ document.addEventListener("DOMContentLoaded", function () {
         megaMenuGatos.classList.remove("ativo");
     });
 
-});
-
-document.getElementById("fecharMega").addEventListener("click", function () {
-    megaMenu.classList.remove("ativo");
-});
-
-document.getElementById("fecharMegaGatos").addEventListener("click", function () {
-    megaMenuGatos.classList.remove("ativo");
 });
 </script>
 

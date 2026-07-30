@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento</title>
+    <link rel="stylesheet" href="../css/style-atendimento.css">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+<body>
+    <div class="topo">
+    
+    <div class="logo">
+        <img src="../imagens/logo.png" alt="Garra & Patas">
+    </div>
+
+  <div class="espaco-topo"></div>
+
+    <div class="icons">
+
+        <div class="user">
+            <a href="form.html">
+                <i class="bi bi-lock"></i>
+                <span>Ambiente seguro</span>
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+
+
+ <section class="banner-atendimento">
+
+        <a href="menu.html" class="btn-fechar">
+
+            <i class="bi bi-x-lg"></i>
+
+            Fechar
+
+        </a>
+
+        <div class="banner-conteudo">
+
+            <div class="banner-icone">
+
+                <i class="bi bi-headset"></i>
+
+            </div>
+
+            <div>
+
+                <span class="banner-tag">
+                    Estamos aqui para ajudar
+                </span>
+
+                <h1>Central de Atendimento</h1>
+
+                <p>
+                    Tire suas dúvidas, acompanhe seus pedidos e fale com
+                    nossa equipe de forma rápida e segura.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+
+    <main class="atendimento-container">
+
+        <!-- Título -->
+
+        <section class="inicio-atendimento">
+
+            <span>Fale conosco</span>
+
+            <h2>Como podemos ajudar?</h2>
+
+            <p>
+                Escolha um dos nossos canais de atendimento ou envie
+                uma mensagem pelo formulário.
+            </p>
+
+        </section>
+
+
+        <!-- Canais de atendimento -->
+
+        <section class="canais-atendimento">
+
+            <a
+                href="https://wa.me/5511999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="canal-card"
+            >
+
+                <div class="canal-icone">
+
+                    <i class="bi bi-whatsapp"></i>
+
+                </div>
+
+                <div class="canal-conteudo">
+
+                    <span>Atendimento rápido</span>
+
+                    <h3>WhatsApp</h3>
+
+                    <p>
+                        Converse com nossa equipe e tire suas dúvidas.
+                    </p>
+
+                    <strong>(11) 99999-9999</strong>
+
+                </div>
+
+                <i class="bi bi-arrow-right seta-canal"></i>
+
+            </a>
+
+
+            <a
+                href="tel:+5511999999999"
+                class="canal-card"
+            >
+
+                <div class="canal-icone">
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                </div>
+
+                <div class="canal-conteudo">
+
+                    <span>Fale diretamente</span>
+
+                    <h3>Telefone</h3>
+
+                    <p>
+                        Entre em contato durante nosso horário comercial.
+                    </p>
+
+                    <strong>(11) 99999-9999</strong>
+
+                </div>
+
+                <i class="bi bi-arrow-right seta-canal"></i>
+
+            </a>
+
+
+            <a
+                href="mailto:contato@garraepatas.com"
+                class="canal-card"
+            >
+
+                <div class="canal-icone">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                </div>
+
+                <div class="canal-conteudo">
+
+                    <span>Envie sua mensagem</span>
+
+                    <h3>E-mail</h3>
+
+                    <p>
+                        Responderemos sua solicitação assim que possível.
+                    </p>
+
+                    <strong>contato@garraepatas.com</strong>
+
+                </div>
+
+                <i class="bi bi-arrow-right seta-canal"></i>
+
+            </a>
+
+        </section>
+
+
+        <!-- Área principal -->
+
+        <section class="area-atendimento">
+
+            <!-- Formulário -->
+
+            <div class="formulario-box">
+
+                <div class="titulo-box">
+
+                    <div class="icone-titulo">
+
+                        <i class="bi bi-chat-left-text-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Envie sua solicitação</span>
+
+                        <h2>Fale com nossa equipe</h2>
+
+                    </div>
+
+                </div>
+
+                <form id="formAtendimento">
+
+                    <div class="form-linha">
+
+                        <div class="campo">
+
+                            <label for="nome">
+                                Nome completo
+                            </label>
+
+                            <div class="campo-input">
+
+                                <i class="bi bi-person"></i>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="Digite seu nome"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="email">
+                                E-mail
+                            </label>
+
+                            <div class="campo-input">
+
+                                <i class="bi bi-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Digite seu e-mail"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-linha">
+
+                        <div class="campo">
+
+                            <label for="telefone">
+                                Telefone
+                            </label>
+
+                            <div class="campo-input">
+
+                                <i class="bi bi-telephone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="telefone"
+                                    name="telefone"
+                                    placeholder="(00) 00000-0000"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="assunto">
+                                Assunto
+                            </label>
+
+                            <div class="campo-input">
+
+                                <i class="bi bi-list-ul"></i>
+
+                                <select
+                                    id="assunto"
+                                    name="assunto"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Selecione uma opção
+                                    </option>
+
+                                    <option value="pedido">
+                                        Acompanhar pedido
+                                    </option>
+
+                                    <option value="troca">
+                                        Troca ou devolução
+                                    </option>
+
+                                    <option value="produto">
+                                        Dúvida sobre produto
+                                    </option>
+
+                                    <option value="pagamento">
+                                        Pagamento
+                                    </option>
+
+                                    <option value="cadastro">
+                                        Cadastro ou acesso
+                                    </option>
+
+                                    <option value="outro">
+                                        Outro assunto
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="pedido">
+                            Número do pedido
+                            <small>Opcional</small>
+                        </label>
+
+                        <div class="campo-input">
+
+                            <i class="bi bi-box-seam"></i>
+
+                            <input
+                                type="text"
+                                id="pedido"
+                                name="pedido"
+                                placeholder="Exemplo: 000123"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="mensagem">
+                            Como podemos ajudar?
+                        </label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            maxlength="600"
+                            placeholder="Descreva sua dúvida ou solicitação..."
+                            required
+                        ></textarea>
+
+                        <div class="contador">
+
+                            <span id="contadorMensagem">0</span>/600
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="aceite">
+
+                        <input
+                            type="checkbox"
+                            id="privacidade"
+                            required
+                        >
+
+                        <span>
+                            Li e concordo com a
+                            <a href="politica.html">
+                                Política de Privacidade
+                            </a>.
+                        </span>
+
+                    </label>
+
+
+                    <button type="submit" class="btn-enviar">
+
+                        <i class="bi bi-send-fill"></i>
+
+                        Enviar mensagem
+
+                    </button>
+
+                </form>
+
+                <div
+                    id="mensagemSucesso"
+                    class="mensagem-sucesso"
+                >
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <div>
+
+                        <strong>Mensagem enviada!</strong>
+
+                        <p>
+                            Sua solicitação foi registrada com sucesso.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Informações laterais -->
+
+            <aside class="informacoes-atendimento">
+
+                <div class="horario-box">
+
+                    <div class="horario-titulo">
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        <h3>Horário de atendimento</h3>
+
+                    </div>
+
+                    <div class="horario-item">
+
+                        <span>Segunda a sexta</span>
+
+                        <strong>08:00 às 18:00</strong>
+
+                    </div>
+
+                    <div class="horario-item">
+
+                        <span>Sábado</span>
+
+                        <strong>08:00 às 13:00</strong>
+
+                    </div>
+
+                    <div class="horario-item">
+
+                        <span>Domingos e feriados</span>
+
+                        <strong>Fechado</strong>
+
+                    </div>
+
+                    <div class="status-atendimento">
+
+                        <span class="status-bolinha"></span>
+
+                        Atendimento disponível no horário comercial
+
+                    </div>
+
+                </div>
+
+
+                <div class="endereco-box">
+
+                    <div class="endereco-icone">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>Nossa localização</span>
+
+                        <h3>Loja Garra & Patas</h3>
+
+                        <p>
+                            Rua das Flores, 123<br>
+                            Centro – São Paulo/SP
+                        </p>
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            Ver localização
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="seguranca-box">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <div>
+
+                        <h3>Atendimento seguro</h3>
+
+                        <p>
+                            Nunca solicitamos sua senha ou o código
+                            completo do cartão.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- Perguntas frequentes -->
+
+        <section class="faq">
+
+            <div class="faq-cabecalho">
+
+                <span>Dúvidas frequentes</span>
+
+                <h2>Perguntas frequentes</h2>
+
+                <p>
+                    Encontre respostas rápidas para as principais dúvidas.
+                </p>
+
+            </div>
+
+
+            <div class="faq-lista">
+
+                <div class="faq-item">
+
+                    <button class="faq-pergunta">
+
+                        <span>
+                            Como posso acompanhar meu pedido?
+                        </span>
+
+                        <i class="bi bi-plus-lg"></i>
+
+                    </button>
+
+                    <div class="faq-resposta">
+
+                        <p>
+                            Após a confirmação do pagamento, você poderá
+                            acompanhar o pedido pela área de pedidos da sua
+                            conta ou pelo código de rastreamento enviado
+                            por e-mail.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-pergunta">
+
+                        <span>
+                            Qual é o prazo para troca ou devolução?
+                        </span>
+
+                        <i class="bi bi-plus-lg"></i>
+
+                    </button>
+
+                    <div class="faq-resposta">
+
+                        <p>
+                            Entre em contato com nosso atendimento informando
+                            o número do pedido, o produto e o motivo da
+                            solicitação. Nossa equipe orientará sobre o
+                            procedimento.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-pergunta">
+
+                        <span>
+                            Quais formas de pagamento são aceitas?
+                        </span>
+
+                        <i class="bi bi-plus-lg"></i>
+
+                    </button>
+
+                    <div class="faq-resposta">
+
+                        <p>
+                            As formas de pagamento disponíveis serão
+                            apresentadas durante a finalização da compra,
+                            como Pix, cartão e outras opções habilitadas
+                            no site.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-pergunta">
+
+                        <span>
+                            Como altero meus dados cadastrais?
+                        </span>
+
+                        <i class="bi bi-plus-lg"></i>
+
+                    </button>
+
+                    <div class="faq-resposta">
+
+                        <p>
+                            Acesse sua conta e procure a opção de dados
+                            pessoais. Caso não consiga realizar a alteração,
+                            entre em contato com nosso atendimento.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button class="faq-pergunta">
+
+                        <span>
+                            Meu pagamento ainda não foi aprovado. O que fazer?
+                        </span>
+
+                        <i class="bi bi-plus-lg"></i>
+
+                    </button>
+
+                    <div class="faq-resposta">
+
+                        <p>
+                            Alguns pagamentos podem passar por análise.
+                            Confira os dados informados e aguarde a confirmação.
+                            Caso o problema continue, fale com nossa equipe.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+<footer class="footer">
+
+    <div class="footer-top"></div>
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col empresa">
+
+            <h2>Garras <span>& Patas</span></h2>
+
+            <p>
+                Tudo para o seu pet em um só lugar. Encontre
+                rações, brinquedos, acessórios e muito mais
+                para cães e gatos.
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-col">
+
+            <h3>Institucional</h3>
+
+            <ul>
+
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-col">
+
+            <h3>Categorias</h3>
+
+            <ul>
+
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Rações</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Acessórios</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+
+            <h3>Atendimento</h3>
+
+            <p>📞 (11) 99999-9999</p>
+
+            <p>📧 contato@carrarasepatas.com</p>
+
+            <p>📍 Rua das Flores, 123</p>
+
+            <p>Segunda a Sexta</p>
+
+            <p>08:00 às 18:00</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        <p>
+            © 2025 Garras & Patas - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido por <strong>Seu Nome</strong> | TCC - Desenvolvimento Web
+        </p>
+
+    </div>
+
+</footer>
+
+    <script>
+
+        const perguntas = document.querySelectorAll(".faq-pergunta");
+
+        perguntas.forEach((pergunta) => {
+
+            pergunta.addEventListener("click", () => {
+
+                const item = pergunta.parentElement;
+
+                document
+                    .querySelectorAll(".faq-item")
+                    .forEach((outroItem) => {
+
+                        if (outroItem !== item) {
+                            outroItem.classList.remove("ativo");
+                        }
+
+                    });
+
+                item.classList.toggle("ativo");
+
+            });
+
+        });
+
+
+        const mensagem = document.getElementById("mensagem");
+
+        const contador = document.getElementById("contadorMensagem");
+
+        mensagem.addEventListener("input", () => {
+
+            contador.textContent = mensagem.value.length;
+
+        });
+
+
+        const formulario = document.getElementById("formAtendimento");
+
+        const mensagemSucesso =
+            document.getElementById("mensagemSucesso");
+
+        formulario.addEventListener("submit", (evento) => {
+
+            evento.preventDefault();
+
+            mensagemSucesso.classList.add("ativo");
+
+            formulario.reset();
+
+            contador.textContent = "0";
+
+            setTimeout(() => {
+
+                mensagemSucesso.classList.remove("ativo");
+
+            }, 5000);
+
+        });
+
+    </script>
+</body>
+</html>

@@ -378,6 +378,10 @@
 }
 
 /* ===================== MEGA MENU ===================== */
+.menu-area{
+    position: relative;
+    width: 100%;
+}
 .fechar-mega{
     position:absolute;
     top:20px;
