@@ -259,10 +259,56 @@ display:flex;
 /* =========================================================
    CONFIGURAÇÕES GERAIS DO BLOG
 ========================================================= */
+.btn-fechar {
+    position: absolute;
+    top: 22px;
+    right: 35px;
 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    color: white;
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-fechar i {
+    font-size: 18px;
+}
+
+.btn-fechar:hover {
+    color: #123f4a;
+    background: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 750px) {
+
+    .btn-fechar {
+        top: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .btn-fechar i {
+        font-size: 15px;
+    }
+
+}
 :root {
-    --verde-blog: #0f9c9c;
-    --verde-escuro: #087979;
+    --verde-blog: #123f4a,;
+    --verde-escuro: #1b6470;
     --verde-claro: #e5f7f6;
     --verde-muito-claro: #f3fbfa;
 

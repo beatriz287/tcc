@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+        <link
+        rel="stylesheet"
+        href="../css/style-lojas.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+<body>
+     <div class="topo">
+    
+    <div class="logo">
+    <a href="menu.html">
+        <img src="../imagens/logo.png" alt="Garra & Patas Pet Shop">
+    </a>
+</div>
+
+  <div class="espaco-topo"></div>
+
+    <div class="icons">
+
+        <div class="user">
+            <a href="form.html">
+                <i class="bi bi-lock"></i>
+                <span>Ambiente seguro</span>
+            </a>
+        </div>
+
+        
+
+    </div>
+
+</div>
+
+
+
+   <section class="lojas-hero">
+    <a href="menu.html" class="btn-fechar">
+    <i class="bi bi-x-lg"></i>
+    Fechar
+</a>
+
+    
+
+    <div class="lojas-hero-conteudo">
+
+        <span class="lojas-selo">
+            <i class="bi bi-geo-alt-fill"></i>
+            Nossas unidades
+        </span>
+
+        <h1>
+            Encontre uma Garra & Patas perto de você
+        </h1>
+
+        <p>
+            Visite nossas lojas e encontre rações, brinquedos,
+            acessórios e tudo o que seu pet precisa.
+        </p>
+
+        <div class="lojas-hero-botoes">
+
+            <a href="#lista-lojas" class="btn-loja-principal">
+                Ver nossas lojas
+                <i class="bi bi-arrow-down"></i>
+            </a>
+
+            
+
+        </div>
+
+    </div>
+
+    <div class="lojas-hero-decoracao">
+
+        <div class="circulo-loja circulo-mapa">
+            <i class="bi bi-geo-alt-fill"></i>
+        </div>
+
+        <div class="circulo-loja circulo-petshop">
+            <i class="bi bi-shop"></i>
+        </div>
+
+        <i class="bi bi-paw-fill pata-loja pata-loja-1"></i>
+        <i class="bi bi-paw-fill pata-loja pata-loja-2"></i>
+        <i class="bi bi-paw-fill pata-loja pata-loja-3"></i>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+
+    <main class="lojas-container">
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="inicio-lojas">
+
+            <span class="subtitulo">
+                Estamos perto de você
+            </span>
+
+            <h2>
+                Escolha a unidade mais próxima
+            </h2>
+
+            <p>
+                Consulte endereço, horário de funcionamento e
+                os canais de atendimento de cada loja.
+            </p>
+
+        </section>
+
+
+        <!-- PESQUISA E FILTROS -->
+
+        <section class="filtros-lojas">
+
+            <div class="campo-pesquisa">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="pesquisaLoja"
+                    placeholder="Digite uma cidade, bairro ou endereço"
+                >
+
+            </div>
+
+            <div class="filtro-estado">
+
+                <i class="bi bi-map"></i>
+
+                <select id="filtroEstado">
+
+                    <option value="todos">
+                        Todos os estados
+                    </option>
+
+                    <option value="sp">
+                        São Paulo
+                    </option>
+
+                    <option value="mg">
+                        Minas Gerais
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CARTÕES DAS LOJAS ================= -->
+
+        <section
+            class="lista-lojas"
+            id="lista-lojas"
+        >
+
+            <!-- LOJA 1 -->
+
+            <article
+                class="loja-card"
+                data-estado="sp"
+                data-pesquisa="caconde centro são paulo"
+            >
+
+                <div class="loja-imagem">
+
+                    <div class="loja-imagem-placeholder">
+
+                        <i class="bi bi-shop-window"></i>
+
+                    </div>
+
+                    <span class="loja-status aberta">
+                        Aberta agora
+                    </span>
+
+                </div>
+
+                <div class="loja-conteudo">
+
+                    <div class="loja-cabecalho">
+
+                        <div>
+
+                            <span class="loja-tipo">
+                                Loja física
+                            </span>
+
+                            <h3>
+                                Garra & Patas — Caconde
+                            </h3>
+
+                        </div>
+
+                        <button
+                            class="btn-favoritar"
+                            aria-label="Favoritar loja"
+                        >
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="loja-informacoes">
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <div>
+
+                                <strong>Endereço</strong>
+
+                                <p>
+                                    Rua das Flores, 123 — Centro<br>
+                                    Caconde — SP
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                            <div>
+
+                                <strong>Horário de funcionamento</strong>
+
+                                <p>
+                                    Segunda a sexta: 8h às 18h<br>
+                                    Sábado: 8h às 13h
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-telephone-fill"></i>
+
+                            <div>
+
+                                <strong>Telefone</strong>
+
+                                <p>
+                                    (19) 99999-9999
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="servicos-loja">
+
+                        <span>
+                            <i class="bi bi-bag-check"></i>
+                            Retirada na loja
+                        </span>
+
+                        <span>
+                            <i class="bi bi-truck"></i>
+                            Entrega local
+                        </span>
+
+                        <span>
+                            <i class="bi bi-whatsapp"></i>
+                            WhatsApp
+                        </span>
+
+                    </div>
+
+                    <div class="loja-botoes">
+
+                        <a
+                            href="https://www.google.com/maps"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-loja btn-mapa"
+                        >
+
+                            <i class="bi bi-map"></i>
+
+                            Ver no mapa
+
+                        </a>
+
+                        <a
+                            href="https://wa.me/5519999999999"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-loja btn-whatsapp"
+                        >
+
+                            <i class="bi bi-whatsapp"></i>
+
+                            Falar com a loja
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LOJA 2 -->
+
+            <article
+                class="loja-card"
+                data-estado="sp"
+                data-pesquisa="mococa centro são paulo"
+            >
+
+                <div class="loja-imagem">
+
+                    <div class="loja-imagem-placeholder">
+
+                        <i class="bi bi-shop-window"></i>
+
+                    </div>
+
+                    <span class="loja-status aberta">
+                        Aberta agora
+                    </span>
+
+                </div>
+
+                <div class="loja-conteudo">
+
+                    <div class="loja-cabecalho">
+
+                        <div>
+
+                            <span class="loja-tipo">
+                                Loja física
+                            </span>
+
+                            <h3>
+                                Garra & Patas — Mococa
+                            </h3>
+
+                        </div>
+
+                        <button
+                            class="btn-favoritar"
+                            aria-label="Favoritar loja"
+                        >
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="loja-informacoes">
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <div>
+
+                                <strong>Endereço</strong>
+
+                                <p>
+                                    Avenida Brasil, 450 — Centro<br>
+                                    Mococa — SP
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                            <div>
+
+                                <strong>Horário de funcionamento</strong>
+
+                                <p>
+                                    Segunda a sexta: 9h às 19h<br>
+                                    Sábado: 9h às 14h
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-telephone-fill"></i>
+
+                            <div>
+
+                                <strong>Telefone</strong>
+
+                                <p>
+                                    (19) 98888-8888
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="servicos-loja">
+
+                        <span>
+                            <i class="bi bi-bag-check"></i>
+                            Retirada na loja
+                        </span>
+
+                        <span>
+                            <i class="bi bi-truck"></i>
+                            Entrega local
+                        </span>
+
+                    </div>
+
+                    <div class="loja-botoes">
+
+                        <a
+                            href="https://www.google.com/maps"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-loja btn-mapa"
+                        >
+
+                            <i class="bi bi-map"></i>
+
+                            Ver no mapa
+
+                        </a>
+
+                        <a
+                            href="https://wa.me/5519988888888"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-loja btn-whatsapp"
+                        >
+
+                            <i class="bi bi-whatsapp"></i>
+
+                            Falar com a loja
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LOJA 3 -->
+
+            <article
+                class="loja-card"
+                data-estado="mg"
+                data-pesquisa="guaxupé centro minas gerais"
+            >
+
+                <div class="loja-imagem">
+
+                    <div class="loja-imagem-placeholder">
+
+                        <i class="bi bi-shop-window"></i>
+
+                    </div>
+
+                    <span class="loja-status fechada">
+                        Fechada
+                    </span>
+
+                </div>
+
+                <div class="loja-conteudo">
+
+                    <div class="loja-cabecalho">
+
+                        <div>
+
+                            <span class="loja-tipo">
+                                Loja física
+                            </span>
+
+                            <h3>
+                                Garra & Patas — Guaxupé
+                            </h3>
+
+                        </div>
+
+                        <button
+                            class="btn-favoritar"
+                            aria-label="Favoritar loja"
+                        >
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="loja-informacoes">
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <div>
+
+                                <strong>Endereço</strong>
+
+                                <p>
+                                    Rua dos Animais, 280 — Centro<br>
+                                    Guaxupé — MG
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                            <div>
+
+                                <strong>Horário de funcionamento</strong>
+
+                                <p>
+                                    Segunda a sexta: 8h30 às 18h<br>
+                                    Sábado: 8h30 às 13h
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacao-item">
+
+                            <i class="bi bi-telephone-fill"></i>
+
+                            <div>
+
+                                <strong>Telefone</strong>
+
+                                <p>
+                                    (35) 97777-7777
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="servicos-loja">
+
+                        <span>
+                            <i class="bi bi-bag-check"></i>
+                            Retirada na loja
+                        </span>
+
+                        <span>
+                            <i class="bi bi-whatsapp"></i>
+                            WhatsApp
+                        </span>
+
+                    </div>
+
+                    <div class="loja-botoes">
+
+                        <a
+                            href="https://www.google.com/maps"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-loja btn-mapa"
+                        >
+
+                            <i class="bi bi-map"></i>
+
+                            Ver no mapa
+
+                        </a>
+
+                        <a
+                            href="https://wa.me/5535977777777"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-loja btn-whatsapp"
+                        >
+
+                            <i class="bi bi-whatsapp"></i>
+
+                            Falar com a loja
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- MENSAGEM QUANDO NÃO ENCONTRAR -->
+
+        <div class="nenhuma-loja" id="nenhumaLoja">
+
+            <i class="bi bi-geo-alt"></i>
+
+            <h3>Nenhuma loja encontrada</h3>
+
+            <p>
+                Tente pesquisar outra cidade, bairro ou estado.
+            </p>
+
+        </div>
+
+
+        <!-- ================= BENEFÍCIOS ================= -->
+
+        <section class="beneficios-lojas">
+
+            <div class="beneficios-titulo">
+
+                <span>
+                    Experiência Garra & Patas
+                </span>
+
+                <h2>
+                    Por que visitar nossas lojas?
+                </h2>
+
+            </div>
+
+            <div class="beneficios-grid">
+
+                <article class="beneficio-card">
+
+                    <div class="beneficio-icone">
+
+                        <i class="bi bi-person-heart"></i>
+
+                    </div>
+
+                    <h3>
+                        Atendimento especializado
+                    </h3>
+
+                    <p>
+                        Nossa equipe ajuda você a escolher os melhores
+                        produtos de acordo com as necessidades do seu pet.
+                    </p>
+
+                </article>
+
+                <article class="beneficio-card">
+
+                    <div class="beneficio-icone">
+
+                        <i class="bi bi-box-seam"></i>
+
+                    </div>
+
+                    <h3>
+                        Retirada de pedidos
+                    </h3>
+
+                    <p>
+                        Compre pelo site e retire seus produtos em uma
+                        de nossas unidades disponíveis.
+                    </p>
+
+                </article>
+
+                <article class="beneficio-card">
+
+                    <div class="beneficio-icone">
+
+                        <i class="bi bi-stars"></i>
+
+                    </div>
+
+                    <h3>
+                        Produtos selecionados
+                    </h3>
+
+                    <p>
+                        Trabalhamos com produtos de qualidade para
+                        proporcionar segurança e bem-estar ao seu pet.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+
+
+
+
+    <footer class="footer">
+
+    <div class="footer-top"></div>
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col empresa">
+
+            <h2>Garras <span>& Patas</span></h2>
+
+            <p>
+                Tudo para o seu pet em um só lugar. Encontre
+                rações, brinquedos, acessórios e muito mais
+                para cães e gatos.
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-col">
+
+            <h3>Institucional</h3>
+
+            <ul>
+
+                <li><a href="menu.html">Página Inicial</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="blog.html">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-col">
+
+            <h3>Categorias</h3>
+
+            <ul>
+
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Rações</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Acessórios</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+
+            <h3>Atendimento</h3>
+
+            <p>📞 (11) 99999-9999</p>
+
+            <p>📧 contato@carrarasepatas.com</p>
+
+            <p>📍 Rua das Flores, 123</p>
+
+            <p>Segunda a Sexta</p>
+
+            <p>08:00 às 18:00</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        <p>
+            © 2025 Garras & Patas - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido por <strong>Seu Nome</strong> | TCC - Desenvolvimento Web
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <script>
+
+        const campoPesquisa =
+            document.getElementById("pesquisaLoja");
+
+        const filtroEstado =
+            document.getElementById("filtroEstado");
+
+        const lojas =
+            document.querySelectorAll(".loja-card");
+
+        const nenhumaLoja =
+            document.getElementById("nenhumaLoja");
+
+
+        function removerAcentos(texto) {
+
+            return texto
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+        }
+
+
+        function filtrarLojas() {
+
+            const pesquisa = removerAcentos(
+                campoPesquisa.value.toLowerCase().trim()
+            );
+
+            const estadoSelecionado =
+                filtroEstado.value;
+
+            let quantidadeVisivel = 0;
+
+
+            lojas.forEach(function (loja) {
+
+                const dadosPesquisa = removerAcentos(
+                    loja.dataset.pesquisa.toLowerCase()
+                );
+
+                const estadoLoja =
+                    loja.dataset.estado;
+
+                const correspondePesquisa =
+                    dadosPesquisa.includes(pesquisa);
+
+                const correspondeEstado =
+                    estadoSelecionado === "todos" ||
+                    estadoLoja === estadoSelecionado;
+
+
+                if (
+                    correspondePesquisa &&
+                    correspondeEstado
+                ) {
+
+                    loja.style.display = "grid";
+
+                    quantidadeVisivel++;
+
+                } else {
+
+                    loja.style.display = "none";
+
+                }
+
+            });
+
+
+            if (quantidadeVisivel === 0) {
+
+                nenhumaLoja.classList.add("ativo");
+
+            } else {
+
+                nenhumaLoja.classList.remove("ativo");
+
+            }
+
+        }
+
+
+        campoPesquisa.addEventListener(
+            "input",
+            filtrarLojas
+        );
+
+
+        filtroEstado.addEventListener(
+            "change",
+            filtrarLojas
+        );
+
+
+        const botoesFavoritar =
+            document.querySelectorAll(".btn-favoritar");
+
+
+        botoesFavoritar.forEach(function (botao) {
+
+            botao.addEventListener("click", function () {
+
+                const icone =
+                    botao.querySelector("i");
+
+                botao.classList.toggle("favoritado");
+
+                if (
+                    botao.classList.contains("favoritado")
+                ) {
+
+                    icone.className =
+                        "bi bi-heart-fill";
+
+                } else {
+
+                    icone.className =
+                        "bi bi-heart";
+
+                }
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>

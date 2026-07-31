@@ -43,7 +43,7 @@
     <div class="produto-imagem">
       <img 
     id="fotoProduto"
-    src="../marcas/areia gato/gattino/4kg_perfumada.png" 
+    src="../marcas/areia gato/pipicat/higienica_4kg.png" 
     alt="Ração Premium para Cachorro"
 >
     </div>
@@ -74,7 +74,7 @@
       </p>
 
       <div class="preco" id="precoProduto">
-  R$ 42,99
+  R$ 32,99
 </div>
 
       <div class="tamanhos">
@@ -185,10 +185,10 @@
 
             <ul>
 
-                <li><a href="#">Página Inicial</a></li>
+                <li><a href="menu.html">Página Inicial</a></li>
                 <li><a href="#">Quem Somos</a></li>
                 <li><a href="#">Promoções</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
 
             </ul>
 
@@ -257,8 +257,8 @@ function trocarProduto(tamanho){
     event.target.classList.add('ativo');
 
     if(tamanho === "4kg"){
-        foto.src = "../marcas/areia gato/gattino/4kg_perfumada.png";
-        precoUnitario = 42,99;
+        foto.src = "../marcas/areia gato/pipicat/higienica_4kg.png";
+        precoUnitario = 32,99;
     }
 
 
@@ -269,7 +269,7 @@ function trocarProduto(tamanho){
 
 <script>
 
-let precoUnitario = 42.99;
+let precoUnitario = 32.99;
 
 function atualizarPreco() {
     const quantidade = document.getElementById("quantidade").value;
