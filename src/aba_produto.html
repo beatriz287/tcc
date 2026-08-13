@@ -1,0 +1,3191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../css/style-aba_produto.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="topo">
+    <div class="logo">
+    <a href="menu.html">
+        <img src="../imagens/logo.png" alt="Garra & Patas Pet Shop">
+    </a>
+</div>
+<div class="busca">
+    <div class="search-box">
+        <input type="text" placeholder="O melhor para seu pet você encontra aqui.">
+        <i class="bi bi-search"></i>
+    </div>
+</div>
+
+    <div class="icons">
+   <div class="user">
+        <a href="form.html"> <i class="bi bi-person"></i>
+        <span>  Entre ou cadastre-se </a></span>
+    </div>
+
+    <i class="bi bi-heart"></i>
+    <i class="bi bi-cart"></i>
+    </div>
+</div>
+
+<div class="menu-area">
+
+    
+<!-- =====================================================
+     PÁGINA DE PRODUTOS
+====================================================== -->
+
+<main class="pagina-produtos">
+
+    <!-- CAMINHO -->
+    <div class="breadcrumb-produtos">
+        <a href="menu.html">Início</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>Produtos</span>
+    </div>
+
+    <!-- TÍTULO -->
+    <section class="cabecalho-produtos">
+
+        <div>
+            <span class="subtitulo-produtos">
+                Garra & Patas
+            </span>
+
+            <h1>Produtos para seu pet</h1>
+
+            <p>
+                Encontre rações, brinquedos, acessórios,
+                higiene e muito mais.
+            </p>
+        </div>
+
+        <div class="ordenacao-produtos">
+
+            <label for="ordenar">
+                Ordenar por:
+            </label>
+
+            <select id="ordenar">
+
+                <option value="destaque">
+                    Mais relevantes
+                </option>
+
+                <option value="menor">
+                    Menor preço
+                </option>
+
+                <option value="maior">
+                    Maior preço
+                </option>
+
+                <option value="nome">
+                    Nome A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <div class="estrutura-produtos">
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <aside class="filtros-produtos">
+
+            <div class="topo-filtro">
+
+                <div>
+                    <span>Refine sua busca</span>
+                    <h2>Filtros</h2>
+                </div>
+
+                <i class="bi bi-sliders"></i>
+
+            </div>
+
+
+            <!-- PESQUISA -->
+
+            <div class="grupo-filtro">
+
+                <h3>Pesquisar</h3>
+
+                <div class="pesquisa-filtro">
+
+                    <input
+                        type="text"
+                        id="pesquisaProduto"
+                        placeholder="Buscar produto..."
+                    >
+
+                    <i class="bi bi-search"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- PET -->
+
+            <div class="grupo-filtro">
+
+                <div class="titulo-filtro">
+                    <h3>Pet</h3>
+                    <i class="bi bi-chevron-up"></i>
+                </div>
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-pet"
+                        value="cachorro"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Cachorros
+
+                </label>
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-pet"
+                        value="gato"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Gatos
+
+                </label>
+
+            </div>
+
+
+            <!-- CATEGORIA -->
+
+            <div class="grupo-filtro">
+
+                <div class="titulo-filtro">
+
+                    <h3>Categoria</h3>
+
+                    <i class="bi bi-chevron-up"></i>
+
+                </div>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-categoria"
+                        value="racao"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Rações
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-categoria"
+                        value="brinquedo"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Brinquedos
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-categoria"
+                        value="higiene"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Higiene
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-categoria"
+                        value="transporte"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Transporte
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-categoria"
+                        value="acessorio"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Acessórios
+
+                </label>
+
+            </div>
+
+
+            <!-- MARCAS -->
+
+            <div class="grupo-filtro">
+
+                <div class="titulo-filtro">
+
+                    <h3>Marca</h3>
+
+                    <i class="bi bi-chevron-up"></i>
+
+                </div>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-marca"
+                        value="gattino"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Gattino
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-marca"
+                        value="kong"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Kong
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-marca"
+                        value="chalesco"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Chalesco
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-marca"
+                        value="ferplast"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Ferplast
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="checkbox"
+                        class="filtro-marca"
+                        value="furacao"
+                    >
+
+                    <span class="check-personalizado"></span>
+
+                    Furacão Pet
+
+                </label>
+
+            </div>
+
+
+            <!-- PREÇO -->
+
+            <div class="grupo-filtro">
+
+                <div class="titulo-filtro">
+
+                    <h3>Preço</h3>
+
+                    <i class="bi bi-chevron-up"></i>
+
+                </div>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="radio"
+                        name="preco"
+                        class="filtro-preco"
+                        value="todos"
+                        checked
+                    >
+
+                    <span class="radio-personalizado"></span>
+
+                    Todos os preços
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="radio"
+                        name="preco"
+                        class="filtro-preco"
+                        value="50"
+                    >
+
+                    <span class="radio-personalizado"></span>
+
+                    Até R$ 50
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="radio"
+                        name="preco"
+                        class="filtro-preco"
+                        value="100"
+                    >
+
+                    <span class="radio-personalizado"></span>
+
+                    Até R$ 100
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="radio"
+                        name="preco"
+                        class="filtro-preco"
+                        value="200"
+                    >
+
+                    <span class="radio-personalizado"></span>
+
+                    Até R$ 200
+
+                </label>
+
+
+                <label class="opcao-filtro">
+
+                    <input
+                        type="radio"
+                        name="preco"
+                        class="filtro-preco"
+                        value="mais200"
+                    >
+
+                    <span class="radio-personalizado"></span>
+
+                    Acima de R$ 200
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="limparFiltros"
+                class="btn-limpar-filtros"
+            >
+
+                <i class="bi bi-arrow-counterclockwise"></i>
+
+                Limpar filtros
+
+            </button>
+
+        </aside>
+
+
+        <!-- =================================================
+             CONTEÚDO DOS PRODUTOS
+        ================================================== -->
+
+        <section class="conteudo-produtos">
+
+            <!-- RESULTADO DO FILTRO -->
+
+            <div
+                class="resultado-pesquisa"
+                id="resultadoPesquisa"
+            ></div>
+
+
+            <!-- CARROSSEL 1 -->
+
+            <section
+                class="secao-carrossel"
+                data-secao="destaques"
+            >
+
+                <div class="cabecalho-carrossel">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            Escolhidos para você
+                        </span>
+
+                        <h2>Produtos em destaque</h2>
+
+                    </div>
+
+                    <div class="botoes-carrossel">
+
+                        <button
+                            class="seta-carrossel esquerda"
+                            type="button"
+                            aria-label="Anterior"
+                        >
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+                        <button
+                            class="seta-carrossel direita"
+                            type="button"
+                            aria-label="Próximo"
+                        >
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="carrossel-viewport">
+
+                    <div
+                        class="carrossel-produtos"
+                        id="carrosselDestaques"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CARROSSEL 2 -->
+
+            <section
+                class="secao-carrossel"
+                data-secao="gatos"
+            >
+
+                <div class="cabecalho-carrossel">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            Para os felinos
+                        </span>
+
+                        <h2>Favoritos dos gatos 🐱</h2>
+
+                    </div>
+
+                    <div class="botoes-carrossel">
+
+                        <button
+                            class="seta-carrossel esquerda"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+                        <button
+                            class="seta-carrossel direita"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="carrossel-viewport">
+
+                    <div
+                        class="carrossel-produtos"
+                        id="carrosselGatos"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BANNER -->
+
+            
+
+            <!-- CARROSSEL 3 -->
+
+            <section
+                class="secao-carrossel"
+                data-secao="cachorros"
+            >
+
+                <div class="cabecalho-carrossel">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            Para os cães
+                        </span>
+
+                        <h2>Produtos para cachorros 🐶</h2>
+
+                    </div>
+
+                    <div class="botoes-carrossel">
+
+                        <button
+                            class="seta-carrossel esquerda"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+                        <button
+                            class="seta-carrossel direita"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="carrossel-viewport">
+
+                    <div
+                        class="carrossel-produtos"
+                        id="carrosselCachorros"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CARROSSEL 4 -->
+
+            <section
+                class="secao-carrossel"
+                data-secao="brinquedos"
+            >
+
+                <div class="cabecalho-carrossel">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            Hora da diversão
+                        </span>
+
+                        <h2>Brinquedos e acessórios</h2>
+
+                    </div>
+
+                    <div class="botoes-carrossel">
+
+                        <button
+                            class="seta-carrossel esquerda"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+                        <button
+                            class="seta-carrossel direita"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="carrossel-viewport">
+
+                    <div
+                        class="carrossel-produtos"
+                        id="carrosselBrinquedos"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CARROSSEL 5 -->
+
+            <section
+                class="secao-carrossel"
+                data-secao="cuidados"
+            >
+
+                <div class="cabecalho-carrossel">
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            Cuidados especiais
+                        </span>
+
+                        <h2>Higiene e bem-estar</h2>
+
+                    </div>
+
+                    <div class="botoes-carrossel">
+
+                        <button
+                            class="seta-carrossel esquerda"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+                        <button
+                            class="seta-carrossel direita"
+                            type="button"
+                        >
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="carrossel-viewport">
+
+                    <div
+                        class="carrossel-produtos"
+                        id="carrosselCuidados"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- NENHUM PRODUTO -->
+
+            <div
+                class="nenhum-produto"
+                id="nenhumProduto"
+            >
+
+                <div class="nenhum-produto-icone">
+
+                    <i class="bi bi-search-heart"></i>
+
+                </div>
+
+                <h3>Nenhum produto encontrado</h3>
+
+                <p>
+                    Tente remover algum filtro ou pesquisar
+                    por outro produto.
+                </p>
+
+                <button
+                    type="button"
+                    id="limparFiltrosResultado"
+                >
+
+                    Limpar filtros
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/* =====================================================
+   BANCO DE PRODUTOS
+===================================================== */
+
+const produtos = [
+
+    {
+        id: 1,
+        nome: "Areia para Gato Perfumada",
+        marca: "Gattino",
+        marcaFiltro: "gattino",
+
+        preco: 32.99,
+        precoAntigo: 39.99,
+
+        pet: "gato",
+        categoria: "higiene",
+
+        imagem: "../marcas/areia gato/pipicat/higienica_4kg.png",
+
+        avaliacao: 4.9,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "4Kg",
+                preco: 32.99,
+                precoAntigo: 39.99,
+                imagem: "../marcas/areia gato/pipicat/higienica_4kg.png"
+            },
+
+            {
+                nome: "12Kg",
+                preco: 69.99,
+                precoAntigo: 79.99,
+                imagem: "../marcas/areia gato/pipicat/higienica_12kg.png"
+            },
+
+            {
+                nome: "20Kg",
+                preco: 98.90,
+                precoAntigo: 115.90,
+                imagem: "../marcas/areia gato/pipicat/higienica_20kg.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 2,
+        nome: "Arranhador para Gato Peixe Cinza",
+        marca: "São Benedito",
+        marcaFiltro: "sao-benedito",
+
+        preco: 39.00,
+        precoAntigo: 45.90,
+
+        pet: "gato",
+        categoria: "brinquedo",
+
+        imagem: "../marcas/arranhador/sao benedito/peixe_cinza.png",
+
+        avaliacao: 4.8,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 39.00,
+                precoAntigo: 45.90,
+                imagem: "../marcas/arranhador/sao benedito/peixe_cinza.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 3,
+        nome: "Varinha Passarinho Rosa para Gatos",
+        marca: "Kong",
+        marcaFiltro: "kong",
+
+        preco: 52.99,
+        precoAntigo: 65.90,
+
+        pet: "gato",
+        categoria: "brinquedo",
+
+        imagem: "../marcas/brinquedo cachorro e gato/kong/gato/varinha_passarinhororosa.png",
+
+        avaliacao: 4.9,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 52.99,
+                precoAntigo: 65.90,
+                imagem: "../marcas/brinquedo cachorro e gato/kong/gato/varinha_passarinhororosa.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 4,
+        nome: "Arranhador Interativo para Gatos",
+        marca: "Chalesco",
+        marcaFiltro: "chalesco",
+
+        preco: 95.78,
+        precoAntigo: 109.90,
+
+        pet: "gato",
+        categoria: "brinquedo",
+
+        imagem: "../marcas/brinquedo cachorro e gato/chalesco/gato/arranhador_interativo.png",
+
+        avaliacao: 4.7,
+        destaque: false,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 95.78,
+                precoAntigo: 109.90,
+                imagem: "../marcas/brinquedo cachorro e gato/chalesco/gato/arranhador_interativo.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 5,
+        nome: "Kit Caixa de Areia Azul",
+        marca: "Furacão Pet",
+        marcaFiltro: "furacao",
+
+        preco: 39.00,
+        precoAntigo: 49.90,
+
+        pet: "gato",
+        categoria: "higiene",
+
+        imagem: "../marcas/caixa de areia/furacao pet/kit_azul.png",
+
+        avaliacao: 4.9,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 39.00,
+                precoAntigo: 49.90,
+                imagem: "../marcas/caixa de areia/furacao pet/kit_azul.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 6,
+        nome: "Caixa de Areia Roxa para Gatos",
+        marca: "Alvorada",
+        marcaFiltro: "alvorada",
+
+        preco: 55.00,
+        precoAntigo: 69.90,
+
+        pet: "gato",
+        categoria: "higiene",
+
+        imagem: "../marcas/caixa de areia/alvorada/roxo.png",
+
+        avaliacao: 4.6,
+        destaque: false,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 55.00,
+                precoAntigo: 69.90,
+                imagem: "../marcas/caixa de areia/alvorada/roxo.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 7,
+        nome: "Caixa de Transporte Trendy",
+        marca: "Ferplast",
+        marcaFiltro: "ferplast",
+
+        preco: 199.99,
+        precoAntigo: 229.90,
+
+        pet: "gato",
+        categoria: "transporte",
+
+        imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png",
+
+        avaliacao: 4.8,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "1",
+                preco: 199.99,
+                precoAntigo: 229.90,
+                imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+            },
+
+            {
+                nome: "2",
+                preco: 250.00,
+                precoAntigo: 279.90,
+                imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+            },
+
+            {
+                nome: "3",
+                preco: 330.00,
+                precoAntigo: 359.90,
+                imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 8,
+        nome: "Caixa de Transporte Elegance",
+        marca: "Dura Pet",
+        marcaFiltro: "dura-pet",
+
+        preco: 99.90,
+        precoAntigo: 129.90,
+
+        pet: "cachorro",
+        categoria: "transporte",
+
+        imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho1.png",
+
+        avaliacao: 4.9,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "1",
+                preco: 99.90,
+                precoAntigo: 129.90,
+                imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho1.png"
+            },
+
+            {
+                nome: "2",
+                preco: 129.90,
+                precoAntigo: 149.90,
+                imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho2.png"
+            },
+
+            {
+                nome: "3",
+                preco: 159.90,
+                precoAntigo: 189.90,
+                imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho3.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 9,
+        nome: "Areia Higiênica Premium para Gatos",
+        marca: "Gattino",
+        marcaFiltro: "gattino",
+
+        preco: 29.90,
+        precoAntigo: 36.90,
+
+        pet: "gato",
+        categoria: "higiene",
+
+        imagem: "../marcas/areia gato/pipicat/higienica_4kg.png",
+
+        avaliacao: 4.7,
+        destaque: false,
+
+        tamanhos: [
+
+            {
+                nome: "4Kg",
+                preco: 29.90,
+                precoAntigo: 36.90,
+                imagem: "../marcas/areia gato/pipicat/higienica_4kg.png"
+            },
+
+            {
+                nome: "12Kg",
+                preco: 62.90,
+                precoAntigo: 74.90,
+                imagem: "../marcas/areia gato/pipicat/higienica_12kg.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 10,
+        nome: "Arranhador Divertido para Gatos",
+        marca: "São Benedito",
+        marcaFiltro: "sao-benedito",
+
+        preco: 42.90,
+        precoAntigo: 49.99,
+
+        pet: "gato",
+        categoria: "brinquedo",
+
+        imagem: "../marcas/arranhador/sao benedito/peixe_cinza.png",
+
+        avaliacao: 4.8,
+        destaque: false,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 42.90,
+                precoAntigo: 49.99,
+                imagem: "../marcas/arranhador/sao benedito/peixe_cinza.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 11,
+        nome: "Brinquedo Interativo para Gatos",
+        marca: "Chalesco",
+        marcaFiltro: "chalesco",
+
+        preco: 89.90,
+        precoAntigo: 105.90,
+
+        pet: "gato",
+        categoria: "brinquedo",
+
+        imagem: "../marcas/brinquedo cachorro e gato/chalesco/gato/arranhador_interativo.png",
+
+        avaliacao: 4.9,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "Único",
+                preco: 89.90,
+                precoAntigo: 105.90,
+                imagem: "../marcas/brinquedo cachorro e gato/chalesco/gato/arranhador_interativo.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 12,
+        nome: "Caixa Higiênica com Kit",
+        marca: "Furacão Pet",
+        marcaFiltro: "furacao",
+
+        preco: 45.90,
+        precoAntigo: 59.90,
+
+        pet: "gato",
+        categoria: "higiene",
+
+        imagem: "../marcas/caixa de areia/furacao pet/kit_azul.png",
+
+        avaliacao: 4.8,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "P",
+                preco: 45.90,
+                precoAntigo: 59.90,
+                imagem: "../marcas/caixa de areia/furacao pet/kit_azul.png"
+            },
+
+            {
+                nome: "M",
+                preco: 55.90,
+                precoAntigo: 69.90,
+                imagem: "../marcas/caixa de areia/furacao pet/kit_azul.png"
+            },
+
+            {
+                nome: "G",
+                preco: 69.90,
+                precoAntigo: 84.90,
+                imagem: "../marcas/caixa de areia/furacao pet/kit_azul.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 13,
+        nome: "Caixa de Transporte Pet Verde",
+        marca: "Dura Pet",
+        marcaFiltro: "dura-pet",
+
+        preco: 129.90,
+        precoAntigo: 149.90,
+
+        pet: "cachorro",
+        categoria: "transporte",
+
+        imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho1.png",
+
+        avaliacao: 4.8,
+        destaque: false,
+
+        tamanhos: [
+
+            {
+                nome: "1",
+                preco: 129.90,
+                precoAntigo: 149.90,
+                imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho1.png"
+            },
+
+            {
+                nome: "2",
+                preco: 149.90,
+                precoAntigo: 169.90,
+                imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho2.png"
+            },
+
+            {
+                nome: "3",
+                preco: 179.90,
+                precoAntigo: 199.90,
+                imagem: "../marcas/caixa de transporte/dura pet/elegance_verdetamanho3.png"
+            }
+
+        ]
+    },
+
+
+    {
+        id: 14,
+        nome: "Caixa de Transporte Premium",
+        marca: "Ferplast",
+        marcaFiltro: "ferplast",
+
+        preco: 250.00,
+        precoAntigo: 289.90,
+
+        pet: "cachorro",
+        categoria: "transporte",
+
+        imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png",
+
+        avaliacao: 4.9,
+        destaque: true,
+
+        tamanhos: [
+
+            {
+                nome: "1",
+                preco: 199.99,
+                precoAntigo: 229.90,
+                imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+            },
+
+            {
+                nome: "2",
+                preco: 250.00,
+                precoAntigo: 289.90,
+                imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+            },
+
+            {
+                nome: "3",
+                preco: 330.00,
+                precoAntigo: 359.90,
+                imagem: "../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+            }
+
+        ]
+    }
+
+];
+
+
+/* =====================================================
+   ELEMENTOS PRINCIPAIS
+===================================================== */
+
+const pesquisa =
+    document.getElementById("pesquisaProduto");
+
+const ordenar =
+    document.getElementById("ordenar");
+
+const nenhumProduto =
+    document.getElementById("nenhumProduto");
+
+const resultadoPesquisa =
+    document.getElementById("resultadoPesquisa");
+
+
+/* =====================================================
+   FORMATAR PREÇO
+===================================================== */
+
+function formatarPreco(valor) {
+
+    if (
+        valor === undefined ||
+        valor === null ||
+        isNaN(valor)
+    ) {
+
+        return "";
+
+    }
+
+    return Number(valor).toLocaleString(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CALCULAR DESCONTO
+===================================================== */
+
+function calcularDesconto(
+    precoAntigo,
+    precoAtual
+) {
+
+    if (
+        !precoAntigo ||
+        precoAntigo <= precoAtual
+    ) {
+
+        return 0;
+
+    }
+
+    return Math.round(
+        (
+            (precoAntigo - precoAtual)
+            /
+            precoAntigo
+        )
+        *
+        100
+    );
+
+}
+
+
+/* =====================================================
+   CRIAR TAMANHOS DO CARD
+===================================================== */
+
+function criarTamanhos(produto) {
+
+    if (
+        !produto.tamanhos ||
+        produto.tamanhos.length === 0
+    ) {
+
+        return "";
+
+    }
+
+
+    return `
+
+        <div class="area-variacoes">
+
+            <span class="titulo-variacao">
+                Tamanho:
+            </span>
+
+
+            <div class="variacoes-produto">
+
+                ${produto.tamanhos.map(
+                    (tamanho, index) => `
+
+                        <button
+                            type="button"
+
+                            class="
+                                btn-tamanho-card
+                                ${index === 0 ? "ativo" : ""}
+                            "
+
+                            data-preco="${tamanho.preco}"
+
+                            data-preco-antigo="${tamanho.precoAntigo}"
+
+                            data-imagem="${tamanho.imagem}"
+
+                            data-tamanho="${tamanho.nome}"
+                        >
+
+                            ${tamanho.nome}
+
+                        </button>
+
+                    `
+                ).join("")}
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   CRIAR CARD
+===================================================== */
+
+function criarCard(produto) {
+
+    const primeiroTamanho =
+        produto.tamanhos &&
+        produto.tamanhos.length > 0
+        ?
+        produto.tamanhos[0]
+        :
+        null;
+
+
+    const precoInicial =
+        primeiroTamanho
+        ?
+        primeiroTamanho.preco
+        :
+        produto.preco;
+
+
+    const precoAntigoInicial =
+        primeiroTamanho
+        ?
+        primeiroTamanho.precoAntigo
+        :
+        produto.precoAntigo;
+
+
+    const imagemInicial =
+        primeiroTamanho
+        ?
+        primeiroTamanho.imagem
+        :
+        produto.imagem;
+
+
+    const desconto =
+        calcularDesconto(
+            precoAntigoInicial,
+            precoInicial
+        );
+
+
+    return `
+
+        <article
+            class="card-produto"
+            data-id="${produto.id}"
+        >
+
+            <!-- =====================================
+                 IMAGEM
+            ====================================== -->
+
+            <div class="area-imagem-produto">
+
+
+                <span
+                    class="selo-desconto"
+                    style="
+                        display:
+                        ${desconto > 0 ? "block" : "none"}
+                    "
+                >
+
+                    -${desconto}%
+
+                </span>
+
+
+                <!-- FAVORITO -->
+
+                <button
+                    class="btn-favorito"
+                    type="button"
+                    title="Adicionar aos favoritos"
+                >
+
+                    <i class="bi bi-heart"></i>
+
+                </button>
+
+
+                <!-- FOTO -->
+
+                <a href="produto.html">
+
+                    <img
+                        class="imagem-card-produto"
+
+                        src="${imagemInicial}"
+
+                        alt="${produto.nome}"
+                    >
+
+                </a>
+
+
+                <!-- CARRINHO REDONDO -->
+
+                <button
+                    class="btn-carrinho-card"
+                    type="button"
+                    title="Adicionar ao carrinho"
+                >
+
+                    <i class="bi bi-cart-plus"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =====================================
+                 INFORMAÇÕES
+            ====================================== -->
+
+            <div class="informacoes-card">
+
+
+                <div class="linha-marca">
+
+                    <span class="marca-produto">
+
+                        ${produto.marca}
+
+                    </span>
+
+
+                    <span class="nota-produto">
+
+                        <i class="bi bi-star-fill"></i>
+
+                        ${produto.avaliacao}
+
+                    </span>
+
+                </div>
+
+
+                <!-- NOME -->
+
+                <a
+                    href="produto.html"
+                    class="nome-produto"
+                >
+
+                    ${produto.nome}
+
+                </a>
+
+
+                <!-- TAMANHOS -->
+
+                ${criarTamanhos(produto)}
+
+
+                <!-- PREÇOS -->
+
+                <div class="precos-produto">
+
+                    <span class="preco-antigo">
+
+                        ${formatarPreco(
+                            precoAntigoInicial
+                        )}
+
+                    </span>
+
+
+                    <strong class="preco-atual">
+
+                        ${formatarPreco(
+                            precoInicial
+                        )}
+
+                    </strong>
+
+
+                    <span class="preco-pix">
+
+                        à vista no Pix
+
+                    </span>
+
+                </div>
+
+
+                <!-- TAMANHO ESCOLHIDO -->
+
+                <input
+                    type="hidden"
+                    class="tamanho-escolhido"
+                    value="${
+                        primeiroTamanho
+                        ?
+                        primeiroTamanho.nome
+                        :
+                        ""
+                    }"
+                >
+
+
+                <!-- PREÇO ESCOLHIDO -->
+
+                <input
+                    type="hidden"
+                    class="preco-escolhido"
+                    value="${precoInicial}"
+                >
+
+
+                <!-- BOTÃO ADICIONAR -->
+
+                <button
+                    class="comprar-produto"
+                    type="button"
+                >
+
+                    <i class="bi bi-cart3"></i>
+
+                    Adicionar
+
+                </button>
+
+            </div>
+
+        </article>
+
+    `;
+
+}
+
+
+/* =====================================================
+   PEGAR FILTROS
+===================================================== */
+
+function obterFiltros() {
+
+    const pets = [
+
+        ...document.querySelectorAll(
+            ".filtro-pet:checked"
+        )
+
+    ].map(
+        input => input.value
+    );
+
+
+    const categorias = [
+
+        ...document.querySelectorAll(
+            ".filtro-categoria:checked"
+        )
+
+    ].map(
+        input => input.value
+    );
+
+
+    const marcas = [
+
+        ...document.querySelectorAll(
+            ".filtro-marca:checked"
+        )
+
+    ].map(
+        input => input.value
+    );
+
+
+    const precoSelecionado =
+        document.querySelector(
+            ".filtro-preco:checked"
+        );
+
+
+    const preco =
+        precoSelecionado
+        ?
+        precoSelecionado.value
+        :
+        "todos";
+
+
+    return {
+
+        pets,
+
+        categorias,
+
+        marcas,
+
+        preco,
+
+        pesquisa:
+            pesquisa
+            ?
+            pesquisa.value
+            .toLowerCase()
+            .trim()
+            :
+            ""
+
+    };
+
+}
+
+
+/* =====================================================
+   PEGAR MENOR PREÇO DO PRODUTO
+===================================================== */
+
+function obterPrecoParaFiltro(produto) {
+
+    if (
+        produto.tamanhos &&
+        produto.tamanhos.length > 0
+    ) {
+
+        return Math.min(
+            ...produto.tamanhos.map(
+                tamanho =>
+                    Number(tamanho.preco)
+            )
+        );
+
+    }
+
+    return Number(
+        produto.preco
+    );
+
+}
+
+
+/* =====================================================
+   FILTRAR PRODUTOS
+===================================================== */
+
+function filtrarProdutos() {
+
+    const filtros =
+        obterFiltros();
+
+
+    let lista =
+        produtos.filter(
+            produto => {
+
+
+                /* ==========================
+                   PET
+                ========================== */
+
+                const correspondePet =
+
+                    filtros.pets.length === 0
+
+                    ||
+
+                    filtros.pets.includes(
+                        produto.pet
+                    );
+
+
+                /* ==========================
+                   CATEGORIA
+                ========================== */
+
+                const correspondeCategoria =
+
+                    filtros.categorias.length === 0
+
+                    ||
+
+                    filtros.categorias.includes(
+                        produto.categoria
+                    );
+
+
+                /* ==========================
+                   MARCA
+                ========================== */
+
+                const correspondeMarca =
+
+                    filtros.marcas.length === 0
+
+                    ||
+
+                    filtros.marcas.includes(
+                        produto.marcaFiltro
+                    );
+
+
+                /* ==========================
+                   PESQUISA
+                ========================== */
+
+                const textoProduto =
+                    (
+                        produto.nome
+                        +
+                        " "
+                        +
+                        produto.marca
+                        +
+                        " "
+                        +
+                        produto.categoria
+                        +
+                        " "
+                        +
+                        produto.pet
+                    )
+                    .toLowerCase();
+
+
+                const correspondePesquisa =
+                    textoProduto.includes(
+                        filtros.pesquisa
+                    );
+
+
+                /* ==========================
+                   PREÇO
+                ========================== */
+
+                const precoProduto =
+                    obterPrecoParaFiltro(
+                        produto
+                    );
+
+
+                let correspondePreco =
+                    true;
+
+
+                if (
+                    filtros.preco === "50"
+                ) {
+
+                    correspondePreco =
+                        precoProduto <= 50;
+
+                }
+
+
+                if (
+                    filtros.preco === "100"
+                ) {
+
+                    correspondePreco =
+                        precoProduto <= 100;
+
+                }
+
+
+                if (
+                    filtros.preco === "200"
+                ) {
+
+                    correspondePreco =
+                        precoProduto <= 200;
+
+                }
+
+
+                if (
+                    filtros.preco === "mais200"
+                ) {
+
+                    correspondePreco =
+                        precoProduto > 200;
+
+                }
+
+
+                return (
+
+                    correspondePet
+
+                    &&
+
+                    correspondeCategoria
+
+                    &&
+
+                    correspondeMarca
+
+                    &&
+
+                    correspondePesquisa
+
+                    &&
+
+                    correspondePreco
+
+                );
+
+            }
+        );
+
+
+    /* =================================================
+       ORDENAÇÃO
+    ================================================= */
+
+
+    if (
+        ordenar &&
+        ordenar.value === "menor"
+    ) {
+
+        lista.sort(
+            (a, b) =>
+                obterPrecoParaFiltro(a)
+                -
+                obterPrecoParaFiltro(b)
+        );
+
+    }
+
+
+    if (
+        ordenar &&
+        ordenar.value === "maior"
+    ) {
+
+        lista.sort(
+            (a, b) =>
+                obterPrecoParaFiltro(b)
+                -
+                obterPrecoParaFiltro(a)
+        );
+
+    }
+
+
+    if (
+        ordenar &&
+        ordenar.value === "nome"
+    ) {
+
+        lista.sort(
+            (a, b) =>
+                a.nome.localeCompare(
+                    b.nome,
+                    "pt-BR"
+                )
+        );
+
+    }
+
+
+    if (
+        ordenar &&
+        ordenar.value === "destaque"
+    ) {
+
+        lista.sort(
+            (a, b) =>
+                Number(b.destaque)
+                -
+                Number(a.destaque)
+        );
+
+    }
+
+
+    return lista;
+
+}
+
+
+/* =====================================================
+   PREENCHER CARROSSEL
+===================================================== */
+
+function preencherCarrossel(
+    id,
+    lista
+) {
+
+    const elemento =
+        document.getElementById(id);
+
+
+    if (!elemento) {
+
+        return;
+
+    }
+
+
+    elemento.innerHTML =
+        lista
+        .map(criarCard)
+        .join("");
+
+}
+
+
+/* =====================================================
+   RENDERIZAR PRODUTOS
+===================================================== */
+
+function renderizarProdutos() {
+
+    const filtrados =
+        filtrarProdutos();
+
+
+    const destaques =
+        filtrados.filter(
+            produto =>
+                produto.destaque
+        );
+
+
+    const gatos =
+        filtrados.filter(
+            produto =>
+                produto.pet === "gato"
+        );
+
+
+    const cachorros =
+        filtrados.filter(
+            produto =>
+                produto.pet === "cachorro"
+        );
+
+
+    const brinquedos =
+        filtrados.filter(
+            produto =>
+                produto.categoria ===
+                "brinquedo"
+        );
+
+
+    const cuidados =
+        filtrados.filter(
+            produto =>
+
+                produto.categoria ===
+                "higiene"
+
+                ||
+
+                produto.categoria ===
+                "transporte"
+
+        );
+
+
+    /* DESTAQUES */
+
+    preencherCarrossel(
+        "carrosselDestaques",
+
+        destaques.length > 0
+        ?
+        destaques
+        :
+        filtrados
+    );
+
+
+    /* GATOS */
+
+    preencherCarrossel(
+        "carrosselGatos",
+        gatos
+    );
+
+
+    /* CACHORROS */
+
+    preencherCarrossel(
+        "carrosselCachorros",
+        cachorros
+    );
+
+
+    /* BRINQUEDOS */
+
+    preencherCarrossel(
+        "carrosselBrinquedos",
+        brinquedos
+    );
+
+
+    /* CUIDADOS */
+
+    preencherCarrossel(
+        "carrosselCuidados",
+        cuidados
+    );
+
+
+    /* =================================================
+       ESCONDER CARROSSEL VAZIO
+    ================================================= */
+
+    document
+    .querySelectorAll(
+        ".secao-carrossel"
+    )
+    .forEach(
+        secao => {
+
+            const carrossel =
+                secao.querySelector(
+                    ".carrossel-produtos"
+                );
+
+
+            if (!carrossel) {
+
+                return;
+
+            }
+
+
+            secao.style.display =
+                carrossel.children.length > 0
+                ?
+                "block"
+                :
+                "none";
+
+        }
+    );
+
+
+    /* =================================================
+       RESULTADOS DO FILTRO
+    ================================================= */
+
+    if (
+        resultadoPesquisa
+    ) {
+
+        const checkboxesMarcados =
+            document.querySelectorAll(
+                ".filtros-produtos input[type='checkbox']:checked"
+            ).length;
+
+
+        const precoMarcado =
+            document.querySelector(
+                ".filtro-preco:checked"
+            );
+
+
+        const temFiltroPreco =
+            precoMarcado &&
+            precoMarcado.value !== "todos";
+
+
+        const temPesquisa =
+            pesquisa &&
+            pesquisa.value.trim() !== "";
+
+
+        if (
+            checkboxesMarcados > 0
+            ||
+            temFiltroPreco
+            ||
+            temPesquisa
+        ) {
+
+            resultadoPesquisa.style.display =
+                "flex";
+
+
+            resultadoPesquisa.innerHTML = `
+
+                <i class="bi bi-funnel-fill"></i>
+
+                <span>
+
+                    ${filtrados.length}
+
+                    produto(s) encontrado(s)
+
+                </span>
+
+            `;
+
+        }
+
+        else {
+
+            resultadoPesquisa.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    /* =================================================
+       NENHUM PRODUTO
+    ================================================= */
+
+    if (
+        nenhumProduto
+    ) {
+
+        nenhumProduto.style.display =
+
+            filtrados.length === 0
+
+            ?
+
+            "flex"
+
+            :
+
+            "none";
+
+    }
+
+
+    /* REATIVAR EVENTOS DOS CARDS */
+
+    ativarBotoesCards();
+
+}
+
+
+/* =====================================================
+   TROCAR TAMANHO DO PRODUTO
+===================================================== */
+
+function ativarTrocaTamanho() {
+
+    document
+    .querySelectorAll(
+        ".btn-tamanho-card"
+    )
+    .forEach(
+        botao => {
+
+            botao.onclick =
+                function() {
+
+
+                    /* CARD */
+
+                    const card =
+                        this.closest(
+                            ".card-produto"
+                        );
+
+
+                    if (!card) {
+
+                        return;
+
+                    }
+
+
+                    /* ==========================
+                       DESMARCAR OUTROS TAMANHOS
+                    ========================== */
+
+                    card
+                    .querySelectorAll(
+                        ".btn-tamanho-card"
+                    )
+                    .forEach(
+                        btn => {
+
+                            btn.classList.remove(
+                                "ativo"
+                            );
+
+                        }
+                    );
+
+
+                    /* MARCAR O CLICADO */
+
+                    this.classList.add(
+                        "ativo"
+                    );
+
+
+                    /* ==========================
+                       PEGAR NOVOS DADOS
+                    ========================== */
+
+                    const novoPreco =
+                        Number(
+                            this.dataset.preco
+                        );
+
+
+                    const novoPrecoAntigo =
+                        Number(
+                            this.dataset.precoAntigo
+                        );
+
+
+                    const novaImagem =
+                        this.dataset.imagem;
+
+
+                    const novoTamanho =
+                        this.dataset.tamanho;
+
+
+                    /* ==========================
+                       TROCAR IMAGEM
+                    ========================== */
+
+                    const imagem =
+                        card.querySelector(
+                            ".imagem-card-produto"
+                        );
+
+
+                    if (imagem) {
+
+                        imagem.style.opacity =
+                            "0";
+
+
+                        setTimeout(
+                            () => {
+
+                                imagem.src =
+                                    novaImagem;
+
+
+                                imagem.style.opacity =
+                                    "1";
+
+                            },
+
+                            150
+                        );
+
+                    }
+
+
+                    /* ==========================
+                       TROCAR PREÇO ATUAL
+                    ========================== */
+
+                    const precoAtual =
+                        card.querySelector(
+                            ".preco-atual"
+                        );
+
+
+                    if (precoAtual) {
+
+                        precoAtual.textContent =
+                            formatarPreco(
+                                novoPreco
+                            );
+
+                    }
+
+
+                    /* ==========================
+                       TROCAR PREÇO ANTIGO
+                    ========================== */
+
+                    const precoAntigo =
+                        card.querySelector(
+                            ".preco-antigo"
+                        );
+
+
+                    if (precoAntigo) {
+
+                        precoAntigo.textContent =
+                            formatarPreco(
+                                novoPrecoAntigo
+                            );
+
+                    }
+
+
+                    /* ==========================
+                       ATUALIZAR DESCONTO
+                    ========================== */
+
+                    const desconto =
+                        calcularDesconto(
+                            novoPrecoAntigo,
+                            novoPreco
+                        );
+
+
+                    const selo =
+                        card.querySelector(
+                            ".selo-desconto"
+                        );
+
+
+                    if (selo) {
+
+                        if (
+                            desconto > 0
+                        ) {
+
+                            selo.style.display =
+                                "block";
+
+
+                            selo.textContent =
+                                `-${desconto}%`;
+
+                        }
+
+                        else {
+
+                            selo.style.display =
+                                "none";
+
+                        }
+
+                    }
+
+
+                    /* ==========================
+                       GUARDAR TAMANHO ESCOLHIDO
+                    ========================== */
+
+                    const tamanhoInput =
+                        card.querySelector(
+                            ".tamanho-escolhido"
+                        );
+
+
+                    if (tamanhoInput) {
+
+                        tamanhoInput.value =
+                            novoTamanho;
+
+                    }
+
+
+                    /* ==========================
+                       GUARDAR PREÇO ESCOLHIDO
+                    ========================== */
+
+                    const precoInput =
+                        card.querySelector(
+                            ".preco-escolhido"
+                        );
+
+
+                    if (precoInput) {
+
+                        precoInput.value =
+                            novoPreco;
+
+                    }
+
+                };
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FAVORITOS
+===================================================== */
+
+function ativarFavoritos() {
+
+    document
+    .querySelectorAll(
+        ".btn-favorito"
+    )
+    .forEach(
+        botao => {
+
+            botao.onclick =
+                function(evento) {
+
+                    evento.preventDefault();
+
+                    evento.stopPropagation();
+
+
+                    const icone =
+                        this.querySelector(
+                            "i"
+                        );
+
+
+                    this.classList.toggle(
+                        "favoritado"
+                    );
+
+
+                    if (
+                        this.classList.contains(
+                            "favoritado"
+                        )
+                    ) {
+
+                        icone.className =
+                            "bi bi-heart-fill";
+
+                    }
+
+                    else {
+
+                        icone.className =
+                            "bi bi-heart";
+
+                    }
+
+                };
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   BOTÕES DO CARRINHO
+===================================================== */
+
+function ativarCarrinho() {
+
+    document
+    .querySelectorAll(
+        ".btn-carrinho-card, .comprar-produto"
+    )
+    .forEach(
+        botao => {
+
+            botao.onclick =
+                function(evento) {
+
+                    evento.preventDefault();
+
+                    evento.stopPropagation();
+
+
+                    const card =
+                        this.closest(
+                            ".card-produto"
+                        );
+
+
+                    if (!card) {
+
+                        return;
+
+                    }
+
+
+                    const idProduto =
+                        card.dataset.id;
+
+
+                    const tamanho =
+                        card.querySelector(
+                            ".tamanho-escolhido"
+                        )?.value || "";
+
+
+                    const preco =
+                        card.querySelector(
+                            ".preco-escolhido"
+                        )?.value || "";
+
+
+                    console.log(
+                        "Produto:",
+                        idProduto
+                    );
+
+                    console.log(
+                        "Tamanho:",
+                        tamanho
+                    );
+
+                    console.log(
+                        "Preço:",
+                        preco
+                    );
+
+
+                    /* ==========================
+                       BOTÃO GRANDE
+                    ========================== */
+
+                    if (
+                        this.classList.contains(
+                            "comprar-produto"
+                        )
+                    ) {
+
+                        const textoOriginal =
+                            this.innerHTML;
+
+
+                        this.classList.add(
+                            "adicionado"
+                        );
+
+
+                        this.innerHTML = `
+
+                            <i class="bi bi-check-lg"></i>
+
+                            Adicionado
+
+                        `;
+
+
+                        setTimeout(
+                            () => {
+
+                                this.innerHTML =
+                                    textoOriginal;
+
+
+                                this.classList.remove(
+                                    "adicionado"
+                                );
+
+                            },
+
+                            1500
+                        );
+
+                    }
+
+
+                    /* ==========================
+                       BOTÃO REDONDO
+                    ========================== */
+
+                    else {
+
+                        const icone =
+                            this.querySelector(
+                                "i"
+                            );
+
+
+                        const classeOriginal =
+                            icone.className;
+
+
+                        this.classList.add(
+                            "adicionado"
+                        );
+
+
+                        icone.className =
+                            "bi bi-check-lg";
+
+
+                        setTimeout(
+                            () => {
+
+                                icone.className =
+                                    classeOriginal;
+
+
+                                this.classList.remove(
+                                    "adicionado"
+                                );
+
+                            },
+
+                            1200
+                        );
+
+                    }
+
+                };
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ATIVAR TODOS OS BOTÕES DOS CARDS
+===================================================== */
+
+function ativarBotoesCards() {
+
+    ativarTrocaTamanho();
+
+    ativarFavoritos();
+
+    ativarCarrinho();
+
+}
+
+
+/* =====================================================
+   CARROSSÉIS
+===================================================== */
+
+function ativarCarrosseis() {
+
+    document
+    .querySelectorAll(
+        ".secao-carrossel"
+    )
+    .forEach(
+        secao => {
+
+            const carrossel =
+                secao.querySelector(
+                    ".carrossel-produtos"
+                );
+
+
+            const esquerda =
+                secao.querySelector(
+                    ".seta-carrossel.esquerda"
+                );
+
+
+            const direita =
+                secao.querySelector(
+                    ".seta-carrossel.direita"
+                );
+
+
+            if (
+                !carrossel
+                ||
+                !esquerda
+                ||
+                !direita
+            ) {
+
+                return;
+
+            }
+
+
+            esquerda.onclick =
+                function() {
+
+                    carrossel.scrollBy({
+
+                        left: -650,
+
+                        behavior: "smooth"
+
+                    });
+
+                };
+
+
+            direita.onclick =
+                function() {
+
+                    carrossel.scrollBy({
+
+                        left: 650,
+
+                        behavior: "smooth"
+
+                    });
+
+                };
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   EVENTOS DOS FILTROS
+===================================================== */
+
+document
+.querySelectorAll(
+    ".filtros-produtos input"
+)
+.forEach(
+    input => {
+
+        input.addEventListener(
+            "change",
+            renderizarProdutos
+        );
+
+    }
+);
+
+
+/* PESQUISA */
+
+if (pesquisa) {
+
+    pesquisa.addEventListener(
+        "input",
+        renderizarProdutos
+    );
+
+}
+
+
+/* ORDENAÇÃO */
+
+if (ordenar) {
+
+    ordenar.addEventListener(
+        "change",
+        renderizarProdutos
+    );
+
+}
+
+
+/* =====================================================
+   LIMPAR FILTROS
+===================================================== */
+
+function limparFiltros() {
+
+    /* CHECKBOX */
+
+    document
+    .querySelectorAll(
+        ".filtros-produtos input[type='checkbox']"
+    )
+    .forEach(
+        input => {
+
+            input.checked =
+                false;
+
+        }
+    );
+
+
+    /* PREÇO */
+
+    const precoTodos =
+        document.querySelector(
+            ".filtro-preco[value='todos']"
+        );
+
+
+    if (precoTodos) {
+
+        precoTodos.checked =
+            true;
+
+    }
+
+
+    /* PESQUISA */
+
+    if (pesquisa) {
+
+        pesquisa.value =
+            "";
+
+    }
+
+
+    /* ORDENAÇÃO */
+
+    if (ordenar) {
+
+        ordenar.value =
+            "destaque";
+
+    }
+
+
+    renderizarProdutos();
+
+}
+
+
+/* BOTÃO LATERAL */
+
+const botaoLimpar =
+    document.getElementById(
+        "limparFiltros"
+    );
+
+
+if (botaoLimpar) {
+
+    botaoLimpar.addEventListener(
+        "click",
+        limparFiltros
+    );
+
+}
+
+
+/* BOTÃO NENHUM RESULTADO */
+
+const botaoLimparResultado =
+    document.getElementById(
+        "limparFiltrosResultado"
+    );
+
+
+if (botaoLimparResultado) {
+
+    botaoLimparResultado.addEventListener(
+        "click",
+        limparFiltros
+    );
+
+}
+
+
+/* =====================================================
+   ABRIR / FECHAR GRUPOS DO FILTRO
+===================================================== */
+
+document
+.querySelectorAll(
+    ".titulo-filtro"
+)
+.forEach(
+    titulo => {
+
+        titulo.addEventListener(
+            "click",
+            function() {
+
+                const grupo =
+                    this.parentElement;
+
+
+                grupo.classList.toggle(
+                    "fechado"
+                );
+
+
+                const icone =
+                    this.querySelector(
+                        "i"
+                    );
+
+
+                if (!icone) {
+
+                    return;
+
+                }
+
+
+                if (
+                    grupo.classList.contains(
+                        "fechado"
+                    )
+                ) {
+
+                    icone.className =
+                        "bi bi-chevron-down";
+
+                }
+
+                else {
+
+                    icone.className =
+                        "bi bi-chevron-up";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   INICIAR PÁGINA
+===================================================== */
+
+renderizarProdutos();
+
+ativarCarrosseis();
+
+</script>
+
+
+
+
+
+
+
+
+ <footer class="footer">
+
+    <div class="footer-top"></div>
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col empresa">
+
+            <h2>Garras <span>& Patas</span></h2>
+
+            <p>
+                Tudo para o seu pet em um só lugar. Encontre
+                rações, brinquedos, acessórios e muito mais
+                para cães e gatos.
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+
+                <a href="https://wa.me/5519994004101"><i class="bi bi-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-col">
+
+            <h3>Institucional</h3>
+
+            <ul>
+
+                <li><a href="menu.html">Página Inicial</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="blog.html">Blog</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Categorias -->
+        <div class="footer-col">
+
+            <h3>Categorias</h3>
+
+            <ul>
+
+                <li><a href="#">Cachorros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li><a href="#">Rações</a></li>
+                <li><a href="#">Brinquedos</a></li>
+                <li><a href="#">Acessórios</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-col">
+
+            <h3>Atendimento</h3>
+
+            <p>📞 (19) 99400-4101</p>
+
+            <p>📧 contato@carrarasepatas.com</p>
+
+            <p>📍 Rua das Flores, 123</p>
+
+            <p>Segunda a Sexta</p>
+
+            <p>08:00 às 18:00</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+
+        <p>
+            © 2026 Garras & Patas - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido por <strong>Etec</strong> | TCC - Informatica para internet
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
