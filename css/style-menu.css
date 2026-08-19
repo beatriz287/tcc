@@ -1734,3 +1734,639 @@ display:flex;
 .custom-carousel .custom-arrow {
   top: 35% !important;
 }
+
+
+
+
+
+
+
+/* =========================================================
+   NOVO CARROSSEL - PRODUTOS EM DESTAQUE DO MENU
+   IGUAL À ABA PRODUTO
+========================================================= */
+
+.menu-destaques {
+    width: 100%;
+    max-width: 1320px;
+    margin: 45px auto 55px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+/* CABEÇALHO */
+
+.menu-destaques-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-mini-titulo {
+    color: #0f9c9c;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+}
+
+.menu-destaques-cabecalho h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+    color: #262626;
+}
+
+
+/* =========================================================
+   ÁREA DO CARROSSEL
+========================================================= */
+
+.menu-carrossel-area {
+    width: 100%;
+    position: relative;
+}
+
+.menu-carrossel-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 2px 20px;
+}
+
+.menu-carrossel-produtos {
+    display: flex;
+    gap: 18px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    padding: 0;
+
+    scrollbar-width: none;
+
+    scroll-snap-type: x mandatory;
+}
+
+.menu-carrossel-produtos::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   EXATAMENTE 5 CARDS
+========================================================= */
+
+.menu-card-produto {
+    /*
+       4 espaços de 18px = 72px.
+       O restante é dividido entre exatamente 5 cards.
+    */
+
+    flex: 0 0 calc((100% - 72px) / 5);
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    scroll-snap-align: start;
+
+    transition:
+        transform .3s,
+        box-shadow .3s,
+        border .3s;
+}
+
+
+.menu-card-produto:hover {
+    transform: translateY(-5px);
+
+    border-color: #b8e7e7;
+
+    box-shadow:
+        0 12px 28px
+        rgba(0,0,0,.09);
+}
+
+
+/* =========================================================
+   IMAGEM
+========================================================= */
+
+.menu-area-imagem-produto {
+    position: relative;
+
+    height: 215px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+.menu-area-imagem-produto a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu-imagem-card-produto {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: .3s;
+}
+
+
+.menu-card-produto:hover
+.menu-imagem-card-produto {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   DESCONTO
+========================================================= */
+
+.menu-selo-desconto {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 3;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    background: #e4f8f8;
+
+    color: #0f9c9c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FAVORITO
+========================================================= */
+
+.menu-btn-favorito {
+    position: absolute;
+
+    right: 12px;
+    top: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0,0,0,.10);
+
+    cursor: pointer;
+
+    color: #777;
+
+    font-size: 18px;
+
+    z-index: 4;
+
+    transition: .3s;
+}
+
+
+.menu-btn-favorito:hover,
+.menu-btn-favorito.favoritado {
+    color: #ff5a6a;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CARRINHO REDONDO
+========================================================= */
+
+.menu-btn-carrinho-card {
+    position: absolute;
+
+    right: 13px;
+    bottom: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #0f9c9c;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px
+        rgba(15,156,156,.25);
+
+    transition: .3s;
+}
+
+
+.menu-btn-carrinho-card:hover {
+    background: #F7A61B;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.menu-informacoes-card {
+    padding: 14px 16px 17px;
+}
+
+
+.menu-linha-marca {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 9px;
+}
+
+
+.menu-marca-produto {
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+.menu-nota-produto {
+    font-size: 11px;
+
+    color: #777;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.menu-nota-produto i {
+    color: #ffc107;
+}
+
+
+/* =========================================================
+   NOME
+========================================================= */
+
+.menu-nome-produto {
+    color: #333;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+    text-decoration: none;
+
+    display: block;
+
+    min-height: 40px;
+
+    margin-bottom: 14px;
+
+    transition: .2s;
+}
+
+
+.menu-nome-produto:hover {
+    color: #0f9c9c;
+}
+
+
+/* =========================================================
+   TAMANHOS
+========================================================= */
+
+.menu-area-variacoes {
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+
+.menu-titulo-variacao {
+    display: block;
+
+    font-size: 13px;
+
+    color: #444;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.menu-variacoes-produto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.menu-btn-tamanho {
+    min-width: 48px;
+
+    height: 34px;
+
+    padding: 0 11px;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: #444;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .25s,
+        color .25s,
+        border-color .25s,
+        transform .25s,
+        box-shadow .25s;
+}
+
+
+.menu-btn-tamanho:hover {
+    border-color: #0f9c9c;
+
+    color: #0f9c9c;
+
+    background: #f0fbfb;
+
+    transform: translateY(-1px);
+}
+
+
+.menu-btn-tamanho.ativo {
+    background: #0f9c9c;
+
+    border-color: #0f9c9c;
+
+    color: #fff;
+
+    box-shadow:
+        0 3px 9px
+        rgba(15,156,156,.22);
+}
+
+
+/* =========================================================
+   PREÇOS
+========================================================= */
+
+.menu-precos-produto {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 75px;
+}
+
+
+.menu-preco-antigo {
+    color: #999;
+
+    font-size: 11px;
+
+    text-decoration: line-through;
+
+    margin-bottom: 3px;
+}
+
+
+.menu-preco-atual {
+    color: #222;
+
+    font-size: 20px;
+}
+
+
+.menu-preco-pix {
+    color: #0f9c9c;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   BOTÃO ADICIONAR
+========================================================= */
+
+.menu-comprar-produto {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 10px;
+
+    background: #eef9f9;
+
+    color: #0f9c9c;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    margin-top: 13px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    transition: .3s;
+}
+
+
+.menu-comprar-produto:hover {
+    background: #0f9c9c;
+
+    color: white;
+}
+
+
+.menu-comprar-produto.adicionado {
+    background: #0f9c9c;
+
+    color: white;
+}
+
+
+/* =========================================================
+   SETAS DO CARROSSEL
+
+   FICAM NO MEIO DOS CARDS
+========================================================= */
+
+.menu-seta-carrossel {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    color: #555;
+
+    z-index: 20;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,.12);
+
+    transition: .25s;
+}
+
+
+.menu-seta-carrossel:hover {
+    background: #0f9c9c;
+
+    border-color: #0f9c9c;
+
+    color: white;
+}
+
+
+.menu-seta-carrossel.esquerda {
+    left: -22px;
+}
+
+
+.menu-seta-carrossel.direita {
+    right: -22px;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .menu-card-produto {
+        flex: 0 0 calc((100% - 54px) / 4);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .menu-card-produto {
+        flex: 0 0 calc((100% - 36px) / 3);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .menu-card-produto {
+        flex: 0 0 calc((100% - 18px) / 2);
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .menu-card-produto {
+        flex: 0 0 85%;
+    }
+
+}
