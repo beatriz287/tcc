@@ -411,242 +411,320 @@
     transition: .3s;
 }
 
-/* ===================== MEGA MENU ===================== */
+/* ===================== MEGA MENU NOVO ===================== */
+
 .menu-area{
     position: relative;
     width: 100%;
 }
+
+/* CAIXA PRINCIPAL */
+.mega-menu{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 94%;
+    max-width: 1450px;
+
+    background: #fff;
+
+    border-radius: 0 0 22px 22px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.12);
+
+    display: none;
+    overflow: hidden;
+
+    z-index: 999;
+}
+
+.mega-menu.ativo{
+    display: block;
+
+    animation: abrirMega .25s ease;
+}
+
+@keyframes abrirMega{
+
+    from{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
+/* CONTEÚDO */
+
+.mega-container{
+    width: 100%;
+
+    min-height: 500px;
+
+    display: grid;
+
+    /* SOMENTE DUAS COLUNAS */
+    grid-template-columns: 52% 48%;
+
+    background: white;
+
+    position: relative;
+}
+
+
+/* ================= IMAGEM ================= */
+
+.mega-imagem,
+.mega-imagemGatos{
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    padding: 25px 20px 0;
+}
+
+
+/* CACHORRO */
+
+.mega-imagem img{
+
+    position: static;
+
+    width: 100%;
+    max-width: 650px;
+
+    height: 470px;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+}
+
+
+/* GATO */
+
+.mega-imagemGatos img{
+
+    position: static;
+
+    width: 100%;
+    max-width: 650px;
+
+    height: 470px;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+}
+
+
+/* ================= CATEGORIAS ================= */
+
+.mega-categorias{
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 32px;
+
+    border-left: 1px solid #eeeeee;
+
+    justify-content: center;
+}
+
+
+/* CADA CATEGORIA */
+
+.mega-categorias a{
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 43px;
+
+    padding: 10px 20px;
+
+    color: #252525;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-bottom: 1px solid #eeeeee;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        padding .25s ease;
+}
+
+
+/* SETINHA */
+
+.mega-categorias a::after{
+
+    content: "›";
+
+    position: absolute;
+
+    right: 20px;
+
+    font-size: 25px;
+    font-weight: 300;
+
+    color: #999;
+
+    transition: .25s;
+}
+
+
+/* HOVER */
+
+.mega-categorias a:hover{
+
+    background: #f1fafa;
+
+    color: #0f9c9c;
+
+    padding-left: 27px;
+}
+
+.mega-categorias a:hover::after{
+
+    color: #0f9c9c;
+
+    transform: translateX(4px);
+}
+
+
+/* ================= CATEGORIA ATIVA ================= */
+
+.mega-categorias a.ativa{
+
+    background: #eaf8f8;
+
+    color: #087f80;
+
+    font-weight: 700;
+
+    border-left: 4px solid #0f9c9c;
+
+    padding-left: 23px;
+}
+
+.mega-categorias a.ativa::after{
+    color: #0f9c9c;
+}
+
+
+/* REMOVE BORDA DO ÚLTIMO */
+
+.mega-categorias a:last-child{
+    border-bottom: none;
+}
+
+
+/* ================= BOTÃO FECHAR ================= */
+
 .fechar-mega{
-    position:absolute;
-    top:20px;
-    left: 500px;
 
-    background:none;
-    border:none;
+    position: absolute;
 
-    color:#9b9b9b;
+    top: 14px;
+    right: 20px;
+    left: auto;
 
-    font-size:15px;
-    font-weight:600;
+    background: #f5f5f5;
 
-    cursor:pointer;
-    z-index:1000;
+    border: none;
+
+    border-radius: 20px;
+
+    color: #777;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 7px 13px;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition: .25s;
 }
 
 .fechar-mega:hover{
-    color:#555;
+
+    background: #eaf8f8;
+
+    color: #0f9c9c;
 }
-.menu-item a{
-    color: #333;           /* Cor preta (ou a que você preferir) */
-    text-decoration: none; /* Remove o sublinhado */
-}
+/* ================= BOTÃO FECHAR ================= */
 
-
-.mega-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    width: 100%;
-    background: white;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    border-radius: 0 0 18px 18px;
-
-    display: none;
-    z-index: 999;
-
-    /* Não deixa o conteúdo cortado */
-    overflow: hidden;
-}
-
-.mega-menu.ativo {
-    display: block;
-}
-
-.mega-container {
-    width: 1200px;
-    max-width: 95%;
-    margin: 0 auto;
-
-    /* Remova a altura fixa */
-    height: auto;
-    min-height: 430px;
-
-    display: grid;
-    grid-template-columns: 24% 28% 46%;
-    align-items: stretch;
-}
-
-
-
-/* ===================== IMAGEM ===================== */
-
-.mega-imagem {
-    background: white;
-    position: relative;
-    min-width: 0;
-    padding: 0;
-
-    /* Deixa a imagem sair da coluna para o lado esquerdo */
-    overflow: visible;
-    z-index: 1;
-}
-
-.mega-imagem img {
-    display: block;
+.fechar-mega{
     position: absolute;
 
-    width: 210%;
-    max-width: none;
-    height: auto;
+    /* canto superior esquerdo */
+    top: 18px;
+    left: 22px;
+    right: auto;
 
-    right: -100px;   /* aproxima da coluna azul */
-    bottom: -3px;
+    background: #ffffff;
 
-    object-fit: contain;
-}
+    border: 1px solid #d7e7e7;
+    border-radius: 10px;
 
-/* Mantém a coluna azul na frente da imagem */
-.mega-categorias {
-    position: relative;
-    z-index: 2;
-}
+    color: #0f9c9c;
 
-.mega-imagemGatos {
-    background: white;
-    position: relative;
-    min-width: 0;
-    padding: 0;
-
-    /* Deixa a imagem sair da coluna para o lado esquerdo */
-    overflow: visible;
-    z-index: 1;
-}
-
-.mega-imagemGatos img {
-    display: block;
-    position: absolute;
-
-    width: 210%;
-    max-width: none;
-    height: auto;
-
-    right: -50px;   /* aproxima da coluna azul */
-    bottom: -3px;
-
-    object-fit: contain;
-}
-
-/* ===================== CATEGORIAS ===================== */
-
-.mega-categorias {
-    background: #11999c;
-
-    display: flex;
-    flex-direction: column;
-
-    /* Espaço em cima e embaixo para não cortar textos */
-    padding: 16px 0;
-}
-
-.mega-categorias a {
-    display: block;
-
-    color: white;
-    text-decoration: none;
-
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 1.4;
 
-    padding: 12px 24px;
+    padding: 8px 14px;
 
-    transition: 0.2s;
+    cursor: pointer;
+
+    z-index: 20;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+
+    transition: all .25s ease;
 }
 
-.mega-categorias a:hover,
-.mega-categorias a.ativa {
-    background: rgba(255, 255, 255, 0.12);
-}
 
-/* ===================== SUBCATEGORIAS ===================== */
+/* EFEITO AO PASSAR O MOUSE */
 
-.mega-subcategorias {
-    background: white;
-    padding: 28px 32px;
+.fechar-mega:hover{
+    background: #eaf8f8;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    color: #087f80;
 
-    gap: 12px;
-}
+    border-color: #0f9c9c;
 
-.mega-subcategorias h3 {
-    margin: 0 0 12px;
+    transform: translateY(-1px);
 
-    font-size: 26px;
-    line-height: 1.2;
-
-    color: #222;
-}
-
-.mega-subcategorias a {
-    display: block;
-
-    text-decoration: none;
-    color: #333;
-
-    font-size: 16px;
-    line-height: 1.4;
-
-    transition: 0.2s;
-}
-
-.mega-subcategorias a:hover {
-    color: #11999c;
-}
-
-.ver-todos {
-    margin-top: auto;
-    padding-top: 18px;
-
-    color: #11999c !important;
-    font-weight: bold;
-}
-
-/* ===================== RESPONSIVO ===================== */
-
-@media (max-width: 900px) {
-    .mega-menu {
-        position: static;
-        border-radius: 0;
-    }
-
-    .mega-container {
-        width: 100%;
-        max-width: 100%;
-
-        grid-template-columns: 1fr;
-
-        height: auto;
-        min-height: 0;
-    }
-
-    .mega-imagem {
-        display: none;
-    }
-
-    .mega-categorias,
-    .mega-subcategorias {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .ver-todos {
-        margin-top: 15px;
-    }
+    box-shadow: 0 4px 10px rgba(0,0,0,.10);
 }
 
 .carousel {
@@ -1445,6 +1523,18 @@
 /*==========================
           FOOTER
 ===========================*/
+/* =========================
+   CENTRALIZAR RODAPÉ
+========================= */
+
+.footer-container{
+    width: 1300px;
+    max-width: 95%;
+    margin: 0 auto;
+
+    position: relative;
+    left: 100px;
+}
 
 .footer{
 
