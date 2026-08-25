@@ -314,6 +314,19 @@
     transform: rotate(90deg) scale(1.1);
 }
 
+/* =========================
+   CENTRALIZAR RODAPÉ
+========================= */
+
+.footer-container{
+    width: 1300px;
+    max-width: 95%;
+    margin: 0 auto;
+
+    position: relative;
+    left: 100px;
+}
+
 .footer{
 
     margin-top:80px;
@@ -513,4 +526,5 @@ justify-content:center;
 display:flex;
 
 }
+
 }
