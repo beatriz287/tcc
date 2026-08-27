@@ -28,11 +28,14 @@
 
     <div class="icons">
    <div class="user">
-        <a href="form.html"> <i class="bi bi-person"></i>
-        <span>  Entre ou cadastre-se </a></span>
+        <a href="carrinho.html" class="cart-link">
+    <i class="bi bi-cart"></i>
+    <span>Acessar meu carrinho</span>
+    
+</a>
     </div>
 
-    <i class="bi bi-heart"></i>
+    
     
     </div>
 </div>
@@ -1548,15 +1551,7 @@ function criarCard(produto) {
 
                 <!-- FAVORITO -->
 
-                <button
-                    class="btn-favorito"
-                    type="button"
-                    title="Adicionar aos favoritos"
-                >
-
-                    <i class="bi bi-heart"></i>
-
-                </button>
+                
 
 
                 <!-- FOTO -->
@@ -2559,58 +2554,7 @@ function ativarTrocaTamanho() {
    FAVORITOS
 ===================================================== */
 
-function ativarFavoritos() {
 
-    document
-    .querySelectorAll(
-        ".btn-favorito"
-    )
-    .forEach(
-        botao => {
-
-            botao.onclick =
-                function(evento) {
-
-                    evento.preventDefault();
-
-                    evento.stopPropagation();
-
-
-                    const icone =
-                        this.querySelector(
-                            "i"
-                        );
-
-
-                    this.classList.toggle(
-                        "favoritado"
-                    );
-
-
-                    if (
-                        this.classList.contains(
-                            "favoritado"
-                        )
-                    ) {
-
-                        icone.className =
-                            "bi bi-heart-fill";
-
-                    }
-
-                    else {
-
-                        icone.className =
-                            "bi bi-heart";
-
-                    }
-
-                };
-
-        }
-    );
-
-}
 
 
 /* =====================================================
@@ -3147,7 +3091,7 @@ ativarCarrosseis();
 
             <p>📞 (19) 996418975</p>
 
-            <p>📧 contato@carrarasepatas.com</p>
+            <p>📧 garrasepatas00@gmail.com</p>
 
             <p>📍 Rua das Flores, 123</p>
 
@@ -3173,6 +3117,6 @@ ativarCarrosseis();
 
 </footer>
 
-
+<script src="../js/carrinho.js"></script>
 </body>
 </html>

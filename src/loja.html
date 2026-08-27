@@ -208,14 +208,9 @@
 
                         </div>
 
-                        <button
-                            class="btn-favoritar"
-                            aria-label="Favoritar loja"
-                        >
+                        
 
-                            <i class="bi bi-heart"></i>
-
-                        </button>
+                            
 
                     </div>
 
@@ -365,14 +360,9 @@
 
                         </div>
 
-                        <button
-                            class="btn-favoritar"
-                            aria-label="Favoritar loja"
-                        >
+                        
 
-                            <i class="bi bi-heart"></i>
-
-                        </button>
+                           
 
                     </div>
 
@@ -517,12 +507,9 @@
 
                         </div>
 
-                        <button
-                            class="btn-favoritar"
-                            aria-label="Favoritar loja"
-                        >
+                        
 
-                            <i class="bi bi-heart"></i>
+                            
 
                         </button>
 
@@ -790,7 +777,7 @@
 
             <p>📞 (19) 996418975</p>
 
-            <p>📧 contato@carrarasepatas.com</p>
+            <p>📧 garrasepatas00@gmail.com</p>
 
             <p>📍 Rua das Flores, 123</p>
 
@@ -913,36 +900,7 @@
         );
 
 
-        const botoesFavoritar =
-            document.querySelectorAll(".btn-favoritar");
-
-
-        botoesFavoritar.forEach(function (botao) {
-
-            botao.addEventListener("click", function () {
-
-                const icone =
-                    botao.querySelector("i");
-
-                botao.classList.toggle("favoritado");
-
-                if (
-                    botao.classList.contains("favoritado")
-                ) {
-
-                    icone.className =
-                        "bi bi-heart-fill";
-
-                } else {
-
-                    icone.className =
-                        "bi bi-heart";
-
-                }
-
-            });
-
-        });
+       
 
     </script>
 </body>

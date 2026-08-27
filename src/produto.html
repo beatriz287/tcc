@@ -23,9 +23,11 @@
         <div class="icons">
 
             <div class="user">
-                <a href="form.html">
-                    <i class="bi bi-cart"></i>
-                    <span>Acessar meu carrinho</span>
+                <a href="carrinho.html" class="cart-link">
+    <i class="bi bi-cart"></i>
+    <span>Acessar meu carrinho</span>
+    
+</a>
                 </a>
             </div>
 
@@ -149,11 +151,882 @@
 
   </div>
 <!-- PRODUTO -->
-<footer class="footer">
 
-    <div class="footer-top"></div>
+<!-- =====================================================
+     PRODUTOS EM DESTAQUE
+===================================================== -->
 
-    <div class="footer-container">
+<section class="menu-destaques">
+
+    <div class="menu-destaques-cabecalho">
+
+        <div>
+            
+
+            <h2>Outros produtos</h2>
+        </div>
+
+    </div>
+
+
+    <div class="menu-carrossel-area">
+
+        <!-- SETA ESQUERDA -->
+        <button
+            class="menu-seta-carrossel esquerda"
+            type="button"
+            id="menuSetaEsquerda"
+            aria-label="Anterior"
+        >
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+
+        <!-- ÁREA QUE ESCONDE OS PRODUTOS -->
+        <div class="menu-carrossel-viewport">
+
+            <div
+                class="menu-carrossel-produtos"
+                id="menuCarrosselDestaques"
+            >
+
+
+                <!-- ================= PRODUTO 1 ================= -->
+
+                <article class="menu-card-produto">
+
+                    <div class="menu-area-imagem-produto">
+
+                        <span class="menu-selo-desconto">
+                            -18%
+                        </span>
+
+                        
+
+                        <a href="produto.html">
+
+                            <img
+                                class="menu-imagem-card-produto"
+                                src="../marcas/areia gato/pipicat/higienica_4kg.png"
+                                alt="Areia para Gato Perfumada"
+                            >
+
+                        </a>
+
+                        <button
+                            class="menu-btn-carrinho-card"
+                            type="button"
+                        >
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="menu-informacoes-card">
+
+                        <div class="menu-linha-marca">
+
+                            <span class="menu-marca-produto">
+                                Gattino
+                            </span>
+
+                            <span class="menu-nota-produto">
+                                <i class="bi bi-star-fill"></i>
+                                4.9
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="produto.html"
+                            class="menu-nome-produto"
+                        >
+                            Areia para Gato Perfumada
+                        </a>
+
+
+                        <div class="menu-area-variacoes">
+
+                            <span class="menu-titulo-variacao">
+                                Tamanho:
+                            </span>
+
+                            <div class="menu-variacoes-produto">
+
+                                <button
+                                    class="menu-btn-tamanho ativo"
+                                    data-preco="32.99"
+                                    data-preco-antigo="39.99"
+                                    data-imagem="../marcas/areia gato/pipicat/higienica_4kg.png"
+                                >
+                                    4Kg
+                                </button>
+
+                                <button
+                                    class="menu-btn-tamanho"
+                                    data-preco="69.99"
+                                    data-preco-antigo="79.99"
+                                    data-imagem="../marcas/areia gato/pipicat/higienica_12kg.png"
+                                >
+                                    12Kg
+                                </button>
+
+                                <button
+                                    class="menu-btn-tamanho"
+                                    data-preco="98.90"
+                                    data-preco-antigo="115.90"
+                                    data-imagem="../marcas/areia gato/pipicat/higienica_20kg.png"
+                                >
+                                    20Kg
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="menu-precos-produto">
+
+                            <span class="menu-preco-antigo">
+                                R$ 39,99
+                            </span>
+
+                            <strong class="menu-preco-atual">
+                                R$ 32,99
+                            </strong>
+
+                            <span class="menu-preco-pix">
+                                à vista no Pix
+                            </span>
+
+                        </div>
+
+
+                        <button class="menu-comprar-produto">
+                            <i class="bi bi-cart3"></i>
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= PRODUTO 2 ================= -->
+
+                <article class="menu-card-produto">
+
+                    <div class="menu-area-imagem-produto">
+
+                        <span class="menu-selo-desconto">
+                            -15%
+                        </span>
+
+                        
+
+                        <a href="produto.html">
+
+                            <img
+                                class="menu-imagem-card-produto"
+                                src="../marcas/arranhador/sao benedito/peixe_cinza.png"
+                                alt="Arranhador para gato"
+                            >
+
+                        </a>
+
+                        <button class="menu-btn-carrinho-card">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="menu-informacoes-card">
+
+                        <div class="menu-linha-marca">
+
+                            <span class="menu-marca-produto">
+                                São Benedito
+                            </span>
+
+                            <span class="menu-nota-produto">
+                                <i class="bi bi-star-fill"></i>
+                                4.8
+                            </span>
+
+                        </div>
+
+                        <a href="produto.html" class="menu-nome-produto">
+                            Arranhador para Gato Peixe Cinza
+                        </a>
+
+
+                        <div class="menu-area-variacoes">
+
+                            <span class="menu-titulo-variacao">
+                                Tamanho:
+                            </span>
+
+                            <div class="menu-variacoes-produto">
+
+                                <button
+                                    class="menu-btn-tamanho ativo"
+                                    data-preco="39.00"
+                                    data-preco-antigo="45.90"
+                                    data-imagem="../marcas/arranhador/sao benedito/peixe_cinza.png"
+                                >
+                                    Único
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="menu-precos-produto">
+
+                            <span class="menu-preco-antigo">
+                                R$ 45,90
+                            </span>
+
+                            <strong class="menu-preco-atual">
+                                R$ 39,00
+                            </strong>
+
+                            <span class="menu-preco-pix">
+                                à vista no Pix
+                            </span>
+
+                        </div>
+
+
+                        <button class="menu-comprar-produto">
+                            <i class="bi bi-cart3"></i>
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= PRODUTO 3 ================= -->
+
+                <article class="menu-card-produto">
+
+                    <div class="menu-area-imagem-produto">
+
+                        <span class="menu-selo-desconto">
+                            -20%
+                        </span>
+
+                        
+
+                        <a href="produto.html">
+
+                            <img
+                                class="menu-imagem-card-produto"
+                                src="../marcas/brinquedo cachorro e gato/kong/gato/varinha_passarinhororosa.png"
+                                alt="Varinha passarinho rosa"
+                            >
+
+                        </a>
+
+                        <button class="menu-btn-carrinho-card">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="menu-informacoes-card">
+
+                        <div class="menu-linha-marca">
+
+                            <span class="menu-marca-produto">
+                                Kong
+                            </span>
+
+                            <span class="menu-nota-produto">
+                                <i class="bi bi-star-fill"></i>
+                                4.9
+                            </span>
+
+                        </div>
+
+                        <a href="produto.html" class="menu-nome-produto">
+                            Varinha Passarinho Rosa para Gatos
+                        </a>
+
+
+                        <div class="menu-area-variacoes">
+
+                            <span class="menu-titulo-variacao">
+                                Tamanho:
+                            </span>
+
+                            <div class="menu-variacoes-produto">
+
+                                <button
+                                    class="menu-btn-tamanho ativo"
+                                    data-preco="52.99"
+                                    data-preco-antigo="65.90"
+                                    data-imagem="../marcas/brinquedo cachorro e gato/kong/gato/varinha_passarinhororosa.png"
+                                >
+                                    Único
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="menu-precos-produto">
+
+                            <span class="menu-preco-antigo">
+                                R$ 65,90
+                            </span>
+
+                            <strong class="menu-preco-atual">
+                                R$ 52,99
+                            </strong>
+
+                            <span class="menu-preco-pix">
+                                à vista no Pix
+                            </span>
+
+                        </div>
+
+                        <button class="menu-comprar-produto">
+                            <i class="bi bi-cart3"></i>
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= PRODUTO 4 ================= -->
+
+                <article class="menu-card-produto">
+
+                    <div class="menu-area-imagem-produto">
+
+                        <span class="menu-selo-desconto">
+                            -22%
+                        </span>
+
+                        
+
+                        <a href="produto.html">
+
+                            <img
+                                class="menu-imagem-card-produto"
+                                src="../marcas/caixa de areia/furacao pet/kit_azul.png"
+                                alt="Kit caixa de areia"
+                            >
+
+                        </a>
+
+                        <button class="menu-btn-carrinho-card">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="menu-informacoes-card">
+
+                        <div class="menu-linha-marca">
+
+                            <span class="menu-marca-produto">
+                                Furacão Pet
+                            </span>
+
+                            <span class="menu-nota-produto">
+                                <i class="bi bi-star-fill"></i>
+                                4.9
+                            </span>
+
+                        </div>
+
+                        <a href="produto.html" class="menu-nome-produto">
+                            Kit Caixa de Areia Azul
+                        </a>
+
+
+                        <div class="menu-area-variacoes">
+
+                            <span class="menu-titulo-variacao">
+                                Tamanho:
+                            </span>
+
+                            <div class="menu-variacoes-produto">
+
+                                <button
+                                    class="menu-btn-tamanho ativo"
+                                    data-preco="39.00"
+                                    data-preco-antigo="49.90"
+                                    data-imagem="../marcas/caixa de areia/furacao pet/kit_azul.png"
+                                >
+                                    Único
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="menu-precos-produto">
+
+                            <span class="menu-preco-antigo">
+                                R$ 49,90
+                            </span>
+
+                            <strong class="menu-preco-atual">
+                                R$ 39,00
+                            </strong>
+
+                            <span class="menu-preco-pix">
+                                à vista no Pix
+                            </span>
+
+                        </div>
+
+                        <button class="menu-comprar-produto">
+                            <i class="bi bi-cart3"></i>
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= PRODUTO 5 ================= -->
+
+                <article class="menu-card-produto">
+
+                    <div class="menu-area-imagem-produto">
+
+                        <span class="menu-selo-desconto">
+                            -13%
+                        </span>
+
+                       
+
+                        <a href="produto.html">
+
+                            <img
+                                class="menu-imagem-card-produto"
+                                src="../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+                                alt="Caixa de transporte"
+                            >
+
+                        </a>
+
+                        <button class="menu-btn-carrinho-card">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="menu-informacoes-card">
+
+                        <div class="menu-linha-marca">
+
+                            <span class="menu-marca-produto">
+                                Ferplast
+                            </span>
+
+                            <span class="menu-nota-produto">
+                                <i class="bi bi-star-fill"></i>
+                                4.8
+                            </span>
+
+                        </div>
+
+                        <a href="produto.html" class="menu-nome-produto">
+                            Caixa de Transporte Trendy
+                        </a>
+
+
+                        <div class="menu-area-variacoes">
+
+                            <span class="menu-titulo-variacao">
+                                Tamanho:
+                            </span>
+
+                            <div class="menu-variacoes-produto">
+
+                                <button
+                                    class="menu-btn-tamanho ativo"
+                                    data-preco="199.99"
+                                    data-preco-antigo="229.90"
+                                    data-imagem="../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+                                >
+                                    1
+                                </button>
+
+                                <button
+                                    class="menu-btn-tamanho"
+                                    data-preco="250.00"
+                                    data-preco-antigo="279.90"
+                                    data-imagem="../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+                                >
+                                    2
+                                </button>
+
+                                <button
+                                    class="menu-btn-tamanho"
+                                    data-preco="330.00"
+                                    data-preco-antigo="359.90"
+                                    data-imagem="../marcas/caixa de transporte/ferplast/trendy_marrom.png"
+                                >
+                                    3
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="menu-precos-produto">
+
+                            <span class="menu-preco-antigo">
+                                R$ 229,90
+                            </span>
+
+                            <strong class="menu-preco-atual">
+                                R$ 199,99
+                            </strong>
+
+                            <span class="menu-preco-pix">
+                                à vista no Pix
+                            </span>
+
+                        </div>
+
+                        <button class="menu-comprar-produto">
+                            <i class="bi bi-cart3"></i>
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= PRODUTO 6 ================= -->
+
+                <article class="menu-card-produto">
+
+                    <div class="menu-area-imagem-produto">
+
+                        <span class="menu-selo-desconto">
+                            -23%
+                        </span>
+
+                        <button class="menu-btn-favorito">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                        <a href="produto.html">
+
+                            <img
+                                class="menu-imagem-card-produto"
+                                src="../marcas/caixa de transporte/dura pet/elegance_verdetamanho1.png"
+                                alt="Caixa de transporte Elegance"
+                            >
+
+                        </a>
+
+                        <button class="menu-btn-carrinho-card">
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="menu-informacoes-card">
+
+                        <div class="menu-linha-marca">
+
+                            <span class="menu-marca-produto">
+                                Dura Pet
+                            </span>
+
+                            <span class="menu-nota-produto">
+                                <i class="bi bi-star-fill"></i>
+                                4.9
+                            </span>
+
+                        </div>
+
+                        <a href="produto.html" class="menu-nome-produto">
+                            Caixa de Transporte Elegance
+                        </a>
+
+                        <div class="menu-area-variacoes">
+
+                            <span class="menu-titulo-variacao">
+                                Tamanho:
+                            </span>
+
+                            <div class="menu-variacoes-produto">
+
+                                <button
+                                    class="menu-btn-tamanho ativo"
+                                    data-preco="99.90"
+                                    data-preco-antigo="129.90"
+                                    data-imagem="../marcas/caixa de transporte/dura pet/elegance_verdetamanho1.png"
+                                >
+                                    1
+                                </button>
+
+                                <button
+                                    class="menu-btn-tamanho"
+                                    data-preco="129.90"
+                                    data-preco-antigo="149.90"
+                                    data-imagem="../marcas/caixa de transporte/dura pet/elegance_verdetamanho2.png"
+                                >
+                                    2
+                                </button>
+
+                                <button
+                                    class="menu-btn-tamanho"
+                                    data-preco="159.90"
+                                    data-preco-antigo="189.90"
+                                    data-imagem="../marcas/caixa de transporte/dura pet/elegance_verdetamanho3.png"
+                                >
+                                    3
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="menu-precos-produto">
+
+                            <span class="menu-preco-antigo">
+                                R$ 129,90
+                            </span>
+
+                            <strong class="menu-preco-atual">
+                                R$ 99,90
+                            </strong>
+
+                            <span class="menu-preco-pix">
+                                à vista no Pix
+                            </span>
+
+                        </div>
+
+                        <button class="menu-comprar-produto">
+                            <i class="bi bi-cart3"></i>
+                            Adicionar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- SETA DIREITA -->
+        <button
+            class="menu-seta-carrossel direita"
+            type="button"
+            id="menuSetaDireita"
+            aria-label="Próximo"
+        >
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     AVALIAÇÕES E COMENTÁRIOS
+===================================================== -->
+
+<section class="avaliacoes-produto">
+
+    <div class="avaliacoes-container">
+
+        <h2>Avaliações dos clientes</h2>
+
+        <div class="avaliacoes-conteudo">
+
+            <!-- RESUMO DAS AVALIAÇÕES -->
+            <div class="avaliacoes-resumo">
+
+                <span class="nota-grande">4.8</span>
+
+                <div class="estrelas">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+
+                <p>Baseado em 24 avaliações</p>
+
+                <button class="btn-avaliar" id="btnAbrirAvaliacao">
+                    <i class="bi bi-pencil-square"></i>
+                    Avaliar produto
+                </button>
+
+            </div>
+
+
+            <!-- COMENTÁRIOS -->
+            <div class="lista-comentarios">
+
+                <div class="comentario">
+
+                    <div class="comentario-topo">
+
+                        <div class="avatar">
+                            M
+                        </div>
+
+                        <div>
+                            <strong>Mariana Silva</strong>
+
+                            <div class="comentario-estrelas">
+                                ★★★★★
+                            </div>
+                        </div>
+
+                        <span class="data-comentario">
+                            20/08/2026
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Produto muito bom! A areia segura bem o odor
+                        e rende bastante. Minha gata se adaptou muito bem.
+                    </p>
+
+                    <span class="compra-verificada">
+                        <i class="bi bi-patch-check-fill"></i>
+                        Compra verificada
+                    </span>
+
+                </div>
+
+
+                <div class="comentario">
+
+                    <div class="comentario-topo">
+
+                        <div class="avatar">
+                            A
+                        </div>
+
+                        <div>
+                            <strong>Ana Paula</strong>
+
+                            <div class="comentario-estrelas">
+                                ★★★★☆
+                            </div>
+                        </div>
+
+                        <span class="data-comentario">
+                            15/08/2026
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Gostei bastante do produto. Tem um perfume suave
+                        e ajuda bastante no controle de odores.
+                    </p>
+
+                    <span class="compra-verificada">
+                        <i class="bi bi-patch-check-fill"></i>
+                        Compra verificada
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULÁRIO PARA NOVA AVALIAÇÃO -->
+
+        <div class="form-avaliacao" id="formAvaliacao">
+
+            <div class="form-avaliacao-topo">
+
+                <h3>Deixe sua avaliação</h3>
+
+                <button
+                    type="button"
+                    class="fechar-avaliacao"
+                    id="fecharAvaliacao"
+                >
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+            </div>
+
+            <label>Sua nota</label>
+
+            <div class="selecionar-estrelas" id="selecionarEstrelas">
+                <i class="bi bi-star" data-nota="1"></i>
+                <i class="bi bi-star" data-nota="2"></i>
+                <i class="bi bi-star" data-nota="3"></i>
+                <i class="bi bi-star" data-nota="4"></i>
+                <i class="bi bi-star" data-nota="5"></i>
+            </div>
+
+            <label for="nomeAvaliacao">
+                Seu nome
+            </label>
+
+            <input
+                type="text"
+                id="nomeAvaliacao"
+                placeholder="Digite seu nome"
+            >
+
+            <label for="comentarioAvaliacao">
+                Comentário
+            </label>
+
+            <textarea
+                id="comentarioAvaliacao"
+                rows="4"
+                placeholder="Conte o que achou do produto..."
+            ></textarea>
+
+            <button
+                type="button"
+                class="enviar-avaliacao"
+                id="enviarAvaliacao"
+            >
+                Enviar avaliação
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- Logo -->
 <footer class="footer">
@@ -212,7 +1085,7 @@
 
             <p>📞 (19) 996418975</p>
 
-            <p>📧 contato@carrarasepatas.com</p>
+            <p>📧 garrasepatas00@gmail.com</p>
 
             <p>📍 Rua das Flores, 123</p>
 
@@ -311,5 +1184,486 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
+<script>
+
+/* =========================================================
+   CARROSSEL PRODUTOS EM DESTAQUE DO MENU
+========================================================= */
+
+const menuCarrossel =
+    document.getElementById("menuCarrosselDestaques");
+
+const menuSetaEsquerda =
+    document.getElementById("menuSetaEsquerda");
+
+const menuSetaDireita =
+    document.getElementById("menuSetaDireita");
+
+
+function menuMoverCarrossel(direcao) {
+
+    if (!menuCarrossel) {
+        return;
+    }
+
+    const card =
+        menuCarrossel.querySelector(".menu-card-produto");
+
+    if (!card) {
+        return;
+    }
+
+
+    /*
+       Descobre automaticamente o tamanho
+       exato de UM card + espaço entre eles.
+    */
+
+    const estilo =
+        window.getComputedStyle(menuCarrossel);
+
+    const gap =
+        parseFloat(estilo.gap) || 18;
+
+    const larguraCard =
+        card.getBoundingClientRect().width;
+
+
+    /*
+       Move um produto por clique.
+    */
+
+    const movimento =
+        larguraCard + gap;
+
+
+    menuCarrossel.scrollBy({
+
+        left:
+            direcao * movimento,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+if (menuSetaEsquerda) {
+
+    menuSetaEsquerda.addEventListener(
+        "click",
+        function () {
+
+            menuMoverCarrossel(-1);
+
+        }
+    );
+
+}
+
+
+if (menuSetaDireita) {
+
+    menuSetaDireita.addEventListener(
+        "click",
+        function () {
+
+            menuMoverCarrossel(1);
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   TAMANHOS / VARIAÇÕES DOS PRODUTOS
+========================================================= */
+
+document
+.querySelectorAll(".menu-card-produto")
+.forEach(card => {
+
+    const botoes =
+        card.querySelectorAll(
+            ".menu-btn-tamanho"
+        );
+
+
+    const imagem =
+        card.querySelector(
+            ".menu-imagem-card-produto"
+        );
+
+
+    const precoAtual =
+        card.querySelector(
+            ".menu-preco-atual"
+        );
+
+
+    const precoAntigo =
+        card.querySelector(
+            ".menu-preco-antigo"
+        );
+
+
+    const desconto =
+        card.querySelector(
+            ".menu-selo-desconto"
+        );
+
+
+    botoes.forEach(botao => {
+
+        botao.addEventListener(
+            "click",
+            function () {
+
+
+                /* RETIRA SELEÇÃO DOS OUTROS */
+
+                botoes.forEach(b => {
+
+                    b.classList.remove(
+                        "ativo"
+                    );
+
+                });
+
+
+                /* SELECIONA CLICADO */
+
+                botao.classList.add(
+                    "ativo"
+                );
+
+
+                /* MUDA IMAGEM */
+
+                if (
+                    botao.dataset.imagem
+                    &&
+                    imagem
+                ) {
+
+                    imagem.src =
+                        botao.dataset.imagem;
+
+                }
+
+
+                /* PEGA PREÇOS */
+
+                const novoPreco =
+                    Number(
+                        botao.dataset.preco
+                    );
+
+
+                const novoPrecoAntigo =
+                    Number(
+                        botao.dataset.precoAntigo
+                    );
+
+
+                /* FORMATA EM REAL */
+
+                const formatarReal =
+                    valor => {
+
+                        return valor
+                        .toLocaleString(
+                            "pt-BR",
+                            {
+                                style:
+                                    "currency",
+
+                                currency:
+                                    "BRL"
+                            }
+                        );
+
+                    };
+
+
+                /* ALTERA PREÇO */
+
+                if (
+                    precoAtual
+                    &&
+                    !isNaN(novoPreco)
+                ) {
+
+                    precoAtual.textContent =
+                        formatarReal(
+                            novoPreco
+                        );
+
+                }
+
+
+                if (
+                    precoAntigo
+                    &&
+                    !isNaN(novoPrecoAntigo)
+                ) {
+
+                    precoAntigo.textContent =
+                        formatarReal(
+                            novoPrecoAntigo
+                        );
+
+                }
+
+
+                /* ALTERA DESCONTO */
+
+                if (
+                    desconto
+                    &&
+                    novoPrecoAntigo > novoPreco
+                ) {
+
+                    const porcentagem =
+                        Math.round(
+
+                            (
+                                (
+                                    novoPrecoAntigo
+                                    -
+                                    novoPreco
+                                )
+                                /
+                                novoPrecoAntigo
+                            )
+                            *
+                            100
+
+                        );
+
+
+                    desconto.textContent =
+                        "-" +
+                        porcentagem +
+                        "%";
+
+                }
+
+            }
+        );
+
+    });
+
+});
+
+
+/* =========================================================
+   FAVORITOS
+========================================================= */
+
+
+
+/* =========================================================
+   BOTÃO ADICIONAR
+========================================================= */
+
+document
+.querySelectorAll(".menu-comprar-produto")
+.forEach(botao => {
+
+    botao.addEventListener(
+        "click",
+        function () {
+
+            botao.classList.add(
+                "adicionado"
+            );
+
+
+            botao.innerHTML =
+                '<i class="bi bi-check-lg"></i> Adicionado';
+
+
+            setTimeout(
+                function () {
+
+                    botao.classList.remove(
+                        "adicionado"
+                    );
+
+
+                    botao.innerHTML =
+                        '<i class="bi bi-cart3"></i> Adicionar';
+
+                },
+
+                1500
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   CARRINHO REDONDO
+========================================================= */
+
+document
+.querySelectorAll(".menu-btn-carrinho-card")
+.forEach(botao => {
+
+    botao.addEventListener(
+        "click",
+        function () {
+
+            botao.innerHTML =
+                '<i class="bi bi-check-lg"></i>';
+
+
+            setTimeout(
+                function () {
+
+                    botao.innerHTML =
+                        '<i class="bi bi-cart-plus"></i>';
+
+                },
+
+                1200
+            );
+
+        }
+    );
+
+});
+
+</script>
+
+<script>
+
+/* =====================================================
+   AVALIAÇÕES
+===================================================== */
+
+const btnAbrirAvaliacao =
+    document.getElementById("btnAbrirAvaliacao");
+
+const formAvaliacao =
+    document.getElementById("formAvaliacao");
+
+const fecharAvaliacao =
+    document.getElementById("fecharAvaliacao");
+
+const estrelas =
+    document.querySelectorAll(
+        "#selecionarEstrelas i"
+    );
+
+let notaSelecionada = 0;
+
+
+/* ABRIR FORMULÁRIO */
+
+btnAbrirAvaliacao.addEventListener(
+    "click",
+    function () {
+
+        formAvaliacao.classList.add("ativo");
+
+        formAvaliacao.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+);
+
+
+/* FECHAR */
+
+fecharAvaliacao.addEventListener(
+    "click",
+    function () {
+
+        formAvaliacao.classList.remove("ativo");
+
+    }
+);
+
+
+/* ESTRELAS */
+
+estrelas.forEach(estrela => {
+
+    estrela.addEventListener("click", function () {
+
+        notaSelecionada =
+            Number(this.dataset.nota);
+
+        estrelas.forEach((item, index) => {
+
+            if (index < notaSelecionada) {
+
+                item.classList.remove("bi-star");
+                item.classList.add("bi-star-fill");
+
+            } else {
+
+                item.classList.remove("bi-star-fill");
+                item.classList.add("bi-star");
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* ENVIAR */
+
+document
+.getElementById("enviarAvaliacao")
+.addEventListener("click", function () {
+
+    const nome =
+        document
+        .getElementById("nomeAvaliacao")
+        .value.trim();
+
+    const comentario =
+        document
+        .getElementById("comentarioAvaliacao")
+        .value.trim();
+
+
+    if (
+        nome === "" ||
+        comentario === "" ||
+        notaSelecionada === 0
+    ) {
+
+        alert(
+            "Preencha seu nome, comentário e escolha uma nota."
+        );
+
+        return;
+    }
+
+
+    alert("Avaliação enviada com sucesso!");
+
+    formAvaliacao.classList.remove("ativo");
+
+});
+
+</script>
+<script src="../js/carrinho.js"></script>
 </body>
 </html>

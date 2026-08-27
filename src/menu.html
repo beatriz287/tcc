@@ -32,7 +32,10 @@
     </div>
 
     
+    <a href="carrinho.html" class="cart-link">
     <i class="bi bi-cart"></i>
+    
+</a>
     </div>
 </div>
 
@@ -1161,7 +1164,7 @@
 
                     <p>em São Paulo e região</p>
 
-                    <button class="btn-cobertura">
+                    <button class="btn-cobertura" onclick="abrirCobertura(this, 'leve')">
                         Conferir cobertura
                     </button>
 
@@ -1188,7 +1191,7 @@
 
                     <p>em São Paulo e região</p>
 
-                    <button class="btn-cobertura">
+                    <button class="btn-cobertura" onclick="abrirCobertura(this, 'tranquilo')">
                         Conferir cobertura
                     </button>
 
@@ -1215,7 +1218,7 @@
 
                     <p>em São Paulo e região</p>
 
-                    <button class="btn-cobertura">
+                    <button class="btn-cobertura" onclick="abrirCobertura(this, 'ideal')">
                         Conferir cobertura
                     </button>
 
@@ -1242,7 +1245,7 @@
 
                     <p>em São Paulo e região</p>
 
-                    <button class="btn-cobertura">
+                    <button class="btn-cobertura" onclick="abrirCobertura(this, 'premium')">
                         Conferir cobertura
                     </button>
 
@@ -1268,9 +1271,9 @@
 
     <p>em São Paulo e região</p>
 
-    <button class="btn-cobertura">
-        Conferir cobertura
-    </button>
+    <button class="btn-cobertura" onclick="abrirCobertura(this, 'completo')">
+    Conferir cobertura
+</button>
 
     <a href="#">
         Contratar
@@ -1294,9 +1297,9 @@
 
     <p>em São Paulo e região</p>
 
-    <button class="btn-cobertura">
-        Conferir cobertura
-    </button>
+    <button class="btn-cobertura" onclick="abrirCobertura(this, 'essencial')">
+    Conferir cobertura
+</button>
 
     <a href="#">
         Contratar
@@ -1571,7 +1574,7 @@
 
             <p>📞 (19) 996418975</p>
 
-            <p>📧 contato@carrarasepatas.com</p>
+            <p>📧 garrasepatas00@gmail.com</p>
 
             <p>📍 Rua das Flores, 123</p>
 
@@ -2801,6 +2804,203 @@ document
 
 </script>
 
+<script>
+
+const coberturasPlanos = {
+
+    leve: {
+        nome: "Leve",
+        preco: "R$ 14,90/mês",
+
+        itens: [
+            "Consulta veterinária em horário comercial",
+            "Consulta veterinária de emergência",
+            "Vacinas essenciais",
+            "Orientação veterinária",
+            "Desconto em medicamentos"
+        ]
+    },
+
+
+    tranquilo: {
+        nome: "Tranquilo",
+        preco: "R$ 34,90/mês",
+
+        itens: [
+            "Consultas veterinárias",
+            "Atendimento de emergência",
+            "Vacinas essenciais",
+            "Exames laboratoriais básicos",
+            "Exames de imagem simples",
+            "Desconto em medicamentos"
+        ]
+    },
+
+
+    ideal: {
+        nome: "Ideal",
+        preco: "R$ 94,90/mês",
+
+        itens: [
+            "Consultas veterinárias ilimitadas",
+            "Atendimento de emergência",
+            "Vacinas essenciais",
+            "Exames laboratoriais",
+            "Ultrassonografia",
+            "Raio-X",
+            "Internação veterinária",
+            "Desconto em medicamentos"
+        ]
+    },
+
+
+    premium: {
+        nome: "Premium",
+        preco: "R$ 149,90/mês",
+
+        itens: [
+            "Consultas veterinárias ilimitadas",
+            "Atendimento 24 horas",
+            "Vacinas",
+            "Exames laboratoriais completos",
+            "Exames de imagem",
+            "Internação",
+            "Procedimentos ambulatoriais",
+            "Cirurgias de baixa complexidade"
+        ]
+    },
+
+
+    essencial: {
+        nome: "Essencial",
+        preco: "R$ 204,90/mês",
+
+        itens: [
+            "Consultas ilimitadas",
+            "Atendimento veterinário 24 horas",
+            "Vacinação",
+            "Exames laboratoriais",
+            "Raio-X e ultrassom",
+            "Internação",
+            "Cirurgias",
+            "Procedimentos especializados"
+        ]
+    },
+
+
+    completo: {
+        nome: "Completo",
+        preco: "R$ 414,90/mês",
+
+        itens: [
+            "Consultas veterinárias ilimitadas",
+            "Atendimento de emergência 24 horas",
+            "Vacinas",
+            "Exames laboratoriais completos",
+            "Exames de imagem avançados",
+            "Internação",
+            "Cirurgias",
+            "Especialistas veterinários",
+            "Procedimentos de alta complexidade"
+        ]
+    }
+
+};
+
+
+
+function abrirCobertura(botao, plano) {
+
+    const card = botao.closest(".plano-card");
+
+    const dados = coberturasPlanos[plano];
+
+
+    /* evita abrir duas vezes */
+    if (card.querySelector(".cobertura-plano")) {
+        return;
+    }
+
+
+    const janela = document.createElement("div");
+
+    janela.classList.add("cobertura-plano");
+
+
+    /* cria os itens */
+    const lista = dados.itens
+        .map(item => `
+            <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <span>${item}</span>
+            </li>
+        `)
+        .join("");
+
+
+    janela.innerHTML = `
+
+        <button
+            class="fechar-cobertura"
+            onclick="fecharCobertura(this)"
+            aria-label="Fechar"
+        >
+            ×
+        </button>
+
+
+        <span class="cobertura-mini">
+            Garras & Patas
+        </span>
+
+
+        <h3>
+            ${dados.nome}
+        </h3>
+
+
+        <div class="cobertura-preco">
+            ${dados.preco}
+        </div>
+
+
+        <div class="cobertura-linha"></div>
+
+
+        <h4>
+            O que este plano cobre:
+        </h4>
+
+
+        <ul class="lista-cobertura">
+            ${lista}
+        </ul>
+
+
+        <div class="observacao-cobertura">
+            A cobertura pode variar conforme a região
+            e a disponibilidade da rede veterinária.
+        </div>
+
+    `;
+
+
+    card.appendChild(janela);
+}
+
+
+
+function fecharCobertura(botao) {
+
+    const janela =
+        botao.closest(".cobertura-plano");
+
+    janela.remove();
+
+}
+
+</script>
+<script src="../js/carrinho.js"></script>
 </body>
 
 </html>
