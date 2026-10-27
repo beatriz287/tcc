@@ -1,0 +1,595 @@
+/* =========================================================
+   GARRAS & PATAS — ACESSIBILIDADE + RESPONSIVIDADE
+   Versão não destrutiva: as regras de acessibilidade não
+   substituem o layout visual original das páginas.
+========================================================= */
+
+html {
+    scroll-padding-top: 88px;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    touch-action: manipulation;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid #005fcc !important;
+    outline-offset: 3px !important;
+}
+
+.skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100000;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .18);
+    transform: translateY(-160%);
+    transition: transform .18s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Containers: evita estouro sem alterar grids/flex do layout original. */
+.topo,
+.logo,
+.icons,
+.user,
+.espaco-topo,
+.lojas-hero-conteudo,
+.lojas-container,
+.loja-conteudo,
+.loja-cabecalho,
+.loja-informacoes,
+.politica-container,
+.indice-politica,
+.conteudo-politica,
+.pagina-noticia,
+.artigo-blog,
+.artigo-layout,
+.artigo-conteudo,
+.produto-container,
+.produto-imagem,
+.produto-info,
+.produto-similares {
+    min-width: 0;
+}
+
+.logo img {
+    height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+    min-height: 44px;
+}
+
+/* Campos e controles acessíveis sem impor largura/posicionamento. */
+.input-group label,
+.quantidade-area label {
+    display: inline-block;
+}
+
+.input-group input,
+.input-group button,
+.campo-pesquisa input,
+.filtro-estado select,
+.quantidade,
+.btn-tamanho,
+.btn-favoritar,
+.produto-similar-seta {
+    min-height: 44px;
+}
+
+.btn-favoritar,
+.produto-similar-seta {
+    min-width: 44px;
+}
+
+.mensagem-conta,
+.mensagem-produto,
+.loja-conteudo p,
+.conteudo-politica p,
+.conteudo-politica li,
+.artigo-conteudo,
+.artigo-blog p,
+.artigo-blog li {
+    overflow-wrap: anywhere;
+}
+
+[aria-hidden="true"] {
+    pointer-events: none;
+}
+
+/* =========================================================
+   RESPONSIVIDADE — apenas quando a largura realmente exige.
+   O desktop mantém o CSS original da página.
+========================================================= */
+
+/* Tablet largo */
+@media (max-width: 1100px) {
+    .lojas-hero,
+    .politica-hero,
+    .blog-hero {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .lista-lojas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .produto-similares {
+        width: calc(100% - 32px);
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Tablet / celular grande */
+@media (max-width: 850px) {
+    /* Login */
+    .pagina-form .box {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .pagina-form .form-box {
+        width: min(100%, 430px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Política */
+    .pagina-politica .politica-container {
+        display: block;
+    }
+
+    .pagina-politica .indice-politica {
+        position: static;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .pagina-politica .indice-politica nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* Notícia */
+    .pagina-noticia-page .artigo-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pagina-noticia-page .compartilhar-lateral {
+        position: static;
+        width: 100%;
+    }
+
+    /* Produto */
+    .pagina-produto .produto-container {
+        width: min(100% - 32px, 1120px);
+        margin-left: auto;
+        margin-right: auto;
+        gap: 28px;
+    }
+}
+
+/* Celular */
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    /* ---------- topo ---------- */
+    .topo {
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .logo,
+    .icons,
+    .user {
+        min-width: 0;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    .espaco-topo {
+        flex: 1 1 auto;
+    }
+
+    .user a span {
+        max-width: 170px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* ---------- login ---------- */
+    .pagina-form .box {
+        min-height: auto;
+        padding: 28px 14px 38px;
+    }
+
+    .pagina-form .form-box {
+        width: 100%;
+    }
+
+    .pagina-form .input-group input,
+    .pagina-form .input-group button {
+        width: 100%;
+    }
+
+    /* ---------- lojas ---------- */
+    .pagina-loja .lojas-hero {
+        padding: 28px 16px 40px;
+    }
+
+    .pagina-loja .lojas-hero-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .pagina-loja .lojas-hero-conteudo h1 {
+        font-size: clamp(1.8rem, 8vw, 2.45rem);
+        line-height: 1.12;
+    }
+
+    .pagina-loja .lojas-hero-botoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-loja .lojas-hero-botoes a {
+        width: 100%;
+    }
+
+    .pagina-loja .lojas-hero-decoracao {
+        display: none;
+    }
+
+    .pagina-loja .lojas-container {
+        width: calc(100% - 24px);
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagina-loja .filtros-lojas {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-loja .campo-pesquisa,
+    .pagina-loja .filtro-estado,
+    .pagina-loja .campo-pesquisa input,
+    .pagina-loja .filtro-estado select {
+        width: 100%;
+    }
+
+    .pagina-loja .lista-lojas {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-loja .loja-card {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-loja .loja-cabecalho {
+        gap: 12px;
+    }
+
+    .pagina-loja .loja-informacoes {
+        gap: 16px;
+    }
+
+    .pagina-loja .servicos-loja {
+        flex-wrap: wrap;
+    }
+
+    /* ---------- política ---------- */
+    .pagina-politica .politica-hero {
+        padding: 28px 16px 40px;
+    }
+
+    .pagina-politica .politica-hero-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .pagina-politica .politica-hero-conteudo h1 {
+        font-size: clamp(1.8rem, 8vw, 2.45rem);
+        line-height: 1.12;
+    }
+
+    .pagina-politica .politica-hero-botoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-politica .politica-hero-botoes a {
+        width: 100%;
+    }
+
+    .pagina-politica .politica-hero-decoracao {
+        display: none;
+    }
+
+    .pagina-politica .politica-container {
+        width: calc(100% - 24px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagina-politica .indice-politica {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pagina-politica .indice-politica nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .pagina-politica .indice-politica nav a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .pagina-politica .cards-dados,
+    .pagina-politica .compartilhamento-grid,
+    .pagina-politica .direitos-grid,
+    .pagina-politica .seguranca-box,
+    .pagina-politica .contato-politica {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-politica .contato-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-politica .contato-links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ---------- notícia ---------- */
+    .pagina-noticia-page .pagina-noticia {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .pagina-noticia-page .artigo-cabecalho h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.14;
+    }
+
+    .pagina-noticia-page .artigo-meta {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+    }
+
+    .pagina-noticia-page .compartilhar-lateral {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .pagina-noticia-page .compartilhar-lateral > span {
+        flex: 0 0 100%;
+    }
+
+    .pagina-noticia-page .compartilhar-lateral a,
+    .pagina-noticia-page .compartilhar-lateral button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .pagina-noticia-page .fonte-original {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-noticia-page .fonte-original a {
+        justify-content: center;
+    }
+
+    .pagina-noticia-page .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ---------- produto ---------- */
+    .pagina-produto .produto-container {
+        width: calc(100% - 24px);
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .pagina-produto .produto-imagem {
+        min-height: 0;
+    }
+
+    .pagina-produto .produto-imagem img {
+        max-height: 56vh;
+        object-fit: contain;
+    }
+
+    .pagina-produto .produto-titulo {
+        font-size: clamp(1.75rem, 8vw, 2.45rem);
+        line-height: 1.14;
+    }
+
+    .pagina-produto .tamanhos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .pagina-produto .tamanhos > label {
+        flex: 0 0 100%;
+    }
+
+    .pagina-produto .quantidade-area {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .pagina-produto .quantidade-area label {
+        flex: 0 0 100%;
+    }
+
+    .pagina-produto .botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-produto .botoes .btn {
+        width: 100%;
+    }
+
+    .pagina-produto .produto-similares {
+        width: calc(100% - 24px);
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagina-produto .produto-similares-cabecalho {
+        display: block;
+    }
+
+    .pagina-produto .produto-similares-track {
+        overflow-x: auto;
+        gap: 12px;
+        padding-left: 1px;
+        padding-right: 1px;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pagina-produto .produto-similar-card {
+        flex: 0 0 min(78vw, 190px);
+        min-width: min(78vw, 190px);
+        scroll-snap-align: start;
+    }
+
+    .pagina-produto .produto-similar-seta {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo img {
+        max-width: 132px;
+    }
+
+    .user a span {
+        display: none;
+    }
+
+    .pagina-form .box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pagina-loja .lojas-container,
+    .pagina-politica .politica-container,
+    .pagina-noticia-page .pagina-noticia,
+    .pagina-produto .produto-container,
+    .pagina-produto .produto-similares {
+        width: calc(100% - 20px);
+    }
+
+    .pagina-produto .produto-similar-card {
+        flex-basis: 78vw;
+        min-width: 78vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+    }
+}

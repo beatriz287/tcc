@@ -1,0 +1,82 @@
+/* Garras & Patas — acessibilidade global
+   Mantém a identidade visual normal; os reforços aparecem principalmente em foco
+   por teclado, modos de contraste e preferência por movimento reduzido. */
+*, *::before, *::after { box-sizing: border-box; }
+html { text-size-adjust: 100%; -webkit-text-size-adjust: 100%; scroll-padding-top: 1rem; }
+body { min-width: 0; }
+img, svg, video, canvas { max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea, summary { touch-action: manipulation; }
+
+/* Navegação por teclado */
+:focus { scroll-margin-block: 1rem; }
+:focus-visible {
+  outline: 3px solid #005fcc !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 2px #fff !important;
+}
+[tabindex="-1"]:focus { outline: 3px solid #005fcc; outline-offset: 3px; }
+.skip-link {
+  position: fixed !important;
+  top: 10px !important;
+  left: 10px !important;
+  z-index: 2147483647 !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: calc(100vw - 20px);
+  padding: 12px 16px !important;
+  margin: 0 !important;
+  border: 2px solid #005fcc !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  color: #111 !important;
+  font-weight: 700 !important;
+  line-height: 1.35;
+  text-decoration: none !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,.24) !important;
+  transform: translateY(-160%) !important;
+}
+.skip-link:focus, .skip-link:focus-visible { transform: translateY(0) !important; }
+.sr-only, .visually-hidden {
+  position: absolute !important; width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: -1px !important; overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;
+}
+
+/* Evita overflow em zoom e textos longos sem ditar o desenho dos componentes. */
+input, select, textarea { max-width: 100%; }
+label { line-height: 1.45; }
+button, input[type="button"], input[type="submit"], input[type="reset"] { cursor: pointer; }
+button:disabled, [aria-disabled="true"] { cursor: not-allowed; }
+.footer-col, .footer-copy, .produto-info, .produto-container, .conta-card,
+.admin-main, .pagina-produtos, .politica-container, .blog-page, .pagina-noticia,
+.atendimento-container, .form-box { min-width: 0; overflow-wrap: anywhere; }
+[data-garras-cart-badge] { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 700px) {
+  .skip-link { left: 8px !important; top: 8px !important; }
+  input, select, textarea { font-size: max(16px, 1em); }
+  .footer-container { width: calc(100% - 28px) !important; max-width: 100% !important; }
+}
+
+/* Não forçar movimentos animados em quem desativou animações no sistema. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+/* Suporte a alto contraste / Windows Contrast Themes. */
+@media (forced-colors: active) {
+  :focus-visible, [tabindex="-1"]:focus {
+    outline: 3px solid Highlight !important;
+    outline-offset: 3px !important;
+    box-shadow: none !important;
+  }
+  .skip-link { color: LinkText !important; background: Canvas !important; border-color: Highlight !important; }
+  button, input, select, textarea, a { forced-color-adjust: auto; }
+}

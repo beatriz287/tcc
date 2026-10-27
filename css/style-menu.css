@@ -2460,3 +2460,210 @@ display:flex;
     }
 
 }
+
+
+/* =====================================================
+   JANELA DE COBERTURA DOS PLANOS
+===================================================== */
+
+.plano-card {
+    position: relative;
+}
+
+/* conteúdo que aparece sobre o plano */
+.cobertura-plano {
+    position: absolute;
+    inset: 0;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    padding: 35px 30px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    z-index: 30;
+
+    overflow-y: auto;
+
+    animation: abrirCobertura .3s ease;
+}
+
+
+/* mantém a cor do plano Tranquilo/Completo */
+.plano-card.destaque .cobertura-plano {
+    background: #f6f0ea;
+}
+
+
+/* X */
+.fechar-cobertura {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #1AA5A5;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.10);
+
+    transition: .25s;
+}
+
+
+.fechar-cobertura:hover {
+    background: #1AA5A5;
+    color: #ffffff;
+
+    transform: scale(1.07);
+}
+
+
+/* nome pequeno */
+.cobertura-mini {
+    color: #1AA5A5;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* título */
+.cobertura-plano h3 {
+    color: #1AA5A5;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin: 10px 0 5px;
+}
+
+
+/* preço */
+.cobertura-preco {
+    color: #1AA5A5;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+/* linha */
+.cobertura-linha {
+    width: 100%;
+    height: 1px;
+
+    background: #dfe8e8;
+
+    margin-bottom: 20px;
+}
+
+
+/* título da cobertura */
+.cobertura-plano h4 {
+    color: #333;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+/* lista */
+.lista-cobertura {
+    list-style: none;
+
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+
+.lista-cobertura li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    color: #444;
+
+    margin-bottom: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* ícone check */
+.lista-cobertura i {
+    color: #1AA5A5;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* observação */
+.observacao-cobertura {
+    margin-top: auto;
+
+    padding: 12px;
+
+    background: #eaf8f8;
+
+    border-radius: 12px;
+
+    color: #555;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* animação */
+@keyframes abrirCobertura {
+
+    from {
+        opacity: 0;
+        transform: scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

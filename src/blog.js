@@ -1791,6 +1791,7 @@ function renderizarPaginaNoticia() {
 
     if (!noticia) {
 
+        pagina.setAttribute("aria-busy", "false");
         pagina.innerHTML = `
 
             <section class="noticia-nao-encontrada">
@@ -1831,6 +1832,7 @@ function renderizarPaginaNoticia() {
         `${noticia.titulo} | Garra & Patas`;
 
 
+    pagina.setAttribute("aria-busy", "false");
     pagina.innerHTML = `
 
         <nav
@@ -1838,17 +1840,17 @@ function renderizarPaginaNoticia() {
             aria-label="Navegação estrutural"
         >
 
-            <a href="menu.html">
+            <a href="menu.php">
                 Início
             </a>
 
-            <i class="bi bi-chevron-right"></i>
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
 
             <a href="blog.html">
                 Blog
             </a>
 
-            <i class="bi bi-chevron-right"></i>
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
 
             <span>
                 ${noticia.categoriaNome}
@@ -1857,7 +1859,7 @@ function renderizarPaginaNoticia() {
         </nav>
 
 
-        <article class="artigo-blog">
+        <article class="artigo-blog" aria-labelledby="titulo-artigo-noticia">
 
             <header class="artigo-cabecalho">
 
@@ -1876,7 +1878,7 @@ function renderizarPaginaNoticia() {
                 </span>
 
 
-                <h1>
+                <h1 id="titulo-artigo-noticia">
                     ${escaparHTML(noticia.titulo)}
                 </h1>
 
@@ -1919,14 +1921,14 @@ function renderizarPaginaNoticia() {
             </header>
 
 
-            <div class="artigo-imagem-principal">
+            <figure class="artigo-imagem-principal" role="group" aria-label="Imagem principal da notícia">
 
                 <img
                     src="${noticia.imagem}"
                     alt="${escaparHTML(noticia.imagemAlt)}"
                 >
 
-            </div>
+            </figure>
 
 
             <div class="artigo-layout">
@@ -1968,6 +1970,7 @@ function renderizarPaginaNoticia() {
                     >
                         <i class="bi bi-link-45deg"></i>
                     </button>
+                    <span class="sr-only" id="statusCopiarLink" aria-live="polite"></span>
 
                 </aside>
 
@@ -2010,6 +2013,7 @@ function renderizarPaginaNoticia() {
                             href="${noticia.fonteUrl}"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Acessar a fonte original da notícia (abre em nova aba)"
                         >
 
                             Acessar fonte
@@ -2247,6 +2251,10 @@ function configurarCopiarLink() {
             botao.title =
                 "Link copiado";
 
+            botao.setAttribute("aria-label", "Link da notícia copiado");
+            const status = document.getElementById("statusCopiarLink");
+            if (status) status.textContent = "Link copiado para a área de transferência.";
+
 
             window.setTimeout(() => {
 
@@ -2254,12 +2262,16 @@ function configurarCopiarLink() {
                     "bi bi-link-45deg";
 
                 botao.title =
-                    "Copiar link";
+                    "Copiar link da notícia";
+                botao.setAttribute("aria-label", "Copiar link da notícia");
 
             }, 2200);
 
         }
         catch (erro) {
+
+            const status = document.getElementById("statusCopiarLink");
+            if (status) status.textContent = "Não foi possível copiar automaticamente; o endereço foi disponibilizado para cópia manual.";
 
             window.prompt(
                 "Copie o endereço da notícia:",

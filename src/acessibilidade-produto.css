@@ -1,0 +1,245 @@
+/* =========================================================
+   GARRAS & PATAS — PRODUTO
+   Acessibilidade e responsividade sem alterar o layout-base.
+   Não há regras para o footer, mantendo sua formatação original.
+========================================================= */
+
+html {
+    scroll-padding-top: 88px;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    touch-action: manipulation;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid #005fcc !important;
+    outline-offset: 3px !important;
+}
+
+.skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100000;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,.18);
+    transform: translateY(-160%);
+    transition: transform .18s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Somente controles do conteúdo do produto */
+.produto-container,
+.produto-info,
+.produto-imagem,
+.tamanhos,
+.quantidade-area,
+.botoes,
+.beneficios,
+.produto-similares,
+.produto-similares-area,
+.produto-similares-viewport,
+.produto-similar-card {
+    min-width: 0;
+}
+
+.produto-imagem img {
+    max-width: 100%;
+}
+
+.input-group input,
+.quantidade,
+.btn-tamanho,
+#adicionarCarrinhoProduto,
+#favoritarProduto {
+    min-height: 44px;
+}
+
+.quantidade {
+    box-sizing: border-box;
+}
+
+.produto-similar-seta {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.produto-similares-track {
+    overscroll-behavior-inline: contain;
+}
+
+/* =========================================================
+   TABLET
+   Somente ajustes do conteúdo do produto.
+========================================================= */
+@media (max-width: 1024px) {
+    .produto-container {
+        gap: 28px;
+    }
+
+    .produto-similares {
+        width: min(100% - 32px, 1120px);
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    .produto-container {
+        width: min(100% - 24px, 1120px);
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 22px;
+    }
+
+    .produto-imagem {
+        min-height: 0;
+    }
+
+    .produto-imagem img {
+        width: 100%;
+        max-height: 54vh;
+        object-fit: contain;
+    }
+
+    .produto-titulo {
+        font-size: clamp(1.7rem, 8vw, 2.35rem);
+        line-height: 1.14;
+    }
+
+    .tamanhos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tamanhos > label,
+    .tamanhos > #label-tamanho {
+        flex: 0 0 100%;
+    }
+
+    .btn-tamanho {
+        min-width: 64px;
+    }
+
+    .quantidade-area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .quantidade-area label {
+        flex: 0 0 100%;
+    }
+
+    .quantidade {
+        width: min(180px, 100%);
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botoes .btn {
+        width: 100%;
+    }
+
+    .produto-similares {
+        width: min(100% - 24px, 1120px);
+    }
+
+    .produto-similares-cabecalho {
+        display: block;
+    }
+
+    .produto-similares-track {
+        gap: 12px;
+        padding-left: 1px;
+        padding-right: 1px;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+    }
+
+    .produto-similar-card {
+        flex-basis: min(78vw, 190px);
+        min-width: min(78vw, 190px);
+        scroll-snap-align: start;
+    }
+
+    .produto-similar-seta {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .produto-container,
+    .produto-similares {
+        width: min(100% - 20px, 1120px);
+    }
+
+    .produto-similar-card {
+        flex-basis: 78vw;
+        min-width: 78vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .produto-similares-track,
+    .skip-link {
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +19,120 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ifrederico/accessible-web-widget@latest/dist/accessible-web-widget.min.js"></script>
+
+<style id="garras-responsivo-v2">
+/* Responsividade adicional — preserva o layout original em desktop */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; }
+body { overflow-x: hidden; }
+
+.topo {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.logo, .icons, .user, .footer-col { min-width: 0; }
+.logo img { max-width: 100%; height: auto; }
+.user a { max-width: 100%; }
+.user span { overflow-wrap: anywhere; }
+
+.footer-container {
+  width: min(1120px, calc(100% - 40px)) !important;
+  max-width: none !important;
+  left: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.footer-col { overflow-wrap: anywhere; }
+.footer-copy { overflow-wrap: anywhere; }
+
+@media (max-width: 950px) {
+  .topo {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    gap: 18px;
+  }
+  .espaco-topo { flex: 1 1 auto; min-width: 12px; }
+  .icons {
+    position: static !important;
+    right: auto !important;
+    gap: 14px !important;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .topo {
+    min-height: 70px !important;
+    padding: 10px 16px !important;
+    gap: 10px;
+  }
+  .logo { width: auto !important; height: auto !important; flex: 0 0 auto; }
+  .logo img { max-width: 118px !important; max-height: 55px !important; margin: 0 !important; transform: none !important; }
+  .icons { gap: 10px !important; }
+  .user span { display: none !important; }
+  .user i { font-size: 24px !important; }
+
+  .footer-container {
+    width: min(100% - 28px, 620px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+  .footer-col { width: 100%; }
+  .footer-copy { padding-left: 14px !important; padding-right: 14px !important; }
+}
+
+@media (max-width: 430px) {
+  .topo { padding-left: 12px !important; padding-right: 12px !important; }
+  .logo img { max-width: 105px !important; }
+  .icons { gap: 8px !important; }
+  .user i { font-size: 22px !important; }
+  .footer-container { width: min(100% - 22px, 620px) !important; }
+}
+</style>
+
+<style id="garras-blog-responsivo">
+@media (max-width: 950px) {
+  .blog-hero { min-height: auto !important; }
+  .blog-hero-conteudo { width: min(100% - 40px, 800px) !important; }
+  .blog-hero-decoracao { opacity: .6; transform: scale(.8); transform-origin: right center; }
+  .blog-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .blog-page { width: 100%; overflow-x: hidden; }
+  .blog-hero { padding: 52px 16px 42px !important; }
+  .blog-hero-conteudo { width: min(100%, 620px) !important; text-align: center; }
+  .blog-hero-botoes { flex-direction: column !important; align-items: stretch !important; }
+  .blog-hero-botoes a { width: 100%; justify-content: center; }
+  .blog-hero-decoracao { display: none !important; }
+  .controle-noticias, .ultimas-noticias, .blog-beneficios { width: calc(100% - 24px) !important; margin-left: auto; margin-right: auto; }
+  .blog-pesquisa { width: 100% !important; }
+  .filtros-categorias { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; max-width: 100%; padding-bottom: 6px; scrollbar-width: thin; }
+  .filtro-btn { flex: 0 0 auto; }
+  .titulo-secao-blog { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+  .noticias-grid { grid-template-columns: 1fr !important; }
+  .blog-beneficios { grid-template-columns: 1fr !important; }
+  .blog-beneficios article { min-width: 0; }
+}
+@media (max-width: 430px) {
+  .blog-hero { padding-left: 12px !important; padding-right: 12px !important; }
+  .controle-noticias, .ultimas-noticias, .blog-beneficios { width: calc(100% - 20px) !important; }
+}
+</style>
+
+    <link rel="stylesheet" href="../css/acessibilidade-responsivo.css?v=1">
 </head>
 <body>
+<a class="skip-link" href="#conteudoPrincipal">Pular para o conteúdo principal</a>
+
      <div class="topo">
     
     <div class="logo">
-    <a href="menu.html">
+    <a href="menu.php">
         <img src="../imagens/logo.png" alt="Garra & Patas Pet Shop">
     </a>
 </div>
@@ -34,7 +142,7 @@
     <div class="icons">
 
         <div class="user">
-            <a href="form.html">
+            <a href="form.php">
                 <i class="bi bi-lock"></i>
                 <span>Ambiente seguro</span>
             </a>
@@ -50,12 +158,12 @@
          CONTEÚDO DO BLOG
     ====================================================== -->
 
-    <main class="blog-page">
+    <main id="conteudoPrincipal" tabindex="-1" class="blog-page">
        
         <!-- HERO -->
 
         <section class="blog-hero">
- <a href="menu.html" class="btn-fechar">
+ <a href="menu.php" class="btn-fechar">
     <i class="bi bi-x-lg"></i>
     Fechar
 </a>
@@ -275,7 +383,7 @@
                 </div>
 
 
-                <p id="contadorNoticias">
+                <p id="contadorNoticias" role="status" aria-live="polite" aria-atomic="true">
                     Carregando notícias...
                 </p>
 
@@ -292,7 +400,7 @@
 
             <div
                 class="nenhum-resultado"
-                id="nenhumResultado"
+                id="nenhumResultado" role="status" aria-live="polite"
                 hidden
             >
 
@@ -455,9 +563,9 @@
 
             <ul>
 
-                <li><a href="menu.html">Página Inicial</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="menu.php">Página Inicial</a></li>
+                <li><a href="lojas.php">Loja</a></li>
+                <li><a href="aba_produto.php">Produtos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="politica.html">Política e Privacidade</a></li>
 
@@ -503,5 +611,6 @@
 
 <script src="./blog.js"></script>
 
+<script src="../js/acessibilidade.js" defer></script>
 </body>
 </html>

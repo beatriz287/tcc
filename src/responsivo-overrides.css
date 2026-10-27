@@ -1,0 +1,295 @@
+
+<style id="garras-responsivo-v2">
+/* Responsividade adicional — preserva o layout original em desktop */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; }
+body { overflow-x: hidden; }
+
+.topo {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.logo, .icons, .user, .footer-col { min-width: 0; }
+.logo img { max-width: 100%; height: auto; }
+.user a { max-width: 100%; }
+.user span { overflow-wrap: anywhere; }
+
+.footer-container {
+  width: min(1120px, calc(100% - 40px)) !important;
+  max-width: none !important;
+  left: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.footer-col { overflow-wrap: anywhere; }
+.footer-copy { overflow-wrap: anywhere; }
+
+@media (max-width: 950px) {
+  .topo {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    gap: 18px;
+  }
+  .espaco-topo { flex: 1 1 auto; min-width: 12px; }
+  .icons {
+    position: static !important;
+    right: auto !important;
+    gap: 14px !important;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .topo {
+    min-height: 70px !important;
+    padding: 10px 16px !important;
+    gap: 10px;
+  }
+  .logo { width: auto !important; height: auto !important; flex: 0 0 auto; }
+  .logo img { max-width: 118px !important; max-height: 55px !important; margin: 0 !important; transform: none !important; }
+  .icons { gap: 10px !important; }
+  .user span { display: none !important; }
+  .user i { font-size: 24px !important; }
+
+  .footer-container {
+    width: min(100% - 28px, 620px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+  .footer-col { width: 100%; }
+  .footer-copy { padding-left: 14px !important; padding-right: 14px !important; }
+}
+
+@media (max-width: 430px) {
+  .topo { padding-left: 12px !important; padding-right: 12px !important; }
+  .logo img { max-width: 105px !important; }
+  .icons { gap: 8px !important; }
+  .user i { font-size: 22px !important; }
+  .footer-container { width: min(100% - 22px, 620px) !important; }
+}
+</style>
+
+<style id="garras-produto-header-responsivo">
+/* Correção do cabeçalho da página de produto */
+body.pagina-produto .topo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 78px;
+  padding-left: clamp(18px, 4vw, 46px);
+  padding-right: clamp(18px, 4vw, 46px);
+  overflow: visible;
+}
+body.pagina-produto .topo .logo {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+body.pagina-produto .topo .logo img {
+  width: auto;
+  max-width: 145px;
+  max-height: 62px;
+  height: auto;
+  margin: 0 !important;
+  transform: none !important;
+  object-fit: contain;
+}
+body.pagina-produto .topo .espaco-topo {
+  flex: 1 1 auto;
+  min-width: 12px;
+}
+body.pagina-produto .topo .icons {
+  position: static !important;
+  right: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+body.pagina-produto .topo .user { min-width: 0; }
+body.pagina-produto .topo .user a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  white-space: nowrap;
+  text-decoration: none;
+}
+body.pagina-produto .topo .user span {
+  max-width: min(32vw, 240px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.pagina-produto .produto-container {
+  width: min(1120px, calc(100% - 40px));
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 900px) {
+  body.pagina-produto .topo { gap: 14px; }
+  body.pagina-produto .topo .icons { gap: 12px; }
+  body.pagina-produto .topo .user span { max-width: 180px; }
+}
+@media (max-width: 700px) {
+  body.pagina-produto .topo {
+    min-height: 68px;
+    padding: 9px 14px;
+    gap: 8px;
+  }
+  body.pagina-produto .topo .logo img { max-width: 112px; max-height: 52px; }
+  body.pagina-produto .topo .icons { gap: 8px; }
+  body.pagina-produto .topo .user span { display: none; }
+  body.pagina-produto .topo .user i { font-size: 24px; }
+  body.pagina-produto .produto-container { width: min(100% - 24px, 1120px); }
+}
+@media (max-width: 520px) {
+  body.pagina-produto .topo { padding-left: 10px; padding-right: 10px; }
+  body.pagina-produto .topo .logo img { max-width: 100px; }
+  body.pagina-produto .topo .user i { font-size: 22px; }
+}
+</style>
+
+<style id="garras-atendimento-responsivo">
+@media (max-width: 900px) {
+  .atendimento-hero { min-height: auto !important; }
+  .atendimento-hero-conteudo { width: min(100% - 40px, 760px) !important; margin: 0 auto; }
+  .atendimento-hero-decoracao { opacity: .55; transform: scale(.82); transform-origin: right center; }
+  .canais-atendimento { width: min(100% - 40px, 960px) !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .area-atendimento { width: min(100% - 40px, 1100px) !important; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr) !important; }
+  .form-linha { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .atendimento-hero { padding: 54px 18px 48px !important; }
+  .atendimento-hero-conteudo { width: min(100% - 16px, 650px) !important; text-align: center; }
+  .atendimento-hero-botoes { flex-direction: column !important; align-items: stretch !important; }
+  .atendimento-hero-botoes a { width: 100%; justify-content: center; }
+  .atendimento-hero-decoracao { display: none !important; }
+  .canais-atendimento { width: min(100% - 24px, 620px) !important; grid-template-columns: 1fr !important; }
+  .canal-card { min-width: 0; }
+  .area-atendimento { width: min(100% - 24px, 620px) !important; grid-template-columns: 1fr !important; }
+  .form-linha { grid-template-columns: 1fr !important; }
+  .formulario-box, .informacoes-atendimento { min-width: 0; }
+  .titulo-box { align-items: flex-start !important; }
+  .faq-grid, .duvidas-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 430px) {
+  .atendimento-hero { padding-left: 12px !important; padding-right: 12px !important; }
+  .atendimento-container { width: calc(100% - 20px) !important; }
+  .canais-atendimento, .area-atendimento { width: calc(100% - 20px) !important; }
+  .canal-card { padding: 16px !important; }
+}
+</style>
+
+<style id="garras-blog-responsivo">
+@media (max-width: 950px) {
+  .blog-hero { min-height: auto !important; }
+  .blog-hero-conteudo { width: min(100% - 40px, 800px) !important; }
+  .blog-hero-decoracao { opacity: .6; transform: scale(.8); transform-origin: right center; }
+  .blog-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .blog-page { width: 100%; overflow-x: hidden; }
+  .blog-hero { padding: 52px 16px 42px !important; }
+  .blog-hero-conteudo { width: min(100%, 620px) !important; text-align: center; }
+  .blog-hero-botoes { flex-direction: column !important; align-items: stretch !important; }
+  .blog-hero-botoes a { width: 100%; justify-content: center; }
+  .blog-hero-decoracao { display: none !important; }
+  .controle-noticias, .ultimas-noticias, .blog-beneficios { width: calc(100% - 24px) !important; margin-left: auto; margin-right: auto; }
+  .blog-pesquisa { width: 100% !important; }
+  .filtros-categorias { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; max-width: 100%; padding-bottom: 6px; scrollbar-width: thin; }
+  .filtro-btn { flex: 0 0 auto; }
+  .titulo-secao-blog { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+  .noticias-grid { grid-template-columns: 1fr !important; }
+  .blog-beneficios { grid-template-columns: 1fr !important; }
+  .blog-beneficios article { min-width: 0; }
+}
+@media (max-width: 430px) {
+  .blog-hero { padding-left: 12px !important; padding-right: 12px !important; }
+  .controle-noticias, .ultimas-noticias, .blog-beneficios { width: calc(100% - 20px) !important; }
+}
+</style>
+
+<style id="garras-criar-conta-responsivo">
+@media (max-width: 800px) {
+  .box { width: min(100% - 30px, 680px) !important; min-height: auto !important; }
+  .form-box { width: min(100%, 520px) !important; margin-left: auto !important; margin-right: auto !important; }
+  .gato, .cachorro, .biscoito, .racao { max-width: 16vw !important; height: auto !important; }
+}
+@media (max-width: 600px) {
+  .box { width: calc(100% - 20px) !important; padding: 18px !important; }
+  .form-box { width: 100% !important; padding: 24px 18px !important; }
+  .gato, .cachorro, .biscoito, .racao { opacity: .35; max-width: 23vw !important; }
+  .input-group input, .input-group button { width: 100% !important; max-width: 100% !important; }
+}
+@media (max-width: 430px) {
+  .box { width: calc(100% - 12px) !important; padding: 10px !important; }
+  .form-box { padding: 20px 14px !important; }
+  .gato, .cachorro, .biscoito, .racao { display: none !important; }
+}
+</style>
+
+<style id="garras-login-responsivo">
+@media (max-width: 800px) {
+  .box { width: min(100% - 30px, 680px) !important; min-height: auto !important; }
+  .form-box { width: min(100%, 520px) !important; margin-left: auto !important; margin-right: auto !important; }
+  .gato, .cachorro, .biscoito, .racao { max-width: 16vw !important; height: auto !important; }
+}
+@media (max-width: 600px) {
+  .box { width: calc(100% - 20px) !important; padding: 18px !important; }
+  .form-box { width: 100% !important; padding: 24px 18px !important; }
+  .gato, .cachorro, .biscoito, .racao { opacity: .35; max-width: 23vw !important; }
+  .input-group input, .input-group button { width: 100% !important; max-width: 100% !important; }
+}
+@media (max-width: 430px) {
+  .box { width: calc(100% - 12px) !important; padding: 10px !important; }
+  .form-box { padding: 20px 14px !important; }
+  .gato, .cachorro, .biscoito, .racao { display: none !important; }
+}
+</style>
+
+<style id="garras-noticia-responsivo">
+.pagina-noticia { width: min(1120px, calc(100% - 40px)); max-width: 100%; margin-left: auto; margin-right: auto; }
+.pagina-noticia img, .pagina-noticia video, .pagina-noticia iframe { max-width: 100%; height: auto; }
+@media (max-width: 700px) {
+  .pagina-noticia { width: calc(100% - 24px) !important; }
+  .noticia-carregando { min-height: 260px !important; }
+}
+@media (max-width: 430px) {
+  .pagina-noticia { width: calc(100% - 16px) !important; }
+}
+</style>
+
+<style id="garras-politica-responsivo">
+@media (max-width: 950px) {
+  .politica-hero-conteudo { width: min(100% - 40px, 800px) !important; }
+  .politica-hero-decoracao { opacity: .55; transform: scale(.8); transform-origin: right center; }
+  .politica-container { width: min(100% - 40px, 1100px) !important; grid-template-columns: 1fr !important; }
+  .indice-politica { position: static !important; width: 100% !important; }
+  .indice-politica nav { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 8px !important; }
+  .indice-politica nav a { flex: 0 0 auto; }
+  .cards-dados, .compartilhamento-grid, .direitos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .politica-hero { padding: 52px 16px 42px !important; }
+  .politica-hero-conteudo { width: 100% !important; text-align: center; }
+  .politica-hero-botoes { flex-direction: column !important; align-items: stretch !important; }
+  .politica-hero-botoes a { width: 100%; justify-content: center; }
+  .politica-hero-decoracao { display: none !important; }
+  .politica-container { width: calc(100% - 24px) !important; }
+  .cards-dados, .compartilhamento-grid, .direitos-grid { grid-template-columns: 1fr !important; }
+  .conteudo-politica { min-width: 0; }
+  .conteudo-politica p, .conteudo-politica li { overflow-wrap: anywhere; }
+}
+@media (max-width: 430px) {
+  .politica-hero { padding-left: 12px !important; padding-right: 12px !important; }
+  .politica-container { width: calc(100% - 16px) !important; }
+}
+</style>

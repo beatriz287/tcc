@@ -1,0 +1,32 @@
+GARRAS & PATAS — VERSÃO RESPONSIVA
+
+Arquivos atualizados:
+- admin.php
+- login-admin.php
+- logout-admin.php
+- menu.php
+- aba_produto.php
+- produto.php
+- carrinho.php
+- area-cliente.php
+
+A responsividade foi aplicada preservando o layout e a identidade visual existentes.
+
+Principais adaptações:
+- desktop, tablet e celular;
+- cabeçalho e busca quebram corretamente em telas estreitas;
+- menus horizontais continuam utilizáveis por toque e sem estourar a tela;
+- cards e carrosséis se ajustam à largura disponível;
+- página de produto passa para uma coluna em telas menores;
+- filtros da aba de produtos passam para fluxo vertical;
+- carrinho reorganiza itens e resumo sem sobreposição;
+- área do cliente reorganiza menu, cards, listas e formulário;
+- painel administrativo reorganiza sidebar, filtros, formulários e ações;
+- login administrativo se ajusta a telas pequenas.
+
+A lógica de programação existente foi preservada: variações, descontos, categorias, planos, favoritos, carrinho, endereço, login administrativo e finalização pelo WhatsApp continuam no fluxo atual.
+
+Observação:
+O arquivo form.php (login/cadastro do cliente) não foi alterado nesta versão porque ele não estava disponível entre os arquivos fornecidos nesta conversa. Os demais pontos do fluxo disponíveis foram tratados.
+
+Não há SQL novo nesta atualização.

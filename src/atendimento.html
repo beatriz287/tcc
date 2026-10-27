@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +25,122 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ifrederico/accessible-web-widget@latest/dist/accessible-web-widget.min.js"></script>
+
+<style id="garras-responsivo-v2">
+/* Responsividade adicional — preserva o layout original em desktop */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; }
+body { overflow-x: hidden; }
+
+.topo {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.logo, .icons, .user, .footer-col { min-width: 0; }
+.logo img { max-width: 100%; height: auto; }
+.user a { max-width: 100%; }
+.user span { overflow-wrap: anywhere; }
+
+.footer-container {
+  width: min(1120px, calc(100% - 40px)) !important;
+  max-width: none !important;
+  left: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.footer-col { overflow-wrap: anywhere; }
+.footer-copy { overflow-wrap: anywhere; }
+
+@media (max-width: 950px) {
+  .topo {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    gap: 18px;
+  }
+  .espaco-topo { flex: 1 1 auto; min-width: 12px; }
+  .icons {
+    position: static !important;
+    right: auto !important;
+    gap: 14px !important;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .topo {
+    min-height: 70px !important;
+    padding: 10px 16px !important;
+    gap: 10px;
+  }
+  .logo { width: auto !important; height: auto !important; flex: 0 0 auto; }
+  .logo img { max-width: 118px !important; max-height: 55px !important; margin: 0 !important; transform: none !important; }
+  .icons { gap: 10px !important; }
+  .user span { display: none !important; }
+  .user i { font-size: 24px !important; }
+
+  .footer-container {
+    width: min(100% - 28px, 620px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+  .footer-col { width: 100%; }
+  .footer-copy { padding-left: 14px !important; padding-right: 14px !important; }
+}
+
+@media (max-width: 430px) {
+  .topo { padding-left: 12px !important; padding-right: 12px !important; }
+  .logo img { max-width: 105px !important; }
+  .icons { gap: 8px !important; }
+  .user i { font-size: 22px !important; }
+  .footer-container { width: min(100% - 22px, 620px) !important; }
+}
+</style>
+
+<style id="garras-atendimento-responsivo">
+@media (max-width: 900px) {
+  .atendimento-hero { min-height: auto !important; }
+  .atendimento-hero-conteudo { width: min(100% - 40px, 760px) !important; margin: 0 auto; }
+  .atendimento-hero-decoracao { opacity: .55; transform: scale(.82); transform-origin: right center; }
+  .canais-atendimento { width: min(100% - 40px, 960px) !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .area-atendimento { width: min(100% - 40px, 1100px) !important; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr) !important; }
+  .form-linha { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .atendimento-hero { padding: 54px 18px 48px !important; }
+  .atendimento-hero-conteudo { width: min(100% - 16px, 650px) !important; text-align: center; }
+  .atendimento-hero-botoes { flex-direction: column !important; align-items: stretch !important; }
+  .atendimento-hero-botoes a { width: 100%; justify-content: center; }
+  .atendimento-hero-decoracao { display: none !important; }
+  .canais-atendimento { width: min(100% - 24px, 620px) !important; grid-template-columns: 1fr !important; }
+  .canal-card { min-width: 0; }
+  .area-atendimento { width: min(100% - 24px, 620px) !important; grid-template-columns: 1fr !important; }
+  .form-linha { grid-template-columns: 1fr !important; }
+  .formulario-box, .informacoes-atendimento { min-width: 0; }
+  .titulo-box { align-items: flex-start !important; }
+  .faq-grid, .duvidas-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 430px) {
+  .atendimento-hero { padding-left: 12px !important; padding-right: 12px !important; }
+  .atendimento-container { width: calc(100% - 20px) !important; }
+  .canais-atendimento, .area-atendimento { width: calc(100% - 20px) !important; }
+  .canal-card { padding: 16px !important; }
+}
+</style>
+
+    <link rel="stylesheet" href="../css/acessibilidade-responsivo.css?v=1">
 </head>
 <body>
+<a class="skip-link" href="#conteudoPrincipal">Pular para o conteúdo principal</a>
+
     <div class="topo">
     
     <div class="logo">
-    <a href="menu.html">
+    <a href="menu.php">
         <img src="../imagens/logo.png" alt="Garra & Patas Pet Shop">
     </a>
 </div>
@@ -53,7 +163,7 @@
 
  <section class="atendimento-hero">
 
-    <a href="menu.html" class="btn-fechar-atendimento">
+    <a href="menu.php" class="btn-fechar-atendimento">
 
         <i class="bi bi-x-lg"></i>
 
@@ -132,7 +242,7 @@
 
     <!-- ================= CONTEÚDO ================= -->
 
-    <main class="atendimento-container">
+    <main id="conteudoPrincipal" tabindex="-1" class="atendimento-container">
 
         <!-- Título -->
 
@@ -766,9 +876,9 @@
 
             <ul>
 
-                <li><a href="menu.html">Página Inicial</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="menu.php">Página Inicial</a></li>
+                <li><a href="lojas.php">Loja</a></li>
+                <li><a href="aba_produto.php">Produtos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="politica.html">Política e Privacidade</a></li>
 
@@ -874,5 +984,6 @@
         });
 
     </script>
+<script src="../js/acessibilidade.js" defer></script>
 </body>
 </html>

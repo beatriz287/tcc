@@ -1,0 +1,241 @@
+
+/* =========================================================
+   FOOTER — GARRAS & PATAS
+   Arquivo separado da pasta /css.
+   Não interfere no restante da página.
+========================================================= */
+
+.footer {
+    width: 100%;
+    margin-top: 80px;
+    background: #fff;
+    border-top: 5px solid #1AA5A5;
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, .08);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.footer,
+.footer * {
+    box-sizing: border-box;
+}
+
+.footer-top {
+    width: 100%;
+    height: 8px;
+    background: #1AA5A5;
+}
+
+.footer-container {
+    width: min(1250px, 100%);
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(210px, 1fr) minmax(230px, 1.2fr);
+    gap: 50px;
+    align-items: start;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-col h2 {
+    margin: 0 0 18px;
+    color: #1AA5A5;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+.footer-col h2 span {
+    color: #F7A61B;
+}
+
+.footer-col h3 {
+    margin: 0 0 18px;
+    color: #F7A61B;
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.footer-col p {
+    margin: 0 0 4px;
+    color: #666;
+    font-size: 15px;
+    line-height: 28px;
+    overflow-wrap: anywhere;
+}
+
+.footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col li {
+    margin: 0 0 12px;
+}
+
+.footer-col li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-col a {
+    color: #666;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.footer-col li a {
+    display: inline-block;
+}
+
+.footer-col a:hover {
+    color: #1AA5A5;
+}
+
+.footer-col a:focus-visible {
+    outline: 3px solid rgba(26, 165, 165, .35);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1AA5A5;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.social a:hover {
+    background: #F7A61B;
+    transform: translateY(-3px);
+}
+
+.social a:focus-visible {
+    outline-color: #F7A61B;
+}
+
+.footer-copy {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    padding: 20px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.footer-copy p {
+    margin: 6px 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.footer-copy strong {
+    color: #1AA5A5;
+}
+
+/* Tablet: empresa ocupa a linha inteira; as outras duas colunas permanecem lado a lado. */
+@media (max-width: 1000px) {
+    .footer-container {
+        padding: 42px 24px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 36px 42px;
+    }
+
+    .footer-col.empresa {
+        grid-column: 1 / -1;
+        max-width: 760px;
+    }
+}
+
+/* Mobile: uma coluna, sem apertar textos ou criar overflow horizontal. */
+@media (max-width: 700px) {
+    .footer {
+        margin-top: 56px;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 36px 18px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-col.empresa {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .footer-col h2 {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+
+    .footer-col h3 {
+        margin-bottom: 14px;
+        font-size: 20px;
+    }
+
+    .footer-col p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .footer-col li {
+        margin-bottom: 10px;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-copy {
+        padding: 18px 16px;
+    }
+
+    .footer-copy p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-container {
+        padding: 30px 14px;
+        gap: 26px;
+    }
+
+    .footer-copy {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-col a,
+    .social a {
+        transition: none;
+    }
+
+    .social a:hover {
+        transform: none;
+    }
+}

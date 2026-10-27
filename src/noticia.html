@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -25,15 +25,107 @@
         rel="stylesheet"
         href="../css/style-blog.css"
     >
+    <link rel="stylesheet" href="../css/footer.css?v=2">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ifrederico/accessible-web-widget@latest/dist/accessible-web-widget.min.js"></script>
+
+<style id="garras-responsivo-v2">
+/* Responsividade adicional — preserva o layout original em desktop */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; }
+body { overflow-x: hidden; }
+
+.topo {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.logo, .icons, .user, .footer-col { min-width: 0; }
+.logo img { max-width: 100%; height: auto; }
+.user a { max-width: 100%; }
+.user span { overflow-wrap: anywhere; }
+
+.footer-container {
+  width: min(1120px, calc(100% - 40px)) !important;
+  max-width: none !important;
+  left: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.footer-col { overflow-wrap: anywhere; }
+.footer-copy { overflow-wrap: anywhere; }
+
+@media (max-width: 950px) {
+  .topo {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    gap: 18px;
+  }
+  .espaco-topo { flex: 1 1 auto; min-width: 12px; }
+  .icons {
+    position: static !important;
+    right: auto !important;
+    gap: 14px !important;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .topo {
+    min-height: 70px !important;
+    padding: 10px 16px !important;
+    gap: 10px;
+  }
+  .logo { width: auto !important; height: auto !important; flex: 0 0 auto; }
+  .logo img { max-width: 118px !important; max-height: 55px !important; margin: 0 !important; transform: none !important; }
+  .icons { gap: 10px !important; }
+  .user span { display: none !important; }
+  .user i { font-size: 24px !important; }
+
+  .footer-container {
+    width: min(100% - 28px, 620px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+  .footer-col { width: 100%; }
+  .footer-copy { padding-left: 14px !important; padding-right: 14px !important; }
+}
+
+@media (max-width: 430px) {
+  .topo { padding-left: 12px !important; padding-right: 12px !important; }
+  .logo img { max-width: 105px !important; }
+  .icons { gap: 8px !important; }
+  .user i { font-size: 22px !important; }
+  .footer-container { width: min(100% - 22px, 620px) !important; }
+}
+</style>
+
+<style id="garras-noticia-responsivo">
+.pagina-noticia { width: min(1120px, calc(100% - 40px)); max-width: 100%; margin-left: auto; margin-right: auto; }
+.pagina-noticia img, .pagina-noticia video, .pagina-noticia iframe { max-width: 100%; height: auto; }
+@media (max-width: 700px) {
+  .pagina-noticia { width: calc(100% - 24px) !important; }
+  .noticia-carregando { min-height: 260px !important; }
+}
+@media (max-width: 430px) {
+  .pagina-noticia { width: calc(100% - 16px) !important; }
+}
+</style>
+
+    <link rel="stylesheet" href="../css/acessibilidade-responsivo.css?v=1">
 </head>
 
 <body>
+<a class="skip-link" href="#paginaNoticia">Pular para o conteúdo principal</a>
+
 
     <!-- COLE AQUI O MESMO TOPO DO BLOG -->
       <div class="topo">
     
     <div class="logo">
-    <a href="menu.html">
+    <a href="menu.php">
         <img src="../imagens/logo.png" alt="Garra & Patas Pet Shop">
     </a>
 </div>
@@ -43,7 +135,7 @@
     <div class="icons">
 
         <div class="user">
-            <a href="form.html">
+            <a href="form.php">
                 <i class="bi bi-lock"></i>
                 <span>Ambiente seguro</span>
             </a>
@@ -56,9 +148,8 @@
 </div>
 
 
-    <main
+    <main id="paginaNoticia" tabindex="-1"
         class="pagina-noticia"
-        id="paginaNoticia"
     >
 
         <section class="noticia-carregando">
@@ -73,16 +164,14 @@
 
 
     <!-- COLE AQUI O MESMO RODAPÉ DO BLOG -->
-         <footer class="footer">
+         <footer class="footer" aria-label="Rodapé do site">
 
-    <div class="footer-top"></div>
+    <div class="footer-top" aria-hidden="true"></div>
 
     <div class="footer-container">
 
-        <!-- Logo -->
-        <div class="footer-col empresa">
-
-            <h2>Garras <span>& Patas</span></h2>
+        <section class="footer-col empresa" aria-labelledby="footer-empresa-titulo">
+            <h2 id="footer-empresa-titulo">Garras <span>&amp; Patas</span></h2>
 
             <p>
                 Tudo para o seu pet em um só lugar. Encontre
@@ -90,67 +179,52 @@
                 para cães e gatos.
             </p>
 
-            <div class="social">
-
-                <a href="#"><i class="bi bi-instagram"></i></a>
-
-                <a href="#"><i class="bi bi-facebook"></i></a>
-
-                <a href="https://wa.me/5519996418975"><i class="bi bi-whatsapp"></i></a>
-
+            <div class="social" aria-label="Redes sociais">
+                <a href="#" aria-label="Instagram" title="Instagram">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Facebook" title="Facebook">
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+                <a
+                    href="https://wa.me/5519996418975"
+                    aria-label="WhatsApp"
+                    title="WhatsApp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                </a>
             </div>
+        </section>
 
-        </div>
-
-        <!-- Navegação -->
-        <div class="footer-col">
-
-            <h3>Institucional</h3>
+        <nav class="footer-col" aria-labelledby="footer-institucional-titulo">
+            <h3 id="footer-institucional-titulo">Institucional</h3>
 
             <ul>
-
-                <li><a href="menu.html">Página Inicial</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="produto.html">Produtos</a></li>
+                <li><a href="menu.php">Página Inicial</a></li>
+                <li><a href="loja.php">Loja</a></li>
+                <li><a href="aba_produto.php">Produtos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="politica.html">Política e Privacidade</a></li>
-
             </ul>
+        </nav>
 
-        </div>
-
-        <!-- Categorias -->
-       
-
-        <!-- Contato -->
-        <div class="footer-col">
-
-            <h3>Atendimento</h3>
+        <section class="footer-col" aria-labelledby="footer-atendimento-titulo">
+            <h3 id="footer-atendimento-titulo">Atendimento</h3>
 
             <p>📞 (19) 996418975</p>
-
-            <p>📧 contato@carrarasepatas.com</p>
-
+            <p>📧 garrasepatas00@gmail.com</p>
             <p>📍 Rua das Flores, 123</p>
-
             <p>Segunda a Sexta</p>
-
             <p>08:00 às 18:00</p>
-
-        </div>
+        </section>
 
     </div>
 
     <div class="footer-copy">
-
-        <p>
-            © 2026 Garras & Patas - Todos os direitos reservados.
-        </p>
-
-        <p>
-            Desenvolvido por <strong>Etec</strong> | TCC - Informatica para internet
-        </p>
-
+        <p>© 2026 Garras &amp; Patas - Todos os direitos reservados.</p>
+        <p>Desenvolvido por <strong>Etec</strong> | TCC - Informatica para internet</p>
     </div>
 
 </footer>
@@ -158,6 +232,7 @@
 
     <script src="./blog.js"></script>
 
+<script src="../js/acessibilidade.js" defer></script>
 </body>
 
 </html>

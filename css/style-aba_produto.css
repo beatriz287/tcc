@@ -1808,6 +1808,45 @@ display:flex;
 
 
 /* =====================================================
+   CONTADOR DO CARRINHO
+===================================================== */
+
+.carrinho-cabecalho,
+.icone-carrinho-produtos{
+    position:relative !important;
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+.icone-carrinho-produtos .garras-cart-badge,
+.carrinho-cabecalho .garras-cart-badge,
+.garras-cart-badge[data-garras-cart-badge]{
+    position:absolute !important;
+    top:-9px !important;
+    right:-10px !important;
+    min-width:18px !important;
+    width:auto !important;
+    height:18px !important;
+    padding:0 4px !important;
+    margin:0 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:#e74c3c !important;
+    color:#fff !important;
+    font:700 10px/18px Arial,sans-serif !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+    box-sizing:border-box !important;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:50 !important;
+    pointer-events:none !important;
+}
+
+/* =====================================================
    PREÇO DEPOIS DOS TAMANHOS
 ===================================================== */
 
